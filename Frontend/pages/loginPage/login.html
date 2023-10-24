@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="css/login.css">
+    <link href="" rel="stylesheet">
+    <link href="css/bootstrap.min.css">
+    <script src="js/jquery-3.6.1.min.js"></script>  //good
+    <title> Login Page | Next Travel</title>
+</head>
+
+<body>
+
+
+<div class="container" id="container">
+    <div class="form-container sign-up" id="signup-container">
+        <form >
+           <!-- <h1 style="color: #ffc107; padding-bottom: 2px"  >Create Account</h1>-->
+
+            <!-- name -->
+            <div class="mb-4">
+                <label for="signup_name" class="form-label">Name</label>
+                <input type="text" class="form-control input" id="signup_name" required="required">
+            </div>
+
+            <!-- address -->
+            <div class="mb-4">
+                <label for="signup_address" class="form-label">Address</label>
+                <input type="text" class="form-control" id="signup_address" required="required">
+            </div>
+
+            <!-- NIC -->
+            <div class="mb-4">
+                <label for="signup_nic_or_passport" class="form-label">NIC or Passport</label>
+                <input type="text" class="form-control" id="signup_nic_or_passport" required="required">
+            </div>
+
+
+            <!-- email -->
+            <div class="mb-4">
+                <label for="signup_email" class="form-label">Email</label>
+                <input type="email" class="form-control" id="signup_email" required="required">
+            </div>
+
+            <!-- username -->
+            <div class="mb-4">
+                <label for="signup_username" class="form-label">Username</label>
+                <input type="text" class="form-control" id="signup_username" required="required">
+            </div>
+
+            <!-- password -->
+            <div class="mb-4">
+                <label for="signup_password" class="form-label">Password</label>
+                <input type="password" class="form-control" id="signup_password"  required="required">
+                <p style="color: #ffc107"> should contain 8 characters. 2 upper letters, 2 lower letters, 2 numbers, 2 special characters</p>
+
+
+            </div>
+
+            <!-- profile picture -->
+            <div class="mb-4">
+                <label for="signupprofile_image" class="form-label">Profile Image</label>
+                <input class="form-control" type="file" id="signupprofile_image" accept=".jpg, .jpeg, .webp .png .gif" required="required">
+            </div>
+
+
+            <button type="button" id="create_acc_btn" onclick="createAccountBtnAction()">Sign Up</button>
+        </form>
+    </div>
+
+    <!--    sign in container-->
+    <div class="form-container sign-in" id="signin-container">
+        <form>
+          <!--  <h1>Sign In</h1> -->
+
+            <!-- username -->
+            <div class="mb-4">
+                <label for="sign_in-username" class="form-label">Username</label>
+                <input type="text" class="form-control " id="sign_in-username" required="required">
+            </div>
+
+            <!-- password -->
+            <div class="mb-4">
+                <label for="sign_in-password" class="form-label w-75">Password</label>
+                <input type="password" class="form-control" id="sign_in-password"  required="required">
+            </div>
+            <a href="#">Forget Your Password?</a>
+            <button id="signin_click_btn" type="button" onclick="signInBtnClicked()">Sign In</button>
+        </form>
+    </div>
+
+    <div class="toggle-container" id="toggle-container" >
+        <div class="toggle">
+            <div class="toggle-panel toggle-left" id="sign-in" >
+                <h1>Welcome Back!</h1>
+                <p>Enter your personal details to use all of site features</p>
+                <button class="hidden " id="login">Sign In</button>
+            </div>
+            <div class="toggle-panel toggle-right" id="sign-up" >
+                <h1>Hello, Travellers!</h1>
+                <br>
+                <p>Register with your personal details to use all of site features</p>
+                <button class="hidden " id="register">Sign Up</button>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="js/script.js"></script>
+
+</body>
+</html>
