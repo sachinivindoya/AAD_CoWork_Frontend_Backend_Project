@@ -6,9 +6,9 @@
 <p> We are so excited to have you </p>
 </div>
 
-#Tech Stack
+# Tech Stack
 
-###FrontEnd
+### FrontEnd
 
 
 ![bootstrap](https://img.shields.io/badge/Bootstrap-302020?style=for-the-badge&logo=bootstrap&logoColor=FFFFFF)
@@ -34,3 +34,7 @@
 ![jwt](https://img.shields.io/badge/JWT-004?style=for-the-badge&logo=JWT&logoColor=FFFFFF)
 ![jackson](https://img.shields.io/badge/Jackson-453090?style=for-the-badge&logo=jackson&logoColor=FFFFFF)
 ![modelmapper](https://img.shields.io/badge/ModelMapper-1010?style=for-the-badge&logo=modelmapper&logoColor=FFFFFF)
+
+
+## What is Next Travel ?
+Next Travel is a company that helps travellers to find their comforts in their travels by offering all kind of facilities.
