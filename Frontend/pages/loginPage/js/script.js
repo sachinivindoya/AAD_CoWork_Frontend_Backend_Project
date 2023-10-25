@@ -280,6 +280,15 @@ function createAccountBtnAction(){
     formData.append("signup_username" , signup_form_username);
     formData.append("signup_password" , signup_form_password);
     formData.append("signupprofile_image" , signup_form_profile_image);
+
+    // send data to the backend endpoint
+
+    $.ajax({
+
+        method: "POST" ,
+        async: true ,
+
+    })
 }
 
 
