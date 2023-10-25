@@ -1,6 +1,7 @@
 package lk.nexttravel.apigateway.advice;
 
 import lk.nexttravel.apigateway.advice.util.InvalidPasswordException;
+import lk.nexttravel.apigateway.advice.util.NotFoundException;
 import lk.nexttravel.apigateway.dto.RespondDTO;
 import lk.nexttravel.apigateway.util.ResCodes;
 import org.springframework.http.HttpStatus;
@@ -28,6 +29,20 @@ public class RespondExceptionHandler {
                 ),
                 HttpStatus.UNAUTHORIZED
 
+        );
+    }
+
+    @ExceptionHandler(NotFoundException.class)
+    protected ResponseEntity<RespondDTO> exception (NotFoundException notFoundException) {
+        return new ResponseEntity<RespondDTO>(
+                (RespondDTO.builder()
+                        .res_code(ResCodes.Response_NO_DATA_FOUND)
+                        .res_mg(notFoundException.getMessage())
+                        .token(null)
+                        .data(null)
+                        .build()
+                ),
+                HttpStatus.NOT_FOUND
         );
     }
 }
