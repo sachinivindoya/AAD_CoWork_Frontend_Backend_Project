@@ -2,6 +2,7 @@ package lk.nexttravel.apigateway.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.security.config.annotation.web.reactive.EnableWebFluxSecurity;
 import org.springframework.web.client.RestTemplate;
 
 /**
@@ -10,10 +11,7 @@ import org.springframework.web.client.RestTemplate;
  * Time    : 19:32
  */
 @Configuration
+@EnableWebFluxSecurity
 public class ConfigSecurity {
 
-    @Bean
-    public RestTemplate restTemplate(){
-        return new RestTemplate();
-    }
 }
