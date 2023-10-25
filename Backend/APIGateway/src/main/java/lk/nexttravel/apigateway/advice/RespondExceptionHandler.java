@@ -2,6 +2,7 @@ package lk.nexttravel.apigateway.advice;
 
 import lk.nexttravel.apigateway.advice.util.InvalidPasswordException;
 import lk.nexttravel.apigateway.advice.util.NotFoundException;
+import lk.nexttravel.apigateway.advice.util.NullPointException;
 import lk.nexttravel.apigateway.dto.RespondDTO;
 import lk.nexttravel.apigateway.util.ResCodes;
 import org.springframework.http.HttpStatus;
@@ -45,4 +46,19 @@ public class RespondExceptionHandler {
                 HttpStatus.NOT_FOUND
         );
     }
+
+    @ExceptionHandler(NullPointException.class)
+    protected ResponseEntity<RespondDTO> exception (NullPointException nullPointException) {
+        return new ResponseEntity<RespondDTO>(
+                (RespondDTO.builder()
+                        .res_code(ResCodes.Response_FAIL)
+                        .res_mg(nullPointException.getMessage())
+                        .token(null)
+                        .data(null)
+                        .build()
+                ),
+                HttpStatus.NOT_FOUND
+        );
+    }
+
 }
