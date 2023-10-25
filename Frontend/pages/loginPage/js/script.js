@@ -270,6 +270,16 @@ function createAccountBtnAction(){
     let signup_form_username =  signup_username.val();
     let signup_form_password = signup_password.val();
     let signup_form_profile_image = $('#signupprofile_image')[0].files[0];
+
+    var formData = new FormData();
+
+    formData.append("signup_name" , signup_form_name);
+    formData.append("signup_address", signup_form_address);
+    formData.append("signup_nic_or_passport" , signup_form_nic_passport);
+    formData.append("signup_email" , signup_form_email);
+    formData.append("signup_username" , signup_form_username);
+    formData.append("signup_password" , signup_form_password);
+    formData.append("signupprofile_image" , signup_form_profile_image);
 }
 
 
