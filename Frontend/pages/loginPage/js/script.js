@@ -261,6 +261,15 @@ function triggerCreateAccBtn() {
 
 function createAccountBtnAction(){
     console.log("clicked")
+
+    // fields variables
+    let signup_form_name = signup_name.val();
+    let signup_form_address = signup_address.val();
+    let signup_form_nic_passport = signup_nic_or_passport.val();
+    let signup_form_email = signup_email.valueOf();
+    let signup_form_username =  signup_username.val();
+    let signup_form_password = signup_password.val();
+    let signup_form_profile_image = $('#signupprofile_image')[0].files[0];
 }
 
 
