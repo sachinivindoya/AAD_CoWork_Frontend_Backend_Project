@@ -94,7 +94,7 @@
                 </div>
             </div>
             <div>
-                <a class="btn btn-outline-warning py-3 px-5 mt-2" href=""> BACK </a>
+                <button class="btn btn-outline-warning py-3 px-5 mt-2" id="readmoreback"> BACK </button>
 
             </div>
         </div>
@@ -102,6 +102,12 @@
     </div>
 </section>
 <!-- About End -->
+
+<script>
+    document.getElementById("readmoreback").addEventListener('click', function () {
+        window.location.href = "#about.html";
+    });
+</script>
 
 </body>
 </html>

@@ -9,7 +9,7 @@
     <meta content="" name="description">
 
     <!-- Favicon -->
-    <link href="img/favicon.ico" rel="icon">
+<!--    <link href="img/favicon.ico" rel="icon">-->
 
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -24,6 +24,7 @@
     <link href="lib/animate/animate.min.css" rel="stylesheet">
     <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
     <link href="lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
+
 
     <!-- Customized Bootstrap Stylesheet -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -113,7 +114,7 @@
                             <p class="mb-0"><i class="fa fa-arrow-right text-warning me-2"></i>24/7 Service</p>
                         </div>
                     </div>
-                    <a class="btn btn-outline-warning py-3 px-5 mt-2" href="">Read More</a>
+                    <button class="btn btn-outline-warning rounded-pill" id="readmorebtn">Read More</button>
                 </div>
             </div>
         </div>
@@ -124,9 +125,15 @@
 </section>
 <!-- about section end -->
 
+
+<script src="js/main.js"></script>
 <script>
     document.getElementById("loginBtn").addEventListener('click', function () {
         window.location.href = "pages/loginPage/login.html";
+    });
+
+    document.getElementById("readmorebtn").addEventListener('click',function (){
+       window.location.href="pages/Readmore/readmore.html";
     });
 </script>
 </body>
