@@ -1,0 +1,21 @@
+
+/* About Start */
+body{
+    background-image:  linear-gradient(rgba(20, 20, 31, .7), rgba(20, 20, 31, .7)),  url("https://www.bordersofadventure.com/wp-content/uploads/2015/02/Screen-Shot-2015-02-02-at-17.20.30.png");
+}
+.about{
+    padding: 50px;
+    background: #f9f9f9;
+    background: rgba(255, 255, 255,0.2); /* Adjust the alpha (fourth value) to control transparency */
+    backdrop-filter: blur(1px); /* Adjust the blur radius as needed */
+    border: 1px solid rgba(255, 255, 255, 0.2); /* Add a border to enhance the glass effect */
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add a shadow for depth */
+    min-height: 100vh;
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center;     /* Center vertically */
+
+
+
+}
