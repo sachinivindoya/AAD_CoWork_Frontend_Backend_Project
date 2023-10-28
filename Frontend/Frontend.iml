@@ -5,5 +5,6 @@
     <content url="file://$MODULE_DIR$" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="wow" level="application" />
+    <orderEntry type="library" name="jquery-3.4.1" level="application" />
   </component>
 </module>
