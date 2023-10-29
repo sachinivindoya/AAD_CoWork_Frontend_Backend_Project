@@ -24,5 +24,364 @@
 </head>
 <body>
 
+<div class="wrapper">
+    <div class="body-overlay"></div>
+
+    <!-- ========================================== side bar =======================================   -->
+
+    <nav id="sidebar">
+        <div class="sidebar-header">
+            <h3><img src="img/logo2.png" class="img-fluid"/><span>Next Travel</span></h3>
+        </div>
+        <ul class="list-unstyled components">
+            <li  class="active">
+                <a href="#" class="dashboard"><i class="material-icons">dashboard</i>
+                    <span>Dashboard</span></a>
+            </li>
+
+            <li  class="">
+                <a href="#"><i class="material-icons">library_books</i><span>Calender
+					</span></a>
+            </li>
+        </ul>
+    </nav>
+    <!-- ================================ page ===============================================================  -->
+
+    <div id="content" >
+        <!--  nav bar  -->
+        <div class="top-navbar" style="background-color:black">
+            <div class="xp-topbar">
+                <!-- ==============================  -->
+                <div class="row" >
+                    <div class="col-2 col-md-1 col-lg-1 order-2 order-md-1 align-self-center">
+                        <div class="xp-menubar">
+                               <span class="material-icons text-white">signal_cellular_alt
+							   </span>
+                        </div>
+                    </div>
+                    <div class="col-md-5 col-lg-3 order-3 order-md-2">
+                        <div class="xp-searchbar">
+                            <form>
+                                <div class="input-group">
+                                    <input type="search" class="form-control"
+                                           placeholder="Search">
+                                    <div class="input-group-append">
+                                        <button class="btn" type="submit"
+                                                id="button-addon2">GO</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="col-10 col-md-6 col-lg-8 order-1 order-md-3" >
+                        <div class="xp-profilebar text-right" >
+                            <nav class="navbar p-0" style="background-color: black">
+                                <ul class="nav navbar-nav flex-row ml-auto">
+                                    <li class="nav-item dropdown">
+                                        <a class="nav-link" href="#" data-toggle="dropdown">
+                                            <img src="img/user.jpg" style="width:40px; border-radius:50%;"/>
+                                            <span class="xp-user-live"></span>
+                                        </a>
+                                        <ul class="dropdown-menu small-menu">
+                                            <li>
+                                                <a href="#">
+										             <span class="material-icons">
+                                                         person_outline
+                                                     </span>Profile
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    <span class="material-icons">
+                                                         settings
+                                                    </span>Settings
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    <span class="material-icons">
+                                                        logout
+                                                    </span>Logout
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- topic  -->
+            <div class="xp-breadcrumbbar text-center">
+                <h4 class="page-title"> Guide Dashboard</h4>
+                <!--                <h7 class="page-title"> Next Travel Pvt Ltd</h7>  -->
+            </div>
+        </div>
+        <!-- main-content  -->
+        <div class="main-content">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="table-wrapper">
+                        <div class="table-title" style="background-color: black">
+                            <div class="row" >
+                                <div class="col-sm-6 p-0 d-flex justify-content-lg-start justify-content-center">
+                                    <h2 class="ml-lg-2">Manage Vehicles</h2>
+                                </div>
+                                <div class="col-sm-6 p-0 d-flex justify-content-lg-end justify-content-center">
+                                    <a href="#addEmployeeModal" class="btn btn-success" data-toggle="modal">
+                                        <i class="material-icons">&#xE147;</i>
+                                        <span>Add New Vehicle</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <table class="table table-striped table-hover">
+                            <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Role</th>
+                                <th>Username</th>
+                                <th>name</th>
+                                <th>Email</th>
+                                <th>NIC / Passport</th>
+                                <th>Physical Address</th>
+                                <th>Salary</th>
+                                <th>Action</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>User Admin</td>
+                                <td>thomas1234</td>
+                                <td>thomas Hardy</td>
+                                <td>thomashardy@mail.com</td>
+                                <td>200165202516</td>
+                                <td>89, kalutara,Sri lanka</td>
+                                <td> 20000</td>
+                                <td>
+                                    <a href="#editEmployeeModal" class="edit" data-toggle="modal">
+                                        <i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i>
+                                    </a>
+                                    <a href="#deleteEmployeeModal" class="delete" data-toggle="modal">
+                                        <i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i>
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>User Admin</td>
+                                <td>thomas1234</td>
+                                <td>thomas Hardy</td>
+                                <td>thomashardy@mail.com</td>
+                                <td>200165202516</td>
+                                <td>89, kalutara,Sri lanka</td>
+                                <td> 20000</td>
+                                <td>
+                                    <a href="#editEmployeeModal" class="edit" data-toggle="modal">
+                                        <i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i>
+                                    </a>
+                                    <a href="#deleteEmployeeModal" class="delete" data-toggle="modal">
+                                        <i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i>
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>User Admin</td>
+                                <td>thomas1234</td>
+                                <td>thomas Hardy</td>
+                                <td>thomashardy@mail.com</td>
+                                <td>200165202516</td>
+                                <td>89, kalutara,Sri lanka</td>
+                                <td> 20000</td>
+                                <td>
+                                    <a href="#editEmployeeModal" class="edit" data-toggle="modal">
+                                        <i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i>
+                                    </a>
+                                    <a href="#deleteEmployeeModal" class="delete" data-toggle="modal">
+                                        <i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i>
+                                    </a>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                        <!--                        <div class="clearfix">-->
+                        <!--                            <div class="hint-text">Showing <b>5</b> out of <b>25</b> entries</div>-->
+                        <!--                            <ul class="pagination">-->
+                        <!--                                <li class="page-item disabled"><a href="#">Previous</a></li>-->
+                        <!--                                <li class="page-item"><a href="#" class="page-link">1</a></li>-->
+                        <!--                                <li class="page-item"><a href="#" class="page-link">2</a></li>-->
+                        <!--                                <li class="page-item active"><a href="#" class="page-link">3</a></li>-->
+                        <!--                                <li class="page-item"><a href="#" class="page-link">4</a></li>-->
+                        <!--                                <li class="page-item"><a href="#" class="page-link">5</a></li>-->
+                        <!--                                <li class="page-item"><a href="#" class="page-link">Next</a></li>-->
+                        <!--                            </ul>-->
+                        <!--                        </div>-->
+                    </div>
+                </div>
+            </div>
+
+            <!-- Edit Modal HTML -->
+            <div id="addEmployeeModal" class="modal fade">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <form>
+                            <div class="modal-header">
+                                <h4 class="modal-title">Add New Vehicle </h4>
+                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                            </div>
+                            <div class="modal-body">
+                                <form >
+                                    <!-- <h1 style="color: #ffc107; padding-bottom: 2px"  >Create Account</h1>-->
+
+                                    <!-- name -->
+                                    <div class="mb-4">
+                                        <label for="name" class="form-label">Name</label>
+                                        <input type="text" class="form-control input" id="name" required="required">
+                                    </div>
+
+                                    <!-- address -->
+                                    <div class="mb-4">
+                                        <label for="address" class="form-label">Address</label>
+                                        <input type="text" class="form-control" id="address" required="required">
+                                    </div>
+
+                                    <!-- NIC -->
+                                    <div class="mb-4">
+                                        <label for="nic_or_passport" class="form-label">NIC or Passport</label>
+                                        <input type="text" class="form-control" id="nic_or_passport" required="required">
+                                    </div>
+
+
+                                    <!-- email -->
+                                    <div class="mb-4">
+                                        <label for="email" class="form-label">Email</label>
+                                        <input type="email" class="form-control" id="email" required="required">
+                                    </div>
+
+                                    <!-- username -->
+                                    <div class="mb-4">
+                                        <label for="username" class="form-label">Username</label>
+                                        <input type="text" class="form-control" id="username" required="required">
+                                    </div>
+
+                                    <!-- password -->
+                                    <div class="mb-4">
+                                        <label for="password" class="form-label">Password</label>
+                                        <input type="password" class="form-control" id="password"  required="required">
+                                        <p style="color: #ffc107"> should contain 8 characters. 2 upper letters, 2 lower letters, 2 numbers, 2 special characters</p>
+                                    </div>
+
+                                    <!-- profile picture -->
+                                    <div class="mb-4">
+                                        <label for="profile_image" class="form-label">Profile Image</label>
+                                        <input class="form-control" type="file" id="profile_image" accept=".jpg, .jpeg, .webp .png .gif" required="required">
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="modal-footer">
+                                <input type="button" class="btn btn-default" data-dismiss="modal" value="Cancel">
+                                <button type="button" class="btn-success" id="addBtn" onclick="addUserBtnOnAction()">Add</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <!-- Edit Modal HTML -->
+            <div id="editEmployeeModal" class="modal fade">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <form>
+                            <div class="modal-header">
+                                <h4 class="modal-title">Edit Employee</h4>
+                                <button type="button" class="close" data-dismiss="modal"
+                                        aria-hidden="true">&times;</button>
+                            </div>
+                            <div class="modal-body">
+                                <form >
+                                    <!-- <h1 style="color: #ffc107; padding-bottom: 2px"  >Create Account</h1>-->
+
+                                    <!-- name -->
+                                    <div class="mb-4">
+                                        <label for="update_name" class="form-label">Name</label>
+                                        <input type="text" class="form-control input" id="update_name" required="required">
+                                    </div>
+
+                                    <!-- address -->
+                                    <div class="mb-4">
+                                        <label for="update_address" class="form-label">Address</label>
+                                        <input type="text" class="form-control" id="update_address" required="required">
+                                    </div>
+
+                                    <!-- NIC -->
+                                    <div class="mb-4">
+                                        <label for="update_nic_or_passport" class="form-label">NIC or Passport</label>
+                                        <input type="text" class="form-control" id="update_nic_or_passport" required="required">
+                                    </div>
+
+
+                                    <!-- email -->
+                                    <div class="mb-4">
+                                        <label for="update_email" class="form-label">Email</label>
+                                        <input type="email" class="form-control" id="update_email" required="required">
+                                    </div>
+
+                                    <!-- username -->
+                                    <div class="mb-4">
+                                        <label for="update_username" class="form-label">Username</label>
+                                        <input type="text" class="form-control" id="update_username" required="required">
+                                    </div>
+
+                                    <!-- password -->
+                                    <div class="mb-4">
+                                        <label for="update_password" class="form-label">Password</label>
+                                        <input type="password" class="form-control" id="update_password"  required="required">
+                                        <p style="color: #ffc107"> should contain 8 characters. 2 upper letters, 2 lower letters, 2 numbers, 2 special characters</p>
+                                    </div>
+
+                                    <!-- profile picture -->
+                                    <div class="mb-4">
+                                        <label for="updateprofile_image" class="form-label">Profile Image</label>
+                                        <input class="form-control" type="file" id="updateprofile_image" accept=".jpg, .jpeg, .webp .png .gif" required="required">
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="modal-footer">
+                                <input type="button" class="btn btn-default" data-dismiss="modal" value="Cancel">
+                                <input type="submit" class="btn btn-info" value="Save">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <!-- Delete Modal HTML -->
+            <div id="deleteEmployeeModal" class="modal fade">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <form>
+                            <div class="modal-header">
+                                <h4 class="modal-title">Delete Employee</h4>
+                                <button type="button" class="close" data-dismiss="modal"
+                                        aria-hidden="true">&times;
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <p>Are you sure you want to delete these Records?</p>
+                                <p class="text-warning"><small>This action cannot be undone.</small></p>
+                            </div>
+                            <div class="modal-footer">
+                                <input type="button" class="btn btn-default" data-dismiss="modal" value="Cancel">
+                                <input type="submit" class="btn btn-danger" value="Delete">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
 </body>
 </html>
