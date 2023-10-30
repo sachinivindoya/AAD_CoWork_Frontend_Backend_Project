@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="JavaScriptLibraryMappings">
-    <file url="file://$PROJECT_DIR$/Frontend" libraries="{jquery-3.4.1, wow}" />
+    <file url="file://$PROJECT_DIR$/Frontend" libraries="{@popperjs/core, jquery-3.4.1, wow}" />
   </component>
 </project>
