@@ -109,7 +109,26 @@ function signInBtnClicked(){
         },
         success: function (data){
             if(data.resCode === ResCodes.Respond_PASSWORD_MATCHED){
+                // save tokens in local storage
+                localStorage.setItem("secure_data_username", data.token.access_username);
+                localStorage.setItem("secure_data_access_token", data.token.access_jwt_token);
+                localStorage.setItem("secure_data_refresh_token", data.token.access_refresh_token);
 
+                if(data.data === RoleTypes.CLIENT){
+                    setTimeout(function(){
+                         //hide loading model
+                        loginPage_Loading_Model.modal('hide');
+                        setTimeout(function(){
+                            //
+                            //
+                            //
+
+                            setTimeout(function (){
+                                window.location.href = 'http://localhost:63342/AAD_CoWork_Frontend_Backend_Project/Frontend/pages/MainWebSite/MainWeb.html?_ijt=lb51mhkl1mlf7bbmdrb1asf7bq&_ij_reload=RELOAD_ON_SAVE';
+                            }, 3100);
+                        }, 100);
+                    }, 500);
+                }
             }
         }
     })
