@@ -22,4 +22,9 @@ public class UserServiceImpl implements UserService {
     public ResponseEntity<RespondDTO> saveNewUser(UserSignupDTO userSignupDTO) {
         return null;
     }
+
+    @Override
+    public ResponseEntity<RespondDTO> userLogin(String username, String password) {
+        return null;
+    }
 }

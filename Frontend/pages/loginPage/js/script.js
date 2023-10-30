@@ -95,7 +95,7 @@ function triggerSignInBtn() {
 function signInBtnClicked() {
 //model
     showLoadingModal();
-    console.log("success");
+    console.log("ajax started");
 
     $.ajax({
         method: "GET",
@@ -103,133 +103,16 @@ function signInBtnClicked() {
         url: "",
         async: false,
         data: {
-            username:signInUsername.val(),
+            username:signInUsername.val(), //key: value
             password:signInPassword.val()
         },
         success:function (data) {
-            console.log("function success trgeer");
-            if(data.resCode === ResCodes.Respond_PASSWORD_MATCHED){
-                //save tokens on local localStorage
-                localStorage.setItem("secure_data_username", data.token.access_username);
-                localStorage.setItem("secure_data_access_token", data.token.access_jwt_token);
-                localStorage.setItem("secure_data_refresh_token", data.token.access_refresh_token);
-
-                if(data.data === RoleTypes.CLIENT){
-
-                    setTimeout(function (){
-                        showLoadingModal();
-
-                        setTimeout(function (){
-                            //
-                            //
-                            //
-
-                            setTimeout(function (){
-                                window.location.href = 'http://localhost:63342/AAD_CoWork_Frontend_Backend_Project/Frontend/pages/MainWebSite/MainWeb.html?_ijt=aplql1ql4n7sefqj5304ic00jl&_ij_reload=RELOAD_ON_SAVE';
-                            }, 3100);
-                        },100);
-                    }, 500);
-                } else if (data.data === RoleTypes.ROLE_ADMIN_SERVICE_USER) {
-                    setTimeout(function () {
-                        hideLoadingModel()
-
-                        setTimeout(function () {
-                            // intrologin_pg_alertModelDone_title.text("Welcome Again!");
-                            // intrologin_pg_alertModelDone_content.text("Have a Nice Day Mr."+data.token.access_username);
-                            // intrologin_pg_alertModelDone.modal('show');
-
-                            setTimeout(function () {
-                                window.location.href = 'http://localhost:63342/AAD_CoWork_Frontend_Backend_Project/Frontend/pages/UserAdmin/userAdmin.html?_ijt=5nb1frfjcptsr41u4l8m1sulss&_ij_reload=RELOAD_ON_SAVE';
-                            }, 3100);
-
-                        }, 100); // delay
-
-                    }, 500); // delay
-
-                }else if (data.data === RoleTypes.ROLE_ADMIN_SERVICE_TRAVELPACKAGE) {
-
-                setTimeout(function (){
-                    hideLoadingModel();
-
-                    setTimeout(function (){
-                        //
-                        //
-                        //
-
-                        setTimeout(function (){
-                            window.location.href = 'http://localhost:63342/AAD_CoWork_Frontend_Backend_Project/Frontend/pages/PackageAdmin/packageAdmin.html?_ijt=ftmlr1f7acsdp2abl9m5v6o0jm&_ij_reload=RELOAD_ON_SAVE';
-                        },3100);
-                    }, 100);
-                },500);
-
-            }else if(data.data === RoleTypes.ROLE_ADMIN_SERVICE_HOTEL){
-                    setTimeout(function (){
-                        hideLoadingModel();
-                        setTimeout(function (){
-                            //
-                            //
-                            //
-                            setTimeout(function (){
-                                window.location.href = 'http://localhost:63342/AAD_CoWork_Frontend_Backend_Project/Frontend/pages/HotelAdmin/hotelAdmin.html?_ijt=dmtdr2rc4lp00cghqn351bk7g7&_ij_reload=RELOAD_ON_SAVE';
-                            },3100);
-                        },100);
-                    },500);
-                }else if(data.data === RoleTypes.ROLE_ADMIN_SERVICE_GUIDE){
-                    setTimeout(function (){
-                        hideLoadingModel();
-                        setTimeout(function (){
-                            //
-                            //
-                            //
-                            setTimeout(function (){
-                                window.location.href = 'http://localhost:63342/AAD_CoWork_Frontend_Backend_Project/Frontend/pages/GuideAdmin/guideAdmin.html?_ijt=o7c6nl7fs1gmpg3ldnipcvo7g0&_ij_reload=RELOAD_ON_SAVE';
-                            },3100);
-                        },100);
-                    },500);
-                }else if(data.data === RoleTypes.ROLE_ADMIN_SERVICE_VEHICLE) {
-                    setTimeout(function () {
-                        hideLoadingModel();
-                        setTimeout(function () {
-                            //
-                            //
-                            //
-                            setTimeout(function () {
-                                window.location.href = 'http://localhost:63342/AAD_CoWork_Frontend_Backend_Project/Frontend/pages/VehicleAdmin/vehicleAdmin.html?_ijt=n7267gr0spiktk0bnd7aaua3et&_ij_reload=RELOAD_ON_SAVE';
-                            }, 3100);
-                        }, 100);
-                    }, 500);
-                }
-                }else if(data.resCode === ResCodes.Respond_PASSWORD_NOT_MATCHED){
-                    setTimeout(function (){
-                        hideLoadingModel();
-                        setTimeout(function (){
-                            //
-                            //
-                            //
-                            setTimeout(function () {
-                                location.reload();
-                            }, 2800);
-                        }, 100);
-                    }, 500);
-                }
+            console.log("done");
+            hideLoadingModel();
             },
-            error: function (xhr,exception){
-                setTimeout(function () {
-                   hideLoadingModel();
-
-                    setTimeout(function () {
-                        // intrologin_pg_alertModelError_title.text("Not Found!");
-                        // intrologin_pg_alertModelError_content.text("This user is not registered. Please register and try again!");
-                        // intrologin_pg_alertModelError.modal('show');
-
-                        setTimeout(function () {
-                            location.reload(); //reload
-                        }, 2800); // 2000 milliseconds
-
-                    }, 100); // 2000 milliseconds
-
-                }, 500); // 2000 milliseconds
-
+        error: function (xhr,exception){
+                console.log("done");
+                hideLoadingModel();
             }
         })
     }

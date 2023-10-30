@@ -14,4 +14,6 @@ public interface UserService {
     ResponseEntity<RespondDTO> IsUsernameAlreadyHave (String username);
 
     ResponseEntity<RespondDTO> saveNewUser (UserSignupDTO userSignupDTO);
+
+    ResponseEntity<RespondDTO> userLogin (String username, String password);
 }
