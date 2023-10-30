@@ -1,4 +1,4 @@
-const login_loadModel = $('#loadingModal');
+const login_loadModel = $('#loadingModel');
 
 //==============================================================================================================
 // Function to show the loading modal
@@ -100,19 +100,28 @@ function signInBtnClicked() {
     $.ajax({
         method: "GET",
         contentType: "application/json",
-        url: "",
+        url: "http://localhost:1010/main/user/user-login",
         async: false,
         data: {
             username:signInUsername.val(), //key: value
             password:signInPassword.val()
         },
         success:function (data) {
+        /*    //hide loading model*/
+            setTimeout(function () {
+                hideLoadingModel();
+            }, 1000); // delay 1s
+
             console.log("done");
-            hideLoadingModel();
+
             },
         error: function (xhr,exception){
-                console.log("done");
+            /*    //hide loading model*/
+            setTimeout(function () {
                 hideLoadingModel();
+            }, 1000); // delay 1s
+                console.log("done");
+
             }
         })
     }

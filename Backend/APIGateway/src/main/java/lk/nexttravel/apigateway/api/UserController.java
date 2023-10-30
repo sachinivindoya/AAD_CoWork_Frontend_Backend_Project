@@ -39,7 +39,7 @@ public class UserController {
             return Mono.just(userService.userLogin(username, password));
 
         } else {
-            return Mono.error( new InvalidDataEntryException(""));
+            return Mono.error( new InvalidDataEntryException("invalid username and password"));
         }
     }
 
