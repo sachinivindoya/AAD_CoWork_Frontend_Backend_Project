@@ -303,14 +303,13 @@ function createAccountBtnAction(){
     console.log("clicked")
 
     // fields variables
-    let signup_form_name = signup_name.val();
-    let signup_form_address = signup_address.val();
-    let signup_form_nic_passport = signup_nic_or_passport.val();
-    let signup_form_email = signup_email.valueOf();
-    let signup_form_username =  signup_username.val();
-    let signup_form_password = signup_password.val();
-    let signup_form_profile_image = $('#signupprofile_image')[0].files[0];
-
+    let signup_form_name = $("#signup_name").val();
+    let signup_form_address = $("#signup_address").val();
+    let signup_form_nic_passport = $("#signup_nic_or_passport").val();
+    let signup_form_email = $("#signup_email").val();
+    let signup_form_username = $("#signup_username").val();
+    let signup_form_password = $("#signup_password").val();
+    let signup_form_profile_image = $("#signupprofile_image")[0].files[0];
     var formData = new FormData();
 
     formData.append("signup_name" , signup_form_name);
@@ -326,9 +325,32 @@ function createAccountBtnAction(){
     $.ajax({
 
         method: "POST" ,
+        contentType: false,
+        url: "http://localhost:1010/main/user/signup-user",
         async: true ,
+        processData:false,
+        data: formData,
+        success: function (data){
+            /*    //hide loading model*/
+            setTimeout(function () {
+                hideLoadingModel();
+            }, 1000); // delay 1s
 
+            console.log("done");
+
+        },
+        error: function (xhr,exception){
+            /*    //hide loading model*/
+            setTimeout(function () {
+                hideLoadingModel();
+            }, 1000); // delay 1s
+            console.log("done");
+
+        }
     })
+
+
+
 }
 
 

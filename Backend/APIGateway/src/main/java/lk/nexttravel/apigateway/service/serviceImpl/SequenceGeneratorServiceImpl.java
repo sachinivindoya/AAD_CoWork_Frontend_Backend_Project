@@ -1,6 +1,6 @@
 package lk.nexttravel.apigateway.service.serviceImpl;
 
-import lk.nexttravel.apigateway.entity.util.DBSequensee;
+
 import lk.nexttravel.apigateway.service.SequenceGeneratorService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.mongodb.core.MongoOperations;

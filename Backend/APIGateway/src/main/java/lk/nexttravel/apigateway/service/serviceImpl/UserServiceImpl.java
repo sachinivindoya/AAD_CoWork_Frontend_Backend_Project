@@ -21,7 +21,16 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public ResponseEntity<RespondDTO> saveNewUser(UserSignupDTO userSignupDTO) {
-        return null;
+        RespondDTO respondDTO = new RespondDTO();
+        System.out.println("method invoked");
+        return new ResponseEntity<>(
+                respondDTO
+                ,
+                HttpStatus.ACCEPTED
+
+        );
+
+
     }
 
     @Override
