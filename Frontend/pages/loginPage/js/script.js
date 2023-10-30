@@ -1,5 +1,10 @@
-//-----Navigation
+//loading model
 
+const loginPage_Loading_Model = $('#login_loading_model');
+
+
+//====================================================================================================================
+//-----Navigation
 const container = document.getElementById('container');
 const registerBtn = document.getElementById('register');
 const loginBtn = document.getElementById('login');
@@ -51,7 +56,7 @@ signInUsername.on('keyup', function () {
 
 //signInPassword key function
 function isPasswordCheckedRegexSignin(password) {
-    const regex = /^(?=.\d)(?=.[a-z])(?=.*[A-Z]).{8,}$/;
+    const regex = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}$/;
     return regex.test(password);
 }
 signInPassword.on('keyup', function () {
@@ -82,12 +87,32 @@ function triggerSignInBtn() {
 }
 
 function signInBtnClicked(){
+    //show loading model
+    loginPage_Loading_Model.modal('show');
+    console.log("success");
+
     //fields variables
     let fsigninUsername = signInUsername.val();
     let fsigninPassword = signInPassword.val();
 
     console.log( fsigninUsername );
     console.log( fsigninPassword );
+
+    $.ajax({
+        method: "GET",
+        contentType:"application/json",
+        url:"",
+        async: false,
+        data:{
+            username: signInUsername.val(),
+            password: signInPassword.val()
+        },
+        success: function (data){
+            if(data.resCode === ResCodes.Respond_PASSWORD_MATCHED){
+
+            }
+        }
+    })
 }
 
 //=================================================================================================================
@@ -293,6 +318,7 @@ function createAccountBtnAction(){
 
 
 
+//=========================================================================================================================
 
 
 
