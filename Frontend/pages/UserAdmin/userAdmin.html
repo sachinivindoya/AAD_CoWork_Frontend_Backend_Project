@@ -9,9 +9,12 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 
     <!----css3---->
     <link rel="stylesheet" href="css/custom.css">
+    <link rel="stylesheet" href="css/styleesh.css">
 
     <!--google fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -20,6 +23,9 @@
 
     <!--google material icon-->
     <link href="https://fonts.googleapis.com/css2?family=Material+Icons"rel="stylesheet">
+
+    <script src="js/jquery-3.6.1.min.js"></script>
+
 
 </head>
 <body>
@@ -35,8 +41,8 @@
         </div>
         <ul class="list-unstyled components">
             <!--  dashboard  -->
-            <li  class="active" onclick="openHomeContainer()">
-                <a href="#home_container" class="dashboard"><i class="material-icons">dashboard</i>
+            <li  class="" onclick="openHomeContainer()">
+                <a href="#" class="dashboard"><i class="material-icons">dashboard</i>
                     <span>Dashboard</span></a>
             </li>
             <!--  client  -->
@@ -135,17 +141,125 @@
         <div class="container-fluid" id="home_container" style="display: none">
             <h2> dashboard</h2>
         </div>
-
+<!--=======================================================================================================================================================-->
         <!-- client-content  -->
-        <div class="container-fluid" id="client_manage_container" style="display: none">
-            <h2> Client</h2>
+        <div class="container-fluid" id="client_manage_container" style="display: none; min-height: 80vh">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="table-wrapper">
+                        <div class="table-title">
+                            <div class="row">
+                                <div class="col-sm-6 p-0 d-flex justify-content-lg-start justify-content-center">
+                                    <h2 class="ml-lg-2">Manage Users</h2>
+                                </div>
+                                <div class="col-sm-6 p-0 d-flex justify-content-lg-end justify-content-center">
+                                    <a href="#client-manage-container-add-client-model"  class="btn btn-success" data-toggle="modal">
+                                        <i class="material-icons">&#xE147;</i>
+                                        <span>Add New User</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <table class="table table-striped table-hover">
+                            <thead style="color: #86847c">
+                            <tr>
+                                <th>ID</th>
+                                <th>Username</th>
+                                <th>Name</th>
+                                <th>Password</th>
+                                <th>Email</th>
+                                <th>Physical Address</th>
+                                <th>NIC/Passport</th>
+                                <th>NIC/Passport - Front View</th>
+                                <th>NIC/Passport - Rear View</th>
+                                <th>Gender</th>
+                                <th>Age</th>
+                                <th>Tell</th>
+                                <th>Remarks</th>
+                                <th>Action </th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>thomas123</td>
+                                <td>thomas Hardy</td>
+                                <td>thomas1234#</td>
+                                <td>thomashardy@mail.com</td>
+                                <td>89, kalutara,Sri lanka</td>
+                                <td>200167202516</td>
+                                <td> image</td>
+                                <td> image</td>
+                                <td>male</td>
+                                <td>31Yr</td>
+                                <td>0754944970</td>
+                                <td> no remarks</td>
+                                <td>
+                                    <a href="#" class="edit" data-toggle="modal">
+                                        <i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i>
+                                    </a>
+                                    <a href="#deleteClientModel" class="delete" data-toggle="modal">
+                                        <i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i>
+                                    </a>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
         </div>
 
+<!--========================================================================================================================================-->
         <!-- admin-content  -->
         <div class="container-fluid" id="admin_manage_container" style="display: none">
-            <h2> Admin </h2>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="table-wrapper">
+                        <div class="table-title">
+                            <div class="row">
+                                <div class="col-sm-6 p-0 d-flex justify-content-lg-start justify-content-center">
+                                    <h2 class="ml-lg-2">Manage Admin</h2>
+                                </div>
+                            </div>
+                        </div>
+                        <table class="table table-striped table-hover">
+                            <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Role</th>
+                                <th>Username</th>
+                                <th>Name</th>
+                                <th>Email</th>
+                                <th>NIC/Passport</th>
+                                <th>Physical Address</th>
+                                <th>Salary</th>
+                                <th>Action</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>User Admin</td>
+                                <td>thomas1234</td>
+                                <td>thomas Hardy</td>
+                                <td>thomashardy@mail.com</td>
+                                <td>200165202516</td>
+                                <td>89, kalutara,Sri lanka</td>
+                                <td> 20000</td>
+                                <td>
+                                    <a href="#" class="edit" data-toggle="modal">
+                                        <i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i>
+                                    </a>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
         </div>
-
+<!--========================================================================================================================================================-->
         <!-- report-content  -->
         <div class="container-fluid" id="report_container" style="display: none">
             <h2> reports </h2>
@@ -153,6 +267,183 @@
         </div>
     </div>
 </div>
+<!--==============================================================================================================================-->
+<!-- Delete Modal HTML -->
+<div id="deleteClientModel" class="modal fade">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <form>
+                <div class="modal-header">
+                    <h4 class="modal-title">Delete Client</h4>
+                    <button type="button" class="close" data-dismiss="modal"
+                            aria-hidden="true">&times;
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>Are you sure you want to delete these Records?</p>
+                    <p class="text-warning"><small>This action cannot be undone.</small></p>
+                </div>
+                <div class="modal-footer">
+                    <input type="button" class="btn btn-default" data-dismiss="modal" value="Cancel">
+                    <input type="submit" class="btn btn-danger" value="Delete">
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<!--=======================================================================================================================================-->
+<!--client manage container - sub content - add New client model-->
+<!-- Model -->
+<!--!&#45;&#45;client manage container - sub content - add New client model&ndash;&gt;-->
+<!-- Model -->
+<div class="modal fade " id="client-manage-container-add-client-model" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" data-bs-backdrop="static" data-bs-keyboard="false" style="margin-left: -200px">
+    <div class="modal-dialog  " >
+        <div class="modal-content"  style="width: 900px; height: 600px">
+            <div class="modal-header">
+                <h5 class="modal-title" id="">New Client</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body" style="max-height: 85vh; overflow-y: auto;">
+                <div style="display: flex;">
+                    <div style="flex-direction: column; width: 600px;">
+                        <div class="mb-4">
+                            <div class="row text-center">
+                                <div class="col-xs-6 text-center" style=" margin-top: 10px;">
+                                    <div class='product-holder'>
+                                        <img src="img/user.jpg" width="250" height="250" class='product-image' id="c_m_s_a_image" style="border: 1px solid #000; border-radius: 50%; filter: brightness(90%)" alt="">
+                                        <input id="c_m_s_a_image_input" class="form-control" type="file" accept=".jpg, .jpeg, .webp" style="background-color: #e5f1f8; border-color: #112D4E; border-width: 1.5px; width: 250px; margin-left: 30px; margin-top: 10px">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div style="flex-direction: column; width: 800px; height: 480px; overflow-y: auto;">
+                        <div data-spy="scroll" data-target="#navbar-example3" data-offset="0">
+                            <div class="mb-4" >
+                                <label for="c_m_s_a_username" class="form-label">Username</label>
+                                <input type="text" class="form-control" id="c_m_s_a_username"  style="width: 95%; background-color: #f1e5f8; border-color: #112D4E; border-width: 1.5px">
+                                <div class="invalid-feedback">
+                                    *Starts with an uppercase letter, followed by one or more lowercase letters.
+                                    *Can contain one or more spaces, followed by an uppercase letter, followed by one or more lowercase letters.lowercase letters.
+                                    *Examples: John Doe ,Jane M. Doe ,Peter B. Brown
+                                </div>
+                            </div>
+                            <div class="mb-4">
+                                <label for="c_m_s_a_nameinitial" class="form-label">Name with Initial</label>
+                                <input type="text" class="form-control" id="c_m_s_a_nameinitial" style="width: 95%; background-color: #f1e5f8; border-color: #112D4E; border-width: 1.5px">
+                                <div class="invalid-feedback">
+                                    *Starts with an uppercase letter, followed by one or more lowercase letters.
+                                    *Can contain one or more spaces, followed by an uppercase letter, followed by one or more lowercase letters.lowercase letters.
+                                    *Examples: John Doe ,Jane M. Doe ,Peter B. Brown
+                                </div>
+                            </div>
+                            <div class="mb-4">
+                                <label for="c_m_s_a_password" class="form-label">Password</label>
+                                <input type="password" class="form-control" id="c_m_s_a_password" style="width: 95%; background-color: #f1e5f8; border-color: #112D4E; border-width: 1.5px">
+                                <div class="invalid-feedback">
+                                    *Starts with an uppercase letter, followed by one or more lowercase letters.
+                                    *Can contain one or more spaces, followed by an uppercase letter, followed by one or more lowercase letters.lowercase letters.
+                                    *Examples: John Doe ,Jane M. Doe ,Peter B. Brown
+                                </div>
+                            </div>
+                            <div class="mb-4">
+                                <label for="c_m_s_a_email" class="form-label">Email</label>
+                                <input type="email" class="form-control" id="c_m_s_a_email" style="width: 95%; background-color:#f1e5f8; border-color: #112D4E; border-width: 1.5px">
+                                <div class="invalid-feedback">
+                                    *Starts with an uppercase letter, followed by one or more lowercase letters.
+                                    *Can contain one or more spaces, followed by an uppercase letter, followed by one or more lowercase letters.lowercase letters.
+                                    *Examples: John Doe ,Jane M. Doe ,Peter B. Brown
+                                </div>
+                            </div>
+                            <div class="mb-4">
+                                <label for="c_m_s_a_address" class="form-label">Physical Address</label>
+                                <input type="text" class="form-control" id="c_m_s_a_address" style="width: 95%; background-color: #f1e5f8; border-color: #112D4E; border-width: 1.5px">
+                                <div class="invalid-feedback">
+                                    *Starts with an uppercase letter, followed by one or more lowercase letters.
+                                    *Can contain one or more spaces, followed by an uppercase letter, followed by one or more lowercase letters.lowercase letters.
+                                    *Examples: John Doe ,Jane M. Doe ,Peter B. Brown
+                                </div>
+                            </div>
+                            <div class="mb-4">
+                                <label for="c_m_s_a_nic" class="form-label">NIC / Passport</label>
+                                <input type="text" class="form-control" id="c_m_s_a_nic" style="width: 95%; background-color: #f1e5f8; border-color: #112D4E; border-width: 1.5px">
+                                <div class="invalid-feedback">
+                                    *Starts with an uppercase letter, followed by one or more lowercase letters.
+                                    *Can contain one or more spaces, followed by an uppercase letter, followed by one or more lowercase letters.lowercase letters.
+                                    *Examples: John Doe ,Jane M. Doe ,Peter B. Brown
+                                </div>
+                            </div>
+                            <br>
+                            <div class="mb-4 " style="display: flex; flex-direction: column">
+                                <label for="c_m_s_a_nic_front_image" class="form-label">NIC / Passport - Front View</label>
+                                <img src="img/frontnicimage.png" width="95%" height="300"  id="c_m_s_a_nic_front_image" style="border: 0.5px solid #000; border-radius: 1%; ">
+                                <input id="c_m_s_a_nic_front_image_input"  class="form-control" type="file" accept=".jpg, .jpeg, .webp" style="background-color: #e5f1f8; border-color: #112D4E; border-width: 1.5px; width: 250px">
+                                <div class="invalid-feedback">
+                                    *Starts with an uppercase letter, followed by one or more lowercase letters.
+                                    *Can contain one or more spaces, followed by an uppercase letter, followed by one or more lowercase letters.lowercase letters.
+                                    *Examples: John Doe ,Jane M. Doe ,Peter B. Brown
+                                </div>
+                            </div>
+                            <br>
+                            <div class="mb-4" style="display: flex; flex-direction: column">
+                                <label for="c_m_s_a_nic_rear_image" class="form-label">NIC / Passport - Rear View</label>
+                                <img src="img/frontnicimage.png" width="95%" height="300"  id="c_m_s_a_nic_rear_image" style="border: 0.5px solid #000; border-radius: 1%; ">
+                                <input id="c_m_s_a_nic_rear_image_input"  class="form-control" type="file" accept=".jpg, .jpeg, .webp" style="background-color: #e5f1f8; border-color: #112D4E; border-width: 1.5px; width: 250px">
+                                <div class="invalid-feedback">
+                                    *Starts with an uppercase letter, followed by one or more lowercase letters.
+                                    *Can contain one or more spaces, followed by an uppercase letter, followed by one or more lowercase letters.lowercase letters.
+                                    *Examples: John Doe ,Jane M. Doe ,Peter B. Brown
+                                </div>
+                            </div>
+                            <br>
+                            <div class="mb-4">
+                                <label for="c_m_s_a_gender" class="form-label">Gender</label>
+                                <input type="text" class="form-control" id="c_m_s_a_gender" style="width: 95%; background-color: #f1e5f8; border-color: #112D4E; border-width: 1.5px">
+                                <div class="invalid-feedback">
+                                    *Starts with an uppercase letter, followed by one or more lowercase letters.
+                                    *Can contain one or more spaces, followed by an uppercase letter, followed by one or more lowercase letters.lowercase letters.
+                                    *Examples: John Doe ,Jane M. Doe ,Peter B. Brown
+                                </div>
+                            </div>
+                            <div class="mb-4">
+                                <label for="c_m_s_a_age" class="form-label">Age</label>
+                                <input type="number" class="form-control" id="c_m_s_a_age" style="width: 95%; background-color: #f1e5f8; border-color: #112D4E; border-width: 1.5px">
+                                <div class="invalid-feedback">
+                                    *Starts with an uppercase letter, followed by one or more lowercase letters.
+                                    *Can contain one or more spaces, followed by an uppercase letter, followed by one or more lowercase letters.lowercase letters.
+                                    *Examples: John Doe ,Jane M. Doe ,Peter B. Brown
+                                </div>
+                            </div>
+                            <div class="mb-4">
+                                <label for="c_m_s_a_tell" class="form-label">Tell</label>
+                                <input type="text" class="form-control" id="c_m_s_a_tell" style="width: 95%; background-color: #f1e5f8; border-color: #112D4E; border-width: 1.5px">
+                                <div class="invalid-feedback">
+                                    *Starts with an uppercase letter, followed by one or more lowercase letters.
+                                    *Can contain one or more spaces, followed by an uppercase letter, followed by one or more lowercase letters.lowercase letters.
+                                    *Examples: John Doe ,Jane M. Doe ,Peter B. Brown
+                                </div>
+                            </div>
+                            <div class="mb-4">
+                                <label for="c_m_s_a_remarks" class="form-label">Remarks</label>
+                                <input type="text" class="form-control" id="c_m_s_a_remarks" style="width: 95%; background-color: #f1e5f8; border-color: #112D4E; border-width: 1.5px">
+                                <div class="invalid-feedback">
+                                    *Starts with an uppercase letter, followed by one or more lowercase letters.
+                                    *Can contain one or more spaces, followed by an uppercase letter, followed by one or more lowercase letters.lowercase letters.
+                                    *Examples: John Doe ,Jane M. Doe ,Peter B. Brown
+                                </div>
+                            </div>
+                            <button type="button" class="btn btn-danger" data-bs-dismiss="modal" style="width: 10rem; height: 3rem">Close</button>
+                            <button type="button" class="btn btn-success text-white " id="c_m_s_a_savebtn" onclick="saveAddClient()" disabled style="width: 10rem; height: 3rem">Save</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
 
 
 <!-- Optional JavaScript -->
