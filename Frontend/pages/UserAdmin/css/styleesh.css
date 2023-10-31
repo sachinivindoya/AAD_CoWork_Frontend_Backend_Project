@@ -647,6 +647,13 @@ overflow:auto;
         margin-top: 10px;
         font-size: 13px;
     }
+#plus-image {
+    left: 50%;
+    top: 50%;
+    position: absolute;
+    margin-top: 48px;
+    margin-left: -125px;
+}
 
 
 	/*!* Modal styles *!*/
