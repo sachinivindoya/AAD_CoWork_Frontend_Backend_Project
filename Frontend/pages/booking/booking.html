@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Booking</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="css/booking.css">
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/tempusdominus/js/moment.min.js"></script>
+    <script src="lib/tempusdominus/js/moment-timezone.min.js"></script>
+    <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/datepicker.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/hover-min.css">
+    <link rel="stylesheet" href="css/jquery-ui.min.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Nunito:wght@600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+</head>
+<body>
+<header>
+    <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0">
+        <a href="" class="navbar-brand p-0">
+
+            <!--                <img src="img/logo.png" alt="Logo" width="100" height="70"> &lt;!&ndash;--><span style="color: #13e3e3; font-size: 30px; font-weight: bold">Next</span><span style="color: #869791; font-family: 'Courier New',cursive; font-size: 25px;"> Travel</span>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <span class="fa fa-bars"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav ms-auto py-0">
+                <a href="index.html" class="nav-item nav-link active">Home</a>
+                <a href="#about.html" class="nav-item nav-link">Booking</a>
+                <a href="#service.html" class="nav-item nav-link">Hotels</a>
+                <a href="#package.html" class="nav-item nav-link">Packages</a>
+                <a href="#Testimonial.html" class="nav-item nav-link">Vehicles</a>
+                <a href="#contact.html" class="nav-item nav-link">Guides</a>
+            </div>
+            <button class="btn btn-outline-light rounded-pill" id="loginBtn">LogOut</button>
+            <a class="nav-link" href="#" data-toggle="dropdown">
+                <img src="img/user.jpg" style="width:50px; border-radius:50%;"/>
+                <span class="xp-user-live"></span>
+            </a>
+        </div>
+    </nav>
+</header>
+<body style="background-color: #002752">
+<main class="container mt-4" >
+    <div class="row">
+        <div class="col-md-8">
+            <h2>Book Your Travel</h2>
+            <form>
+                <div class="form-group">
+                    <label for="destination">Destination:</label>
+                    <input type="text" class="form-control" id="destination" placeholder="Enter your destination">
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="departure">Departure Date:</label>
+                        <input type="date" class="form-control" id="departure">
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="return">Return Date:</label>
+                        <input type="date" class="form-control" id="return">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="travelers">Number of Travelers:</label>
+                    <input type="number" class="form-control" id="travelers" placeholder="Enter the number of travelers">
+                </div>
+                <button type="submit" class="btn btn-primary">Search for Flights</button>
+            </form>
+        </div>
+        <div class="col-md-4">
+            <h2>Popular Destinations</h2>
+            <ul class="list-group">
+                <li class="list-group-item">Paris</li>
+                <li class="list-group-item">New York</li>
+                <li class="list-group-item">Tokyo</li>
+                <li class="list-group-item">London</li>
+                <li class="list-group-item">Dubai</li>
+            </ul>
+        </div>
+    </div>
+</main>
+
+<footer class="mt-4 text-center">
+    &copy; 2023 Travel Booking
+</footer>
+</body>
+
+
+</html>

@@ -12,6 +12,9 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <!----css3---->
     <link rel="stylesheet" href="css/custom.css">
     <link rel="stylesheet" href="css/styleesh.css">
@@ -104,14 +107,7 @@
                                         </a>
                                         <ul class="dropdown-menu small-menu">
                                             <li>
-                                                <a href="#">
-										             <span class="material-icons">
-                                                         person_outline
-                                                     </span>Profile
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="#">
+                                                <a href="#admin-manage-container-edit-admin-model" onclick="">
                                                     <span class="material-icons">
                                                          settings
                                                     </span>Settings
@@ -267,6 +263,71 @@
         </div>
     </div>
 </div>
+<!--==================================================================================================================-->
+
+<!--admin manage container - sub content - edit admin model-->
+<!-- Modal -->
+<div class="modal fade" id="admin-manage-container-edit-admin-model" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" data-bs-backdrop="static" data-bs-keyboard="false">
+    <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Edit Existing Admin</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body" style="max-height: 80vh; overflow-y: auto;">
+                <div style="display: flex;">
+                    <div style="flex-direction: column; width: 600px;">
+                        <div class="mb-4">
+                            <div class="row text-center">
+                                <div class="col-xs-6 text-center" style=" margin-top: 10px;">
+                                    <div class='product-holder'>
+                                        <img src="https://mdbootstrap.com/img/new/avatars/8.jpg" width="300" height="310" class='product-image' id="e_m_n_a_a_image" style="border: 1px solid #000; border-radius: 50%; filter: brightness(90%)">
+                                        <input id="plus-image" class="form-control" type="file" accept=".jpg, .jpeg, .webp" style="background-color: #e5f1f8; border-color: #112D4E; border-width: 1.5px; width: 250px">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div style="flex-direction: column; width: 800px; height: 480px; overflow-y: auto;">
+                        <div data-spy="scroll" data-target="#navbar-example3" data-offset="0">
+                            <div class="mb-4">
+                                <label for="e_m_n_a_a_username" class="form-label">Username</label>
+                                <input type="email" class="form-control" id="e_m_n_a_a_username" aria-describedby="emailHelp" style="width: 95%; background-color: #f1e5f8; border-color: #112D4E; border-width: 1.5px">
+                            </div>
+                            <div class="mb-4">
+                                <label for="e_m_n_a_a_nameinitial" class="form-label">Name with Initial</label>
+                                <input type="email" class="form-control" id="e_m_n_a_a_nameinitial" aria-describedby="emailHelp" style="width: 95%; background-color: #f1e5f8; border-color: #112D4E; border-width: 1.5px">
+                            </div>
+                            <div class="mb-4">
+                                <label for="e_m_n_a_a_email" class="form-label">Email</label>
+                                <input type="email" class="form-control" id="e_m_n_a_a_email" aria-describedby="emailHelp" style="width: 95%; background-color: #f1e5f8; border-color: #112D4E; border-width: 1.5px">
+                            </div>
+                            <div class="mb-4">
+                                <label for="e_m_n_a_a_nic" class="form-label">NIC / Passport</label>
+                                <input type="email" class="form-control" id="e_m_n_a_a_nic" aria-describedby="emailHelp" style="width: 95%; background-color:#f1e5f8; border-color: #112D4E; border-width: 1.5px">
+                            </div>
+                            <div class="mb-4">
+                                <label for="e_m_n_a_a_address" class="form-label">Physical Address</label>
+                                <input type="email" class="form-control" id="e_m_n_a_a_address" aria-describedby="emailHelp" style="width: 95%; background-color: #f1e5f8; border-color: #112D4E; border-width: 1.5px">
+                            </div>
+                            <div class="mb-4">
+                                <label for="e_m_n_a_a_salary" class="form-label">Salary</label>
+                                <input type="email" class="form-control" id="e_m_n_a_a_salary" aria-describedby="emailHelp" style="width: 95%; background-color: #f1e5f8; border-color: #112D4E; border-width: 1.5px">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary text-white" id="a_m_n_a_a_savebtn" onclick="saveEditAdmin()">Save</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
 <!--==============================================================================================================================-->
 <!-- Delete Modal HTML -->
 <div id="deleteClientModel" class="modal fade">
