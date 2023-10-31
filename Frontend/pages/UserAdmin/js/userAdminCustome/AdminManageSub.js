@@ -1,6 +1,5 @@
 //-----------------varibales--------
 const user_admin_main_pg_loading_model = $('#user_admin_main_pg-loading-model');
-
 const user_admin_main_pg_profile_img = $("#user_admin_main_pg_profile_img");
 const user_admin_main_pg_top_admin_name = $("#user_admin_main_pg_top_admin_name")
 //---------------------------------------------
