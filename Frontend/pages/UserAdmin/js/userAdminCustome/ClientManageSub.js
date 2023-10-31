@@ -83,9 +83,6 @@ $(document).ready(function() {
     });
 });
 
-function saveAddClient(){
-    console.log("done");
-}
 
 //------add form validations-----------
 let addtxtfld1 = false;
@@ -101,6 +98,63 @@ let addtxtfld10 = false;
 let addtxtfld11 = false;
 let addtxtfld12 = false;
 let addtxtfld13 = false;
+
+//signupUsername key function
+function usernameCheckClientMngRegex(username) {
+    const regex = /^[a-zA-Z0-9_.-]{5,30}$/;
+    return regex.test(username);
+}
+c_m_s_a_username.on('keyup', function () {
+
+    if( usernameCheckClientMngRegex(c_m_s_a_username.val())){
+        c_m_s_a_username.css('background-color','rgba(193, 237, 255, 0.68)');
+        txtfld1 = true;
+        triggerCreateAccBtn();//trigger to enable
+    }else {
+        c_m_s_a_username.css('background-color','rgba(255, 193, 193, 0.68)');
+        txtfld1 = false;
+        triggerCreateAccBtn();//trigger to enable
+    }
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+function saveAddClient(){
+    console.log("done");
+
+}
+
+function triggerAddNewClientSaveBtn(){
+    if(
+        addtxtfld1===true && addtxtfld2===true && addtxtfld3===true && addtxtfld4===true && addtxtfld5===true && addtxtfld6===true && addtxtfld7===true && addtxtfld8===true && addtxtfld9===true && addtxtfld10===true && addtxtfld11===true && addtxtfld12===true && addtxtfld13===true
+    ){
+        c_m_s_a_savebtn.prop("disabled", false);
+    }else {
+        c_m_s_a_savebtn.prop("disabled", true);
+    }
+}
+
+
 
 c_m_s_a_username.on('keyup', function () {
     console.log("ddddd");
@@ -133,12 +187,3 @@ c_m_s_a_remarks.on('keyup', function () {
     console.log("ddddd");
 });
 
-function triggerAddNewClientSaveBtn(){
-    if(
-        addtxtfld1===true && addtxtfld2===true && addtxtfld3===true && addtxtfld4===true && addtxtfld5===true && addtxtfld6===true && addtxtfld7===true && addtxtfld8===true && addtxtfld9===true && addtxtfld10===true && addtxtfld11===true && addtxtfld12===true && addtxtfld13===true
-    ){
-        c_m_s_a_savebtn.prop("disabled", false);
-    }else {
-        c_m_s_a_savebtn.prop("disabled", true);
-    }
-}
