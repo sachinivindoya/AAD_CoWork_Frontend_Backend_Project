@@ -1,7 +1,7 @@
 /********** Template CSS **********/
 :root {
-    --primary: rgba(248, 180, 36, 0.94);
-    --secondary: #FE8800;
+    --primary: #13e3e3;
+    --secondary: #13e3e3;
     --light: #F5F5F5;
     --dark: #14141F;
 }
@@ -22,7 +22,7 @@
     z-index: 99;
 }
 
- 
+
 
 /*** Button ***/
 .btn {
@@ -127,7 +127,7 @@
         border-bottom: 1px solid rgba(256, 256, 256, .1);
         z-index: 999;
     }
-    
+
     .sticky-top.navbar-light {
         position: fixed;
         background: #FFFFFF;
@@ -158,18 +158,18 @@
 
 /*** Hero Header ***/
 .home {
-    background: linear-gradient(rgba(20, 20, 31, .7), rgba(20, 20, 31, .7)), url(https://www.aiesec.lk/wp-content/uploads/2019/08/nst-sl4-1332x650.jpg);
+    background: linear-gradient(rgba(51, 51, 67, 0.7), rgba(50, 50, 63, 0.64)), url("https://img.freepik.com/premium-photo/suitcase-with-travel-accessories-background_916191-42317.jpg");
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
-    min-height: 60vh;
+    min-height: 100vh;
 }
 
 .breadcrumb-item + .breadcrumb-item::before {
     color: rgba(0, 0, 0, 0.68);
 }
 .home .content{
-   margin-top: 50px;
+    margin-top: 50px;
 }
 .home .content h1{
     color: white;
@@ -177,60 +177,14 @@
     font-weight: 550;
     text-shadow: 0px 1px 1px black;
     margin-top: 5px;
-}
-.home .content h5{
-    margin-top: 30px;
-    align-items: center;
-    color: #869791;
-}
-.title h3{
-    color: wheat;
-    margin-top: 30px;
-    align-content: center;
-}
-.changecontent::after{
-    content: ' ';
-    color: #ffa500;
-    text-shadow: 0px 1px 1px black;
-    animation: changetext 10s infinite linear;
-}
-@keyframes changetext{
-    0%{content: "Anuradhapura";}
-    10%{content: "Sigiriya";}
-    20%{content: " Kandy";}
-    30%{content: "Galle";}
-    40%{content: "Jaffna";}
-    50%{content: "Nuwara Eliya";}
-    60%{content: "Trincomalee";}
-    70%{content: "Colombo";}
-    80%{content: "hambantota";}
-    90%{content: "Polonnaruwa";}
-    100%{content: "Anuradhapura";}
+    text-align: center;
 }
 
-.home .content p{
-    color: #869791;
-    font-size: 17px;
-    font-weight: 600;
-    text-shadow: 0px 1px 1px black;
-    margin-bottom: 30px;
-    margin-top: 60px;
-    font-family: "Century Gothic";
-}
-.home .content a{
-    padding: 10px;
-    background: white;
-    color: black;
-    letter-spacing: 2px;
-    font-weight: 550;
-    border-radius: 5px;
-    text-decoration: none;
-    transition: 0.5s;
-}
-.home .content a:hover{
-    background: #ffa500;
-    color: white;
-}
+
+
+
+
+
 
 
 /*** Section Title ***/
@@ -318,7 +272,7 @@
 
 /*** Booking ***/
 .booking {
-    background: linear-gradient(rgba(15, 23, 43, .7), rgba(15, 23, 43, .7)), url(../img/booking.jpg);
+    background: linear-gradient(rgba(15, 23, 43, .7), rgba(15, 23, 43, .7)), url("https://img.freepik.com/free-vector/realistic-travel-background-with-elements_52683-77784.jpg?size=626&ext=jpg");
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
