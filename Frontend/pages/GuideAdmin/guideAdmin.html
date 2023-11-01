@@ -98,10 +98,10 @@
                                 <ul class="nav navbar-nav flex-row ml-auto">
                                     <li class="nav-item dropdown">
                                         <a class="nav-link" href="#" data-toggle="dropdown">
-                                            <img src="img/user.jpg" style="width:40px; border-radius:50%;"/>
+                                            <img src="img/user.jpg" id="guide_admin_main_pg_profile_img" alt="profileimage" style="width:40px; border-radius:50%;"/>
                                             <span class="xp-user-live"></span>
                                         </a>
-                                        <ul class="dropdown-menu small-menu">
+                                        <ul class="dropdown-menu small-menu" data-bs-toggle="modal" data-bs-target="#profile-setting-model">
                                             <li>
                                                 <a href="#">
                                                     <span class="material-icons">
@@ -368,6 +368,91 @@
                     </div>
                 </div>
             </div>
+            <!--main window - profile settings model-->
+            <!-- Model -->
+            <div class="modal fade" id="profile-setting-model" tabindex="-1" aria-hidden="true" data-bs-backdrop="static" data-bs-keyboard="false">
+                <div class="modal-dialog ">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="dd">Profile Settings</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="mb-4">
+                                <div class="row text-center">
+                                    <div class="col-xs-6 text-center" style="margin-top: 10px;">
+                                        <div class="p_s_image_holder">
+                                            <img src="img/user.jpg" width="300" height="310" class="product-image" id="p_s_image" style="border: 1px solid #000; border-radius: 50%; filter: brightness(90%)" alt="">
+                                            <input id="p_s_image_input" class="form-control" type="file" accept=".jpg, .jpeg, .webp" style="background-color: #e5f1f8; border-color: #112D4E; border-width: 1.5px; width: 250px; margin-left: 24.5%">
+                                            <div class="valid-feedback" id="img-valid-feedback">
+                                                Looks good!
+                                            </div>
+                                            <div class="invalid-feedback" id="img-invalid-feedback">
+                                                Please choose a valid image (JPG, JPEG, PNG, or GIF format) and ensure the file size is less than 2MB.
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mb-4">
+                                <label for="p_s_username" class="form-label">Username</label>
+                                <input type="text" class="form-control" id="p_s_username" style="width: 100%; background-color: #f1e5f8; border-color: #112D4E; border-width: 1.5px">
+                                <div class="invalid-feedback">
+                                    *Starts with an uppercase letter, followed by one or more lowercase letters.
+                                    *Can contain one or more spaces, followed by an uppercase letter, followed by one or more lowercase letters.
+                                    *Examples: John Doe, Jane M. Doe, Peter B. Brown
+                                </div>
+                            </div>
+                            <div class="mb-4">
+                                <label for="p_s_nameinitial" class="form-label">Name with Initial</label>
+                                <input type="text" class="form-control" id="p_s_nameinitial" style="width: 100%; background-color: #f1e5f8; border-color: #112D4E; border-width: 1.5px">
+                                <div class="invalid-feedback">
+                                    *Starts with an uppercase letter, followed by one or more lowercase letters.
+                                    *Can contain one or more spaces, followed by an uppercase letter, followed by one or more lowercase letters.
+                                    *Examples: John Doe, Jane M. Doe, Peter B. Brown
+                                </div>
+                            </div>
+                            <div class="mb-4">
+                                <label for="p_s_password" class="form-label">Create Password</label>
+                                <input type="password" class="form-control" id="p_s_password" style="width: 100%; background-color: #f1e5f8; border-color: #112D4E; border-width: 1.5px">
+                                <div class="invalid-feedback">
+                                    *Use a secure password with a combination of uppercase, lowercase, numbers, and special characters.
+                                </div>
+                            </div>
+                            <div class="mb-4">
+                                <label for="p_s_email" class="form-label">Email</label>
+                                <input type="email" class="form-control" id="p_s_email" style="width: 100%; background-color: #f1e5f8; border-color: #112D4E; border-width: 1.5px">
+                                <div class="invalid-feedback">
+                                    *Please enter a valid email address.
+                                </div>
+                            </div>
+                            <div class="mb-4">
+                                <label for="p_s_address" class="form-label">Physical Address</label>
+                                <input type="text" class="form-control" id="p_s_address" style="width: 100%; background-color: #f1e5f8; border-color: #112D4E; border-width: 1.5px">
+                                <div class="invalid-feedback">
+                                    *Starts with an uppercase letter, followed by one or more lowercase letters.
+                                    *Can contain one or more spaces, followed by an uppercase letter, followed by one or more lowercase letters.lowercase letters.
+                                    *Examples: John Doe ,Jane M. Doe ,Peter B. Brown
+                                </div>
+                            </div>
+                            <div class="mb-4">
+                                <label for="p_s_nic" class="form-label">NIC / Passport</label>
+                                <input type="text" class="form-control" id="p_s_nic" style="width: 100%; background-color: #f1e5f8; border-color: #112D4E; border-width: 1.5px">
+                                <div class="invalid-feedback">
+                                    *Starts with an uppercase letter, followed by one or more lowercase letters.
+                                    *Can contain one or more spaces, followed by an uppercase letter, followed by one or more lowercase letters.lowercase letters.
+                                    *Examples: John Doe ,Jane M. Doe ,Peter B. Brown
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-danger" data-bs-dismiss="modal" style="width: 10rem; height: 3rem">Close</button>
+                            <button type="button" class="btn btn-primary text-white" id="p_s_updateSettingbtn" onclick="saveUpdatedProfileSettings()" disabled style="width: 10rem; height: 3rem">Update Settings</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
             <!-- Delete Modal HTML -->
             <div id="deleteEmployeeModal" class="modal fade">
                 <div class="modal-dialog">
