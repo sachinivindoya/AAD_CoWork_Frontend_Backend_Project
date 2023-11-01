@@ -178,7 +178,7 @@
                                     <a href="#editEmployeeModal" class="edit" data-toggle="modal">
                                         <i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i>
                                     </a>
-                                    <a href="#deleteEmployeeModal" class="delete" data-toggle="modal">
+                                    <a href="#deleteGuideModal" class="delete" data-toggle="modal">
                                         <i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i>
                                     </a>
                                 </td>
@@ -196,7 +196,7 @@
                                     <a href="#editEmployeeModal" class="edit" data-toggle="modal">
                                         <i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i>
                                     </a>
-                                    <a href="#deleteEmployeeModal" class="delete" data-toggle="modal">
+                                    <a href="#deleteGuideModal" class="delete" data-toggle="modal">
                                         <i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i>
                                     </a>
                                 </td>
@@ -214,7 +214,7 @@
                                     <a href="#editEmployeeModal" class="edit" data-toggle="modal">
                                         <i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i>
                                     </a>
-                                    <a href="#deleteEmployeeModal" class="delete" data-toggle="modal">
+                                    <a href="#deleteGuideModal" class="delete" data-toggle="modal">
                                         <i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i>
                                     </a>
                                 </td>
@@ -384,8 +384,8 @@
                                 <div class="row text-center">
                                     <div class="col-xs-6 text-center" style="margin-top: 10px;">
                                         <div class="p_s_image_holder">
-                                            <img src="img/user.jpg" width="300" height="310" class="product-image" id="p_s_image" style="border: 1px solid #000; border-radius: 50%; filter: brightness(90%)" alt="">
-                                            <input id="p_s_image_input" class="form-control" type="file" accept=".jpg, .jpeg, .webp" style="background-color: #e5f1f8; border-color: #112D4E; border-width: 1.5px; width: 250px; margin-left: 24.5%">
+                                            <img src="img/user.jpg" width="250" height="250" class="product-image" id="p_s_image" style="border: 1px solid #000; border-radius: 50%; filter: brightness(90%)" alt="">
+                                            <input id="p_s_image_input" class="form-control" type="file" accept=".jpg, .jpeg, .webp" style="background-color: #e5f1f8; border-color: #112D4E; border-width: 1.5px; width: 250px; margin-left:15%; margin-top: 10px">
                                             <div class="valid-feedback" id="img-valid-feedback">
                                                 Looks good!
                                             </div>
@@ -449,19 +449,19 @@
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-danger" data-bs-dismiss="modal" style="width: 10rem; height: 3rem">Close</button>
-                            <button type="button" class="btn btn-primary text-white" id="p_s_updateSettingbtn" onclick="saveUpdatedProfileSettings()" disabled style="width: 10rem; height: 3rem">Update Settings</button>
+                            <button type="button" class="btn btn-success text-white" id="p_s_updateSettingbtn" onclick="saveUpdatedProfileSettings()" disabled style="width: 10rem; height: 3rem">Update Settings</button>
                         </div>
                     </div>
                 </div>
             </div>
 
             <!-- Delete Modal HTML -->
-            <div id="deleteEmployeeModal" class="modal fade">
+            <div id="deleteGuideModal" class="modal fade">
                 <div class="modal-dialog">
                     <div class="modal-content">
                         <form>
                             <div class="modal-header">
-                                <h4 class="modal-title">Delete Employee</h4>
+                                <h4 class="modal-title">Delete Guide</h4>
                                 <button type="button" class="close" data-dismiss="modal"
                                         aria-hidden="true">&times;
                                 </button>
