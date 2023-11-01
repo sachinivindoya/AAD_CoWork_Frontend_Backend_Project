@@ -45,22 +45,22 @@
             <h3><img src="img/logo2.png" class="img-fluid"/><span>Next Travel</span></h3>
         </div>
         <ul class="list-unstyled components">
-            <li  class="active">
+            <li  class="active" onclick="openHomeContainer()">
                 <a href="#" class="dashboard"><i class="material-icons">dashboard</i>
                     <span>Dashboard</span></a>
             </li>
 
-            <li  class="">
+            <li  class="" onclick="openGuideContainer()">
                 <a href="#"><i class="material-icons">people</i><span> guides
 					</span></a>
             </li>
 
-            <li  class="">
+            <li  class="" onclick="openReportsContainer()">
                 <a href="#"><i class="material-icons">book</i><span> Reports
 					</span></a>
             </li>
 
-            <li  class="">
+            <li  class="" onclick="openCalenderContainer()">
                 <a href="#"><i class="material-icons">library_books</i><span>Calender
 					</span></a>
             </li>
@@ -132,6 +132,7 @@
                     <p id="g_a_time" style="color: rgba(227,225,225,0.64); font-size: 16px">5.56AM 10/08/2023</p>
             </div>
         </div>
+<!--  =============================================================================================================      -->
         <!-- main-content  -->
         <div class="main-content">
             <div class="row">
@@ -221,156 +222,12 @@
                             </tr>
                             </tbody>
                         </table>
-                        <!--                        <div class="clearfix">-->
-                        <!--                            <div class="hint-text">Showing <b>5</b> out of <b>25</b> entries</div>-->
-                        <!--                            <ul class="pagination">-->
-                        <!--                                <li class="page-item disabled"><a href="#">Previous</a></li>-->
-                        <!--                                <li class="page-item"><a href="#" class="page-link">1</a></li>-->
-                        <!--                                <li class="page-item"><a href="#" class="page-link">2</a></li>-->
-                        <!--                                <li class="page-item active"><a href="#" class="page-link">3</a></li>-->
-                        <!--                                <li class="page-item"><a href="#" class="page-link">4</a></li>-->
-                        <!--                                <li class="page-item"><a href="#" class="page-link">5</a></li>-->
-                        <!--                                <li class="page-item"><a href="#" class="page-link">Next</a></li>-->
-                        <!--                            </ul>-->
-                        <!--                        </div>-->
                     </div>
                 </div>
             </div>
 
-            <!-- Edit Modal HTML -->
-            <div id="addEmployeeModal" class="modal fade">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <form>
-                            <div class="modal-header">
-                                <h4 class="modal-title">Add New Vehicle </h4>
-                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                            </div>
-                            <div class="modal-body">
-                                <form >
-                                    <!-- <h1 style="color: #ffc107; padding-bottom: 2px"  >Create Account</h1>-->
 
-                                    <!-- name -->
-                                    <div class="mb-4">
-                                        <label for="name" class="form-label">Name</label>
-                                        <input type="text" class="form-control input" id="name" required="required">
-                                    </div>
-
-                                    <!-- address -->
-                                    <div class="mb-4">
-                                        <label for="address" class="form-label">Address</label>
-                                        <input type="text" class="form-control" id="address" required="required">
-                                    </div>
-
-                                    <!-- NIC -->
-                                    <div class="mb-4">
-                                        <label for="nic_or_passport" class="form-label">NIC or Passport</label>
-                                        <input type="text" class="form-control" id="nic_or_passport" required="required">
-                                    </div>
-
-
-                                    <!-- email -->
-                                    <div class="mb-4">
-                                        <label for="email" class="form-label">Email</label>
-                                        <input type="email" class="form-control" id="email" required="required">
-                                    </div>
-
-                                    <!-- username -->
-                                    <div class="mb-4">
-                                        <label for="username" class="form-label">Username</label>
-                                        <input type="text" class="form-control" id="username" required="required">
-                                    </div>
-
-                                    <!-- password -->
-                                    <div class="mb-4">
-                                        <label for="password" class="form-label">Password</label>
-                                        <input type="password" class="form-control" id="password"  required="required">
-                                        <p style="color: #ffc107"> should contain 8 characters. 2 upper letters, 2 lower letters, 2 numbers, 2 special characters</p>
-                                    </div>
-
-                                    <!-- profile picture -->
-                                    <div class="mb-4">
-                                        <label for="profile_image" class="form-label">Profile Image</label>
-                                        <input class="form-control" type="file" id="profile_image" accept=".jpg, .jpeg, .webp .png .gif" required="required">
-                                    </div>
-                                </form>
-                            </div>
-                            <div class="modal-footer">
-                                <input type="button" class="btn btn-default" data-dismiss="modal" value="Cancel">
-                                <button type="button" class="btn-success" id="addBtn" onclick="addUserBtnOnAction()">Add</button>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-            <!-- Edit Modal HTML -->
-            <div id="editEmployeeModal" class="modal fade">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <form>
-                            <div class="modal-header">
-                                <h4 class="modal-title">Edit Employee</h4>
-                                <button type="button" class="close" data-dismiss="modal"
-                                        aria-hidden="true">&times;</button>
-                            </div>
-                            <div class="modal-body">
-                                <form >
-                                    <!-- <h1 style="color: #ffc107; padding-bottom: 2px"  >Create Account</h1>-->
-
-                                    <!-- name -->
-                                    <div class="mb-4">
-                                        <label for="update_name" class="form-label">Name</label>
-                                        <input type="text" class="form-control input" id="update_name" required="required">
-                                    </div>
-
-                                    <!-- address -->
-                                    <div class="mb-4">
-                                        <label for="update_address" class="form-label">Address</label>
-                                        <input type="text" class="form-control" id="update_address" required="required">
-                                    </div>
-
-                                    <!-- NIC -->
-                                    <div class="mb-4">
-                                        <label for="update_nic_or_passport" class="form-label">NIC or Passport</label>
-                                        <input type="text" class="form-control" id="update_nic_or_passport" required="required">
-                                    </div>
-
-
-                                    <!-- email -->
-                                    <div class="mb-4">
-                                        <label for="update_email" class="form-label">Email</label>
-                                        <input type="email" class="form-control" id="update_email" required="required">
-                                    </div>
-
-                                    <!-- username -->
-                                    <div class="mb-4">
-                                        <label for="update_username" class="form-label">Username</label>
-                                        <input type="text" class="form-control" id="update_username" required="required">
-                                    </div>
-
-                                    <!-- password -->
-                                    <div class="mb-4">
-                                        <label for="update_password" class="form-label">Password</label>
-                                        <input type="password" class="form-control" id="update_password"  required="required">
-                                        <p style="color: #ffc107"> should contain 8 characters. 2 upper letters, 2 lower letters, 2 numbers, 2 special characters</p>
-                                    </div>
-
-                                    <!-- profile picture -->
-                                    <div class="mb-4">
-                                        <label for="updateprofile_image" class="form-label">Profile Image</label>
-                                        <input class="form-control" type="file" id="updateprofile_image" accept=".jpg, .jpeg, .webp .png .gif" required="required">
-                                    </div>
-                                </form>
-                            </div>
-                            <div class="modal-footer">
-                                <input type="button" class="btn btn-default" data-dismiss="modal" value="Cancel">
-                                <input type="submit" class="btn btn-info" value="Save">
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-            <!--main window - profile settings model-->
+                  <!--main window - profile settings model-->
             <!-- Model -->
             <div class="modal fade" id="profile-setting-model" tabindex="-1" aria-hidden="true" data-bs-backdrop="static" data-bs-keyboard="false">
                 <div class="modal-dialog ">

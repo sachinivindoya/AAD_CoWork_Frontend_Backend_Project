@@ -169,7 +169,6 @@ profileImageInput.onchange = () => {
             profileImageInput.classList.add('is-valid');
             mvalidFeedback.css('display', 'block');
             minvalidFeedback.css('display', 'none');
-
             pstxtfld7 = true;
 
             settingUpdateBtnTrigger();//trigger to enable
@@ -178,9 +177,7 @@ profileImageInput.onchange = () => {
             profileImageInput.classList.add('is-invalid');
             minvalidFeedback.css('display', 'block');
             mvalidFeedback.css('display', 'none');
-
             pstxtfld7 = false;
-
             settingUpdateBtnTrigger();//trigger to enable
         }
     }
@@ -219,4 +216,38 @@ function settingUpdateBtnTrigger(){
 
 function saveUpdatedProfileSettings() {
 
+}
+
+//----------------- navigation
+
+const home_container = $("#home_container");
+const guide_container = $("#guide_container");
+const reports_container = $("#reports_container");
+const calenders_container = $("#calenders_container");
+
+function hideAllContainers(){
+    home_container.css('display','none');
+    guide_container.css('display','none');
+    reports_container.css('display','none');
+    calenders_container.css('display','none');
+}
+
+ function openHomeContainer(){
+    hideAllContainers();
+     home_container.css('display','block');
+}
+
+function openGuideContainer(){
+    hideAllContainers();
+    guide_container.css('display','block');
+}
+
+function openReportsContainer(){
+    hideAllContainers();
+    reports_container.css('display','block');
+}
+
+function openCalenderContainer(){
+    hideAllContainers();
+    calenders_container.css('display','block');
 }
