@@ -1,7 +1,7 @@
 /********** Template CSS **********/
 :root {
-    --primary: #13e3e3;
-    --secondary: #13e3e3;
+    --primary: rgba(250, 172, 5, 0.89);
+    --secondary:  rgba(250, 172, 5, 0.89); ;
     --light: #F5F5F5;
     --dark: #14141F;
 }
@@ -163,11 +163,13 @@
 
 /*** Hero Header ***/
 .home {
-    background: linear-gradient(rgba(51, 51, 67, 0.7), rgba(50, 50, 63, 0.64)), url("https://img.freepik.com/premium-photo/suitcase-with-travel-accessories-background_916191-42317.jpg");
+
+    background: linear-gradient(rgba(51, 51, 67, 0.7), rgb(10, 3, 0)), url("https://www.bordersofadventure.com/wp-content/uploads/2015/02/Screen-Shot-2015-02-02-at-17.20.30.png");
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
     min-height: 100vh;
+
 }
 
 .breadcrumb-item + .breadcrumb-item::before {
