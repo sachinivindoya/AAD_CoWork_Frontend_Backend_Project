@@ -220,13 +220,13 @@ function saveUpdatedProfileSettings() {
 
 //----------------- navigation
 
-const home_container = $("#home_container");
+const dashboard_container_guide = $("#dashboard_container_guide");
 const guide_container = $("#guide_container");
 const reports_container = $("#reports_container");
 const calenders_container = $("#calenders_container");
 
 function hideAllContainers(){
-    home_container.css('display','none');
+    dashboard_container_guide.css('display','none');
     guide_container.css('display','none');
     reports_container.css('display','none');
     calenders_container.css('display','none');
@@ -234,7 +234,7 @@ function hideAllContainers(){
 
  function openHomeContainer(){
     hideAllContainers();
-     home_container.css('display','block');
+     dashboard_container_guide.css('display','block');
 }
 
 function openGuideContainer(){
