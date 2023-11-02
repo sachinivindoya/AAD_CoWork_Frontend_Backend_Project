@@ -396,8 +396,58 @@ g_a_a_nic.on('keyup', function () {
     }
 });
 
+function isTellRegaxChecked(text) {
+    const regex = /^(?:7|0|(?:\+94))[0-9]{9,10}$/;
+    return regex.test(text);
+}
 
+g_a_a_tell.on('keyup', function () {
+    if(isTellRegaxChecked(g_a_a_tell.val())){
+        g_a_a_tell.removeClass('is-invalid');
+        g_a_a_tell.addClass('is-valid');
+        g_a_a_fld_4=true;
+        addGuideSaveBtnIsEnableTrigger();
+    }else{
+        g_a_a_tell.addClass('is-invalid');
+        g_a_a_tell.removeClass('is-valid');
+        g_a_a_fld_4=false;
+        addGuideSaveBtnIsEnableTrigger();
+    }
+});
 
+function isOnlyNumberRegaxChecked(text) {
+    const regex = /^(?=.*[0-9]).*$/;
+    return regex.test(text);
+    //Enter your valid Srilankan Telephone number.
+    //Ex:- 10 / 4
+}
+g_a_a_experience.on('keyup', function () {
+    if(isOnlyNumberRegaxChecked(g_a_a_experience.val())){
+        g_a_a_experience.removeClass('is-invalid');
+        g_a_a_experience.addClass('is-valid');
+        g_a_a_fld_5=true;
+        addGuideSaveBtnIsEnableTrigger();
+    }else{
+        g_a_a_experience.addClass('is-invalid');
+        g_a_a_experience.removeClass('is-valid');
+        g_a_a_fld_5=false;
+        addGuideSaveBtnIsEnableTrigger();
+    }
+});
+
+g_a_a_experience.on('keyup', function () {
+    if(isOnlyNumberRegaxChecked(g_a_a_experience.val())){
+        g_a_a_experience.removeClass('is-invalid');
+        g_a_a_experience.addClass('is-valid');
+        g_a_a_fld_5=true;
+        addGuideSaveBtnIsEnableTrigger();
+    }else{
+        g_a_a_experience.addClass('is-invalid');
+        g_a_a_experience.removeClass('is-valid');
+        g_a_a_fld_5=false;
+        addGuideSaveBtnIsEnableTrigger();
+    }
+});
 
 
 
