@@ -337,6 +337,61 @@ $(document).ready(function() {
 
 
 
+//----------------------------------New Guide container -add guide from - validation all fields-------------------
+let g_a_a_fld_1 = false;
+let g_a_a_fld_2 = false;
+let g_a_a_fld_3 = false;
+let g_a_a_fld_4 = false;
+let g_a_a_fld_5 = false;
+let g_a_a_fld_6 = false;
+let g_a_a_fld_7 = false;
+let g_a_a_fld_8 = false;
+let g_a_a_fld_9 = false;
+let g_a_a_fld_10 = false;
+let g_a_a_fld_11 = false;
+let g_a_a_fld_12 = false;
+
+
+//validate txt flds
+g_a_a_name.on('keyup', function () {
+    if(isP_S_nameCheckRegex(g_a_a_name.val())){
+        g_a_a_name.removeClass('is-invalid');
+        g_a_a_name.addClass('is-valid');
+        g_a_a_fld_1=true;
+        addGuideSaveBtnIsEnableTrigger();
+    }else{
+        g_a_a_name.addClass('is-invalid');
+        g_a_a_name.removeClass('is-valid');
+        g_a_a_fld_1=false;
+        addGuideSaveBtnIsEnableTrigger();
+    }
+});
+
+
+
+
+
+
+
+
+
+
+
+
+function addGuideSaveBtnIsEnableTrigger(){
+    if(g_a_a_fld_1===true && g_a_a_fld_2===true && g_a_a_fld_3===true && g_a_a_fld_4===true && g_a_a_fld_5===true && g_a_a_fld_6===true && g_a_a_fld_7===true && g_a_a_fld_8===true && g_a_a_fld_9===true && g_a_a_fld_10===true&& g_a_a_fld_11===true && g_a_a_fld_12===true){
+        g_a_a_savebtn.prop("disabled", false);
+    }else {
+        g_a_a_savebtn.prop("disabled", true);
+    }
+}
+
+
+
+
+
+
+
 function saveNewGuideBtnClicked(){
 
     var newGuideDTO = new GuideDTO(
