@@ -363,9 +363,45 @@
                 </div>
             </div>
         </div>
+<!-- ===========================================LOADING MODEL ==================== -->
+
+        <!-- loading window -->
+        <!-- use Modal -->
+        <div class="modal fade" id="guide_admin_main_pg-loading-model" tabindex="-1" role="dialog" aria-hidden="true" data-bs-backdrop='static' style="background-color: rgba(0,0,0,0); backdrop-filter: blur(6px)">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <!--          <div class="modal-header">-->
+                    <!--            -->
+                    <!--          </div>-->
+                    <div class="modal-body text-center" style="background-color: #40513B">
+                        <img src="assets/images/guidelogogif.gif" class="img-fluid" alt="Responsive image" style="width: 60%; height: 60%">
+                        <h6 class="modal-title text-white" id="exampleModalLongTitle">Please Wait... </h6>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- alert window -->
+        <!-- Modal -->
+        <div class="modal fade" id="alert-model" tabindex="-1" role="dialog"  aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="alert-model-title">title</h5>
+                    </div>
+                    <div class="modal-body">
+                        <p class="modal-dialog-centered" id="alert-model-content">content</p>
+                    </div>
+                    <div class="modal-footer ">
+                        <button type="button" class="btn btn-primary bg-success w-25" onclick="closeAlerModel()" id="alert-model-btn"> Ok </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
 
         <!-- ======================================================================================================================       -->
-              <!--main window - profile settings model-->
+              >
             <!-- Model -->
             <div class="modal fade" id="profile-setting-model" tabindex="-1" aria-hidden="true" data-bs-backdrop="static" data-bs-keyboard="false">
                 <div class="modal-dialog ">
