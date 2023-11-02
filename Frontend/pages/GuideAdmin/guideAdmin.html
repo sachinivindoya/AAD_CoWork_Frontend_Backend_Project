@@ -45,7 +45,7 @@
             <h3><img src="img/logo2.png" class="img-fluid"/><span>Next Travel</span></h3>
         </div>
         <ul class="list-unstyled components">
-            <li  class="active" onclick="openHomeContainer()">
+            <li  class="" onclick="openHomeContainer()">
                 <a href="#" class="dashboard"><i class="material-icons">dashboard</i>
                     <span>Dashboard</span></a>
             </li>
@@ -190,7 +190,7 @@
                                     <h2 class="ml-lg-2">Manage Guide</h2>
                                 </div>
                                 <div class="col-sm-6 p-0 d-flex justify-content-lg-end justify-content-center">
-                                    <a href="#guide-manage-container-add-client-model"  class="btn btn-success" data-toggle="modal">
+                                    <a href="#guide-manage-container-add-client-model"  class="btn btn-success"  id="addNewGuidBtn"   data-toggle="modal">
                                         <i class="material-icons">&#xE147;</i>
                                         <span>Add New Guide</span>
                                     </a>
@@ -229,8 +229,8 @@
 
 <!-- ==================================================================================================================== -->
 
-        <!--main window - profile settings model-->
-        <!-- Model -->
+
+        <!-- guide -->
         <div class="modal fade" id="guide-manage-container-add-client-model" tabindex="-1" aria-hidden="true" data-bs-backdrop="static" data-bs-keyboard="false">
             <div class="modal-dialog ">
                 <div class="modal-content" style="width: 650px">
@@ -329,7 +329,7 @@
                                 <option value="trans">Trans</option>
                             </select>
                             <div class="invalid-feedback">
-                                *Select gender here... Male or Femlae
+                                *Select gender here... Male or Female
                             </div>
                         </div>
                         <br>
@@ -480,6 +480,8 @@
 <!-- Optional JavaScript -->
 
 <script src="customJs/guideAdmin.js"></script>
+<script src="customJs/db/localGuideDB.js"></script>
+<script src="customJs/dto/GuideDTO.js"></script>
 
 <script type="text/javascript">
 

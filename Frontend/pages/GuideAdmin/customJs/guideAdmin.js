@@ -224,6 +224,8 @@ const dashboard_container_guide = $("#dashboard_container_guide");
 const guide_container = $("#guide_container");
 const reports_container = $("#reports_container");
 const calenders_container = $("#calenders_container");
+const addNewGuidBtn = $("#addNewGuidBtn");
+
 
 function hideAllContainers(){
     dashboard_container_guide.css('display','none');
@@ -233,16 +235,22 @@ function hideAllContainers(){
 }
 
  function openHomeContainer(){
+     localStorage.setItem("guide_admin_console_current_state", "home");
     hideAllContainers();
      dashboard_container_guide.css('display','block');
 }
 
+
 function openGuideContainer(){
+    localStorage.setItem("guide_admin_console_current_state", "view_guide");
     hideAllContainers();
     guide_container.css('display','block');
+    loadDataAfterOpenedViewGuideContainer();
+
 }
 
 function openReportsContainer(){
+    localStorage.setItem("guide_admin_console_current_state", "review_guide");
     hideAllContainers();
     reports_container.css('display','block');
 }
@@ -251,6 +259,20 @@ function openCalenderContainer(){
     hideAllContainers();
     calenders_container.css('display','block');
 }
+
+//default state
+$(document).ready(function(){
+    if(localStorage.getItem("guide_admin_console_current_state")==="home"){
+        openHomeContainer();
+    }else if(localStorage.getItem("guide_admin_console_current_state")==="view_guide"){
+        openGuideContainer();
+    }else if(localStorage.getItem("guide_admin_console_current_state")==="review_guide"){
+        openReportsContainer();
+    }else {
+        openHomeContainer();
+    }
+});
+
 
 
 //---------------------------------------------New Guide container - add guide from - save Btn Clicked send data into server-----------------------------
@@ -633,3 +655,110 @@ function saveNewGuideBtnClicked(){
     GuideObjsLocalDB.push(newGuideDTO);
 
 }
+
+
+//load data
+function loadDataAfterOpenedViewGuideContainer(){
+    //ajax request and load data into local GuideObjsLocalDB------
+
+    //-----------------------------------------------
+
+    //-----------------load data into table
+    //clear table
+    $("#adminTableBody").html("");
+
+    //add data into table
+    GuideObjsLocalDB.forEach(function(guide) {
+        var newRow = $("<tr></tr>");
+
+        newRow.html(`
+        <td>
+            <p class="fw-normal mb-1">${guide.getGuideName()}</p>
+        </td>
+        <td>
+            <div class="d-flex align-items-center">
+                <img src="${guide.getGuideProfileimage()}" alt="" style="width: 60px; height: 60px" class="rounded-circle" />
+                <div class="ms-3">
+                    <p class="fw-bold mb-1">${guide.getGuideName()}</p>
+                </div>
+            </div>
+        </td>
+        <td>
+            <p class="fw-normal mb-1">${guide.getGuideAddress()}</p>
+        </td>
+        <td>
+            <p class="fw-normal mb-1">${guide.getGuideNic()}</p>
+        </td>
+        <td>
+            <p class="fw-normal mb-1">${guide.getGuideTell()}</p>
+        </td>
+        <td>
+            <p class="fw-normal mb-1">${guide.getGuideExperience()}</p>
+        </td>
+        <td>
+            <p class="text-muted mb-1">${guide.getGuideDob()}</p>
+        </td>
+        <td>
+            <p class="fw-normal mb-1">${guide.getGuidePerdayfee()}</p>
+        </td>
+        <td>
+            <p class="fw-normal mb-1">${guide.getGuideRemarks()}</p>
+        </td>
+        <td>
+            <p class="fw-normal mb-1">${guide.getGuideGender()}</p>
+        </td>
+        <td>
+            <div class="d-flex align-items-center">
+                <img src="${guide.getGuideNicfrontimage()}" alt="" style="width: 280px; height: 140px" />
+            </div>
+        </td>
+        <td>
+            <div class="d-flex align-items-center">
+                <img src="${guide.getGuideNicrearimage()}" alt="" style="width: 280px; height: 140px" />
+            </div>
+        </td>
+        <td>
+              <a href="#editEmployeeModal" class="edit" data-toggle="modal">
+                   <i class="material-icons" data-toggle="tooltip" title="Edit" data-guide-id="${guide.getGuideID()}">&#xE254;</i>
+              </a>
+               <a href="#deleteEmployeeModal" class="delete" data-toggle="modal">
+                   <i class="material-icons" data-toggle="tooltip" title="Delete" data-guide-id="${guide.getGuideID()}">&#xE872;</i>
+               </a>
+            </td>
+    `);
+
+        $("#guideTableBody").append(newRow);
+    });
+
+}
+
+//--------------------------Edit & Delete Guide on Guide Table---------------------
+// Event listener for Edit button
+// Event listener for Edit button
+$(document).on("click", ".edit-btn", function() {
+    var guideId = $(this).data("guide-id");
+    console.log("edited", guideId);
+    var guideToEdit = GuideObjsLocalDB.find(guide => guide.getGuideID() === guideId);
+
+    if (guideToEdit) {
+        console.log("Name:", guideToEdit.getGuideName());
+        // Perform edit actions if guideToEdit is found
+    } else {
+        console.log("Guide not found for ID:", guideId);
+    }
+});
+
+$(document).on("click", ".delete-btn", function() {
+    var guideId = $(this).data("guide-id");
+    console.log("Deleted", guideId);
+    var guideToDelete = GuideObjsLocalDB.find(guide => guide.getGuideID() === guideId);
+
+    if (guideToDelete) {
+        console.log("Name:", guideToDelete.getGuideName());
+        // Perform delete actions if guideToDelete is found
+    } else {
+        console.log("Guide not found for ID:", guideId);
+    }
+});
+
+
