@@ -251,3 +251,114 @@ function openCalenderContainer(){
     hideAllContainers();
     calenders_container.css('display','block');
 }
+
+
+//---------------------------------------------New Guide container - add guide from - save Btn Clicked send data into server-----------------------------
+
+//add guide
+const g_a_a_name = $('#g_a_a_name');
+const g_a_a_address = $('#g_a_a_address');
+const g_a_a_nic = $('#g_a_a_nic');
+const g_a_a_tell = $('#g_a_a_tell');
+const g_a_a_experience = $('#g_a_a_experience');
+const g_a_a_age = $('#g_a_a_age');
+const g_a_a_perdayfee = $('#g_a_a_perdayfee');
+const g_a_a_remarks = $('#g_a_a_remarks');
+const g_a_a_gender = $('#g_a_a_gender');
+const g_a_a_image = $('#g_a_a_image');
+const g_a_a_image_input = $('#g_a_a_image_input');
+const g_a_a_nic_front_image = $('#g_a_a_nic_front_image');
+const g_a_a_nic_front_image_input = $('#g_a_a_nic_front_image_input');
+const g_a_a_nic_rear_image = $('#g_a_a_nic_rear_image');
+const g_a_a_nic_rear_image_input = $('#g_a_a_nic_rear_image_input');
+const g_a_a_savebtn = $('#g_a_a_savebtn');
+var guideImage_Base64String = "";
+var guidNICFrontImage_Base64String = "";
+var guidNOCRearImage_Base64String = "";
+
+
+$(document).ready(function() {
+    g_a_a_image_input.on('change', function () {
+        var newImageFile = this.files[0]; // Get the file when a change occurs in the input
+        if (newImageFile) { // Check if a file is selected
+            var reader = new FileReader();
+            var baseString;
+            reader.onload = function () {
+                baseString = reader.result;
+                g_a_a_image.attr('src', baseString);
+                guideImage_Base64String = baseString;
+            };
+            reader.readAsDataURL(newImageFile);
+        } else {
+            console.error('No file selected');
+        }
+    });
+});
+
+
+//----------------------------------New Guide container -add guide from - guide ID front view image set to view if select using base64--------------------
+$(document).ready(function() {
+    g_a_a_nic_front_image_input.on('change', function () {
+        var newImageFile = this.files[0]; // Get the file when a change occurs in the input
+        if (newImageFile) { // Check if a file is selected
+            var reader = new FileReader();
+            var baseString;
+            reader.onload = function () {
+                baseString = reader.result;
+                g_a_a_nic_front_image.attr('src', baseString);
+                guidNICFrontImage_Base64String= baseString;
+            };
+            reader.readAsDataURL(newImageFile);
+        } else {
+            console.error('No file selected');
+        }
+    });
+});
+
+
+//----------------------------------New Guide container -add guide from - guide ID back view image set to view if select using base64--------------------
+$(document).ready(function() {
+    g_a_a_nic_rear_image_input.on('change', function () {
+        var newImageFile = this.files[0]; // Get the file when a change occurs in the input
+        if (newImageFile) { // Check if a file is selected
+            var reader = new FileReader();
+            var baseString;
+            reader.onload = function () {
+                baseString = reader.result;
+                g_a_a_nic_rear_image.attr('src', baseString);
+                guidNOCRearImage_Base64String = baseString;
+            };
+            reader.readAsDataURL(newImageFile);
+        } else {
+            console.error('No file selected');
+        }
+    });
+});
+
+
+
+function saveNewGuideBtnClicked(){
+
+    var newGuideDTO = new GuideDTO(
+        "U001",
+        g_a_a_name.val(),
+        g_a_a_address.val(),
+        g_a_a_nic.val(),
+        g_a_a_tell.val(),
+        g_a_a_experience.val(),
+        g_a_a_age.val(),
+        g_a_a_perdayfee.val(),
+        g_a_a_remarks.val(),
+        g_a_a_gender.val(),
+        guideImage_Base64String,
+        guidNICFrontImage_Base64String,
+        guidNOCRearImage_Base64String
+    );
+
+    //print console
+    newGuideDTO.toString();
+
+    //add into db testing for view table load data
+    GuideObjsLocalDB.push(newGuideDTO);
+
+}

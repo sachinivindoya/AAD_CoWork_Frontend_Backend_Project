@@ -233,10 +233,10 @@
         <!-- Model -->
         <div class="modal fade" id="guide-manage-container-add-client-model" tabindex="-1" aria-hidden="true" data-bs-backdrop="static" data-bs-keyboard="false">
             <div class="modal-dialog ">
-                <div class="modal-content">
+                <div class="modal-content" style="width: 650px">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="aa">Profile Settings</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        <h5 class="modal-title" id="aa">New Guide</h5>
+                        <button type="button" class="btn-close" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
                         <div class="mb-4">
@@ -245,7 +245,7 @@
                                     <div class='product-holder'>
                                         <br><br>
                                         <img src="img/user.jpg" width="250" height="250" class='product-image' id="g_a_a_image" style="border: 1px solid #000; border-radius: 50%; filter: brightness(90%)" alt="">
-                                        <input id="g_a_a_image_input" class="form-control" type="file" accept=".jpg, .jpeg, .webp" style="background-color: #EDF1D6; border-color: #EDF1D6; border-width: 1.5px; width: 250px; margin-left: 41%; margin-top: 10px">
+                                        <input id="g_a_a_image_input" class="form-control" type="file" accept=".jpg, .jpeg, .webp" style="background-color: #EDF1D6; border-color: #EDF1D6; border-width: 1.5px; width: 250px; margin-left: 30%; margin-top: 10px">
                                         <div class="valid-feedback" id="g_a_a_img-valid-feedback">
                                             Looks good!
                                         </div>
@@ -297,18 +297,68 @@
                             </div>
                         </div>
                         <div class="mb-4">
-                            <label for="p_s_nic" class="form-label">NIC / Passport</label>
-                            <input type="text" class="form-control" id="p_s_nic" style="width: 100%; background-color: #f1e5f8; border-color: #112D4E; border-width: 1.5px">
+                            <label for="g_a_a_age" class="form-label" style="margin-left: 39%">Birthday</label>
+                            <input placeholder="Birthday select here..." type="date" class="form-control" id="g_a_a_age" style="width: 85%; background-color: #EDF1D6; border-color: #EDF1D6; border-width: 1.5px">
                             <div class="invalid-feedback">
-                                *Starts with an uppercase letter, followed by one or more lowercase letters.
-                                *Can contain one or more spaces, followed by an uppercase letter, followed by one or more lowercase letters.lowercase letters.
-                                *Examples: John Doe ,Jane M. Doe ,Peter B. Brown
+                                *Enter your Birthday, which must included pattern like these example.
+                                *Ex:- year-month-day
+                            </div>
+                        </div>
+                        <div class="mb-4">
+                            <label for="g_a_a_perdayfee" class="form-label" style="margin-left: 38.5%">Per day fee</label>
+                            <input placeholder="Perday fee here..." type="number" class="form-control" id="g_a_a_perdayfee" style="width: 85%; background-color: #EDF1D6; border-color: #EDF1D6; border-width: 1.5px">
+                            <div class="invalid-feedback">
+                                *Enter only number value.
+                                *Ex:- 10 / 4
+                            </div>
+                        </div>
+                        <div class="mb-4">
+                            <label for="g_a_a_remarks" class="form-label" style="margin-left: 39%">Remarks</label>
+                            <input placeholder="Remarks here..." type="text" class="form-control" id="g_a_a_remarks" style="width: 85%; background-color: #EDF1D6; border-color: #EDF1D6; border-width: 1.5px">
+                            <div class="invalid-feedback">
+                                *Enter your Remarks, which must include letters, numbers, commas, spaces,pullstop.
+                                *Ex:- lorem lorem.
+                            </div>
+                        </div>
+                        <div class="mb-4">
+                            <label for="g_a_a_gender" class="form-label" style="margin-left: 39.5%">Gender</label>
+                            <select class="form-control" id="g_a_a_gender" style="width: 85%; background-color: #EDF1D6; border-color: #EDF1D6; border-width: 1.5px">
+                                <option value="">Select Gender here...</option>
+                                <option value="male">Male</option>
+                                <option value="female">Female</option>
+                                <option value="trans">Trans</option>
+                            </select>
+                            <div class="invalid-feedback">
+                                *Select gender here... Male or Femlae
+                            </div>
+                        </div>
+                        <br>
+                        <div class="mb-4 " style="display: flex; flex-direction: column; margin-left: 16%">
+                            <label for="g_a_a_nic_front_image" class="form-label" style="margin-left: 15%">NIC / Passport - Front View</label>
+                            <img src="img/frontnicimage.png"width="400" height="350"  id="g_a_a_nic_front_image" style="border: 0.5px solid #609966; border-radius: 1%; ">
+                            <input id="g_a_a_nic_front_image_input"  class="form-control" type="file" accept=".jpg, .jpeg, .webp" style="background-color: #EDF1D6; border: 1.5px solid #609966; width: 250px">
+                            <div class="valid-feedback" id="g_a_a_nic_frontimg-valid-feedback">
+                                Looks good!
+                            </div>
+                            <div class="invalid-feedback" id="g_a_a_nic_frontimg-invalid-feedback">
+                                Please choose a valid image (JPG, JPEG, PNG, or GIF format) and ensure the file size is less than 2MB.
+                            </div>
+                        </div>
+                        <br>
+                        <div class="mb-4" style="display: flex; flex-direction: column; margin-left: 16%">
+                            <label for="g_a_a_nic_rear_image" class="form-label" style="margin-left: 15%">NIC / Passport - Rear View</label>
+                            <img src="img/rearnicimage.png" width="400" height="350"  id="g_a_a_nic_rear_image" style="border: 0.5px solid #609966; border-radius: 1%; ">
+                            <input id="g_a_a_nic_rear_image_input"  class="form-control" type="file" accept=".jpg, .jpeg, .webp" style="background-color: #EDF1D6; border: 1.5px solid #609966; border-radius: 1%; width: 250px">
+                            <div class="valid-feedback" id="g_a_a_nic_rearimg-valid-feedback">
+                                Looks good!
+                            </div>
+                            <div class="invalid-feedback" id="g_a_a_nic_rearimg-invalid-feedback">
+                                Please choose a valid image (JPG, JPEG, PNG, or GIF format) and ensure the file size is less than 2MB.
                             </div>
                         </div>
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-danger" data-bs-dismiss="modal" style="width: 10rem; height: 3rem">Close</button>
-                        <button type="button" class="btn btn-success text-white" id="p_s_updateSettingbtn" onclick="saveUpdatedProfileSettings()" disabled style="width: 10rem; height: 3rem">Update Settings</button>
+                        <button type="button" class="btn btn-success  " id="g_a_a_savebtn" onclick="saveNewGuideBtnClicked()" disabled style="width: 15rem; height: 4rem; font-size: 1.4rem;">Save</button>
                     </div>
                 </div>
             </div>
