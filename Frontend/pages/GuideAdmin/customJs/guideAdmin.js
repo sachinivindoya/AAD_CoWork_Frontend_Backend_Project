@@ -368,8 +368,33 @@ g_a_a_name.on('keyup', function () {
 });
 
 
+g_a_a_address.on('keyup', function () {
+    if(isP_S_addressCheckRegex(g_a_a_address.val())){
+        g_a_a_address.removeClass('is-invalid');
+        g_a_a_address.addClass('is-valid');
+        g_a_a_fld_2=true;
+        addGuideSaveBtnIsEnableTrigger();
+    }else{
+        g_a_a_address.addClass('is-invalid');
+        g_a_a_address.removeClass('is-valid');
+        g_a_a_fld_2=false;
+        addGuideSaveBtnIsEnableTrigger();
+    }
+});
 
-
+g_a_a_nic.on('keyup', function () {
+    if(isP_S_nicCheckRegex(g_a_a_nic.val())){
+        g_a_a_nic.removeClass('is-invalid');
+        g_a_a_nic.addClass('is-valid');
+        g_a_a_fld_3=true;
+        addGuideSaveBtnIsEnableTrigger();
+    }else{
+        g_a_a_nic.addClass('is-invalid');
+        g_a_a_nic.removeClass('is-valid');
+        g_a_a_fld_3=false;
+        addGuideSaveBtnIsEnableTrigger();
+    }
+});
 
 
 
