@@ -1,6 +1,7 @@
 package lk.nexttravel.user_service.dto;
 
 import lombok.*;
+import org.springframework.data.annotation.Id;
 import org.springframework.stereotype.Component;
 
 /**
@@ -17,4 +18,13 @@ import org.springframework.stereotype.Component;
 @Component
 public class ReqNewClientSaveDTO {
 
+    @Id
+    private String id;
+    private String name_with_initial;
+    private String address;
+    private String profile_image;
+    private String nic_or_passport;
+
+    //---for security purpose
+    private String token;
 }
