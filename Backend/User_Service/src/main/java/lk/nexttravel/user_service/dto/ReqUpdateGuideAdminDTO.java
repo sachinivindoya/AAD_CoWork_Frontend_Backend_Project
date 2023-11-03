@@ -16,4 +16,12 @@ import org.springframework.stereotype.Component;
 
 @Component
 public class ReqUpdateGuideAdminDTO {
+    private String id;
+    private String name_with_initial;
+    private String nic_or_passport;
+    private String address;
+    private String profile_image;
+
+    //---for security purpose
+    private String token;
 }
