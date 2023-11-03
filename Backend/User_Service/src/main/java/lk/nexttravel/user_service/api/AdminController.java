@@ -42,4 +42,12 @@ public class AdminController {
         return adminService.SaveUpdatedAdmin_Commit(reqUpdateGuideAdminDTO);
     }
 
+    //get Profile Data - user admin
+    @GetMapping(value = "/user-admin-get-profile-data")
+    public ResponseEntity<ReqProfileDataAdminsDTO> userAdminGetProfileData(
+            @RequestParam String id ,
+            @RequestParam String token
+    ){
+        return adminService.userAdminGetProfileData(id,token);
+    }
 }
