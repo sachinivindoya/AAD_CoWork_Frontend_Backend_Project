@@ -14,3 +14,22 @@ const intrologin_pg_alertModelDone_content = $('#intro-login-pg-alert-model-cont
 
 const pswd_recovery_login_username_txtfld = $('#pswd_recovery_login_username');
 const pswd_recovery_login_username_container = $('#forgot_pswd_get_username_container');
+
+
+//------------------ login ----------------
+//fields variables
+let loginUsername =  $('#login_Username');
+let loginPassword =  $('#login_Password');
+const  user_login_btn = $('#user_login_btn');
+
+let logintxtfld1=false;
+let logintxtfld2=false;
+
+function isUsernameCheckedRegexLogin(username) {
+    const regex = /^[a-zA-Z0-9_.-]{5,30}$/;
+    return regex.test(username);
+}
+function isSignUpPasswordCheckedRegexLogin(password) {
+    const regex = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}$/;
+    return regex.test(password);
+}
