@@ -1,5 +1,6 @@
 package lk.nexttravel.user_service.entity;
 
+import lk.nexttravel.user_service.util.GenderTypes;
 import lombok.*;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;

@@ -6,6 +6,9 @@ import lk.nexttravel.user_service.dto.ReqUpdateGuideAdminDTO;
 import lk.nexttravel.user_service.entity.Admin;
 import lk.nexttravel.user_service.persistence.AdminRepository;
 import lk.nexttravel.user_service.service.AdminService;
+import lk.nexttravel.user_service.service.security.APIGatewayJwtAccessTokenServiceBackend;
+import lk.nexttravel.user_service.util.RespondCodes;
+import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -58,7 +61,7 @@ public class AdminServiceImpl implements AdminService {
         }
     }
 
-}
+
 
     @Override
     public ResponseEntity<String> SaveNewClient_Commit(ReqNewClientSaveDTO reqNewClientSaveDTO) {
@@ -88,28 +91,26 @@ public class AdminServiceImpl implements AdminService {
 
     @Override
     public ResponseEntity<String> SaveNewClient_Abrot(ReqNewClientSaveDTO reqNewClientSaveDTO) {
-        public ResponseEntity<String> SaveNewClient_Abrot(ReqNewClientSaveDTO reqNewClientSaveDTO){
-            //check authentication
-            try {
-                if (apiGatewayJwtAccessTokenServiceBackend.isTokenValid(reqNewClientSaveDTO.getToken())) {  //check gateway token
-                    //delete
-                    adminRepository.delete(
-                            Admin.builder()
-                                    .id(reqNewClientSaveDTO.getId())
-                                    .address(reqNewClientSaveDTO.getAddress())
-                                    .profile_image(reqNewClientSaveDTO.getProfile_image())
-                                    .signup_name_with_initial(reqNewClientSaveDTO.getName_with_initial())
-                                    .nic_or_passport(reqNewClientSaveDTO.getNic_or_passport())
-                                    .build()
-                    );
+        //check authentication
+        try {
+            if (apiGatewayJwtAccessTokenServiceBackend.isTokenValid(reqNewClientSaveDTO.getToken())) {  //check gateway token
+                //delete
+                adminRepository.delete(
+                        Admin.builder()
+                                .id(reqNewClientSaveDTO.getId())
+                                .address(reqNewClientSaveDTO.getAddress())
+                                .profile_image(reqNewClientSaveDTO.getProfile_image())
+                                .signup_name_with_initial(reqNewClientSaveDTO.getName_with_initial())
+                                .nic_or_passport(reqNewClientSaveDTO.getNic_or_passport())
+                                .build()
+                );
 
-                    return new ResponseEntity<>(RespondCodes.Respond_DATA_DELETED, HttpStatus.CREATED);
-                } else {
-                    return new ResponseEntity<>(RespondCodes.Respond_NOT_AUTHORISED, HttpStatus.UNAUTHORIZED);
-                }
-            } catch (Exception e) {
-                return new ResponseEntity<>(RespondCodes.Respond_SERVERSIDE_INTERNAL_FAIL, HttpStatus.INTERNAL_SERVER_ERROR);
+                return new ResponseEntity<>(RespondCodes.Respond_DATA_DELETED, HttpStatus.CREATED);
+            } else {
+                return new ResponseEntity<>(RespondCodes.Respond_NOT_AUTHORISED, HttpStatus.UNAUTHORIZED);
             }
+        }catch (Exception e){
+            return new ResponseEntity<>(RespondCodes.Respond_SERVERSIDE_INTERNAL_FAIL, HttpStatus.INTERNAL_SERVER_ERROR);
         }
     }
 
