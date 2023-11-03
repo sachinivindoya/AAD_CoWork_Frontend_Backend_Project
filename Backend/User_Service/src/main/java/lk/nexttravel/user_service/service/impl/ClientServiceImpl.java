@@ -4,15 +4,18 @@ import lk.nexttravel.user_service.dto.ReqNewClientSaveDTO;
 import lk.nexttravel.user_service.entity.Client;
 import lk.nexttravel.user_service.persistence.ClientRepository;
 import lk.nexttravel.user_service.service.ClientService;
+import lk.nexttravel.user_service.service.security.APIGatewayJwtAccessTokenServiceBackend;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.stereotype.Service;
 
 /**
  * @author : R.M.Sachini Vinodya
  * Date    : 03/11/2023
  * Time    : 22:53
  */
+@Service
 public class ClientServiceImpl implements ClientService {
 
     @Autowired
