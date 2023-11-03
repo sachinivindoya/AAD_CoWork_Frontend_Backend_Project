@@ -89,3 +89,263 @@ function readyToEnableLoginBtn() {
         user_login_btn.prop("disabled", false);
     }
 }
+
+
+function loginFormBtnClicked() {
+
+    //show loading model
+    intrologin_pg_loadingModel.modal('show');
+
+    console.log("success");
+
+    $.ajax({
+        method:"GET",
+        contentType:"application/json",
+        url:"http://localhost:1010/main/user/user-login",
+        async:false,
+        data: {
+            username: loginUsername.val(),
+            password: loginPassword.val()
+        },
+        success:function (data){
+            if(data.rspd_code === RespondCodes.Respond_PASSWORD_MATCHED){
+
+                if(data.data === RoleTypes.ROLE_CLIENT){
+
+                    //save tokens on local localStorage - user admin
+                    localStorage.setItem("secure_data_client_username", data.token.access_username);
+                    localStorage.setItem("secure_data_client_access_token", data.token.access_jwt_token);
+                    localStorage.setItem("secure_data_client_refresh_token", data.token.access_refresh_token);
+
+                    setTimeout(function () {
+                        s
+                        //hide loading model
+                        intrologin_pg_loadingModel.modal('hide');
+
+                        setTimeout(function () {
+
+                            intrologin_pg_alertModelDone_title.text("Welcome Again!");
+                            intrologin_pg_alertModelDone_content.text("Have a Nice Day Mr."+data.token.access_username);
+                            intrologin_pg_alertModelDone.modal('show');
+
+                            setTimeout(function () {
+                                window.location.href = 'http://localhost:63342/NextTravel_Company_Project_Frontend_Backend/Frontend/pages/client_main_page.html?_ijt=lgk33b09l42ffpce17ruvb5qhv&_ij_reload=RELOAD_ON_SAVE';
+                            }, 1000); // delay
+
+                        }, 100); // delay
+
+                    }, 500); // delay
+
+                }else if(data.data === RoleTypes.ROLE_ADMIN_SERVICE_USER){
+
+                    //save tokens on local localStorage - user admin
+                    localStorage.setItem("secure_data_user_admin_username", data.token.access_username);
+                    localStorage.setItem("secure_data_user_admin_access_token", data.token.access_jwt_token);
+                    localStorage.setItem("secure_data_user_admin_refresh_token", data.token.access_refresh_token);
+
+                    setTimeout(function () {
+
+                        //hide loading model
+                        intrologin_pg_loadingModel.modal('hide');
+
+                        setTimeout(function () {
+
+                            intrologin_pg_alertModelDone_title.text("Welcome Again!");
+                            intrologin_pg_alertModelDone_content.text("Have a Nice Day Mr."+data.token.access_username);
+                            intrologin_pg_alertModelDone.modal('show');
+
+                            setTimeout(function () {
+                                window.location.href = 'http://localhost:63342/NextTravel_Company_Project_Frontend_Backend/Frontend/pages/user_admin_main_page.html?_ijt=1mvkd5bqbnv72hebvfm2dsuead&_ij_reload=RELOAD_ON_SAVE';
+                            }, 1000); // delay
+
+                        }, 100); // delay
+
+                    }, 500); // delay
+
+                }else if(data.data === RoleTypes.ROLE_ADMIN_SERVICE_TRAVELPACKAGE){
+
+                    //save tokens on local localStorage - user admin
+                    localStorage.setItem("secure_data_travelpackage_admin_username", data.token.access_username);
+                    localStorage.setItem("secure_data_travelpackage_admin_access_token", data.token.access_jwt_token);
+                    localStorage.setItem("secure_data_travelpackage_admin_refresh_token", data.token.access_refresh_token);
+
+                    setTimeout(function () {
+
+                        //hide loading model
+                        intrologin_pg_loadingModel.modal('hide');
+
+                        setTimeout(function () {
+
+                            intrologin_pg_alertModelDone_title.text("Welcome Again!");
+                            intrologin_pg_alertModelDone_content.text("Have a Nice Day Mr."+data.token.access_username);
+                            intrologin_pg_alertModelDone.modal('show');
+
+                            setTimeout(function () {
+                                window.location.href = 'http://localhost:63342/NextTravel_Company_Project_Frontend_Backend/Frontend/pages/travelpackage_admin_main_page.html?_ijt=1mvkd5bqbnv72hebvfm2dsuead&_ij_reload=RELOAD_ON_SAVE';
+                            }, 1000); // delay
+
+                        }, 100); // delay
+
+                    }, 500); // delay
+
+                }else if(data.data === RoleTypes.ROLE_ADMIN_SERVICE_HOTEL){
+
+                    //save tokens on local localStorage - user admin
+                    localStorage.setItem("secure_data_hotel_admin_username", data.token.access_username);
+                    localStorage.setItem("secure_data_hotel_admin_access_token", data.token.access_jwt_token);
+                    localStorage.setItem("secure_data_hotel_admin_refresh_token", data.token.access_refresh_token);
+
+                    setTimeout(function () {
+
+                        //hide loading model
+                        intrologin_pg_loadingModel.modal('hide');
+
+                        setTimeout(function () {
+
+                            intrologin_pg_alertModelDone_title.text("Welcome Again!");
+                            intrologin_pg_alertModelDone_content.text("Have a Nice Day Mr."+data.token.access_username);
+                            intrologin_pg_alertModelDone.modal('show');
+
+                            setTimeout(function () {
+                                window.location.href = 'http://localhost:63342/NextTravel_Company_Project_Frontend_Backend/Frontend/pages/hotel_admin_main_page.html?_ijt=1mvkd5bqbnv72hebvfm2dsuead&_ij_reload=RELOAD_ON_SAVE';
+                            }, 1000); // delay
+
+                        }, 100); // delay
+
+                    }, 500); // delay
+
+                }else if(data.data === RoleTypes.ROLE_ADMIN_SERVICE_GUIDE){
+
+                    //save tokens on local localStorage - user admin
+                    localStorage.setItem("secure_data_guide_admin_username", data.token.access_username);
+                    localStorage.setItem("secure_data_guide_admin_access_token", data.token.access_jwt_token);
+                    localStorage.setItem("secure_data_guide_admin_refresh_token", data.token.access_refresh_token);
+
+                    setTimeout(function () {
+
+                        //hide loading model
+                        intrologin_pg_loadingModel.modal('hide');
+
+                        setTimeout(function () {
+
+                            intrologin_pg_alertModelDone_title.text("Welcome Again!");
+                            intrologin_pg_alertModelDone_content.text("Have a Nice Day Mr."+data.token.access_username);
+                            intrologin_pg_alertModelDone.modal('show');
+
+                            setTimeout(function () {
+                                window.location.href = 'http://localhost:63342/NextTravel_Company_Project_Frontend_Backend/Frontend/pages/guide_admin_main_page.html?_ijt=1mvkd5bqbnv72hebvfm2dsuead&_ij_reload=RELOAD_ON_SAVE';
+                            }, 1000); // delay
+
+                        }, 100); // delay
+
+                    }, 500); // delay
+
+                }else if(data.data === RoleTypes.ROLE_ADMIN_SERVICE_VEHICLE){
+
+                    //save tokens on local localStorage - user admin
+                    localStorage.setItem("secure_data_vehicle_admin_username", data.token.access_username);
+                    localStorage.setItem("secure_data_vehicle_admin_access_token", data.token.access_jwt_token);
+                    localStorage.setItem("secure_data_vehicle_admin_refresh_token", data.token.access_refresh_token);
+
+                    setTimeout(function () {
+
+                        //hide loading model
+                        intrologin_pg_loadingModel.modal('hide');
+
+                        setTimeout(function () {
+
+                            intrologin_pg_alertModelDone_title.text("Welcome Again!");
+                            intrologin_pg_alertModelDone_content.text("Have a Nice Day Mr."+data.token.access_username);
+                            intrologin_pg_alertModelDone.modal('show');
+
+                            setTimeout(function () {
+                                window.location.href = 'http://localhost:63342/NextTravel_Company_Project_Frontend_Backend/Frontend/pages/vehicle_admin_main_page.html?_ijt=lfe5pib42qssa1523t2ctc28hn&_ij_reload=RELOAD_ON_SAVE';
+                            }, 1000); // delay
+
+                        }, 100); // delay
+
+                    }, 500); // delay
+
+                }
+            }else if(data.rspd_code === RespondCodes.Respond_PASSWORD_NOT_MATCHED){
+
+                setTimeout(function () {
+
+                    //hide loading model
+                    intrologin_pg_loadingModel.modal('hide');
+
+                    setTimeout(function () {
+
+                        intrologin_pg_alertModelError_title.text("Username or Password Mismatched!");
+                        intrologin_pg_alertModelError_content.text("Try again!");
+                        intrologin_pg_alertModelError.modal('show');
+
+                        setTimeout(function () {
+                            location.reload(); //reload
+                        }, 1000); // 2000 milliseconds
+
+                    }, 100); // 2000 milliseconds
+
+                }, 500); // 2000 milliseconds
+
+            }
+
+        },
+        error: function (xhr,exception){
+            setTimeout(function () {
+
+                //hide loading model
+                intrologin_pg_loadingModel.modal('hide');
+
+                setTimeout(function () {
+
+                    intrologin_pg_alertModelError_title.text("Not Found!");
+                    intrologin_pg_alertModelError_content.text("This user is not registered. Please register and try again!");
+                    intrologin_pg_alertModelError.modal('show');
+
+                    setTimeout(function () {
+                        location.reload(); //reload
+                    }, 1000); // 2000 milliseconds
+
+                }, 100); // 2000 milliseconds
+
+            }, 500); // 2000 milliseconds
+
+        }
+    })
+}
+
+///---------------open username add form for recover password
+function openRecoveryPasswordUsernameAddPage(){
+    //show username adding container and hide login container
+    pswd_recovery_login_username_container.css('display','block');
+    login_container.css('display','none');
+}
+
+//////--------------------------password recovery username
+
+function pswdRecoveryLoginSearchBtnClicked(){
+    //show loading model
+    intrologin_pg_loadingModel.modal('show');
+
+    $.ajax({
+        method: "GET",
+        async: false,
+        url: 'http://localhost:1010/main/user/search-user-send-otp?username=' + encodeURIComponent(pswd_recovery_login_username_txtfld.val()),
+        processData: false,
+        contentType: false,
+        success: function (data) {
+            if (data.rspd_code === RespondCodes.Respond_THIS_USER_ALREADY_REGISTERED) {
+                console.log("Done! Checked Username and sent otp to your mail...");
+                resolve(true);
+            } else {
+                console.log("Error occured!");
+                resolve(false);
+            }
+        },
+        error: function (xhr, exception) {
+            intrologin_pg_loadingModel.modal('hide');
+            throw exception;
+        }
+    });
+}
