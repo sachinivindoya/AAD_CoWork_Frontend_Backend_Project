@@ -1,5 +1,6 @@
 package lk.nexttravel.user_service.api;
 
+import lk.nexttravel.user_service.dto.ReqNewClientSaveDTO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
