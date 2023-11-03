@@ -349,3 +349,19 @@ function pswdRecoveryLoginSearchBtnClicked(){
         }
     });
 }
+
+
+///-------OTP varification
+const pswd_recovery_login_otp_txtfld = $('#pswd_recovery_login_otp');
+
+function pswdRecoveryLoginOTOCheckBtnClicked(){
+
+}
+
+
+////////////////////////-------------------------------------------------------------close alert model
+//when click alert model's close button close the model
+function closeAlertModel(){
+    alertModel.modal('hide');
+    location.reload();
+}
