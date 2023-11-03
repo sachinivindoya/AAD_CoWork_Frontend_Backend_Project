@@ -698,7 +698,13 @@ let g_a_a_fld_10 = false;
 let g_a_a_fld_11 = false;
 let g_a_a_fld_12 = false;
 
-//validate txt flds
+//validate txt fields
+
+function isNameRegaxChecked(text) {
+    const regex = /^[a-zA-Z0-9_.-]{5,30}$/;
+    return regex.test(text);
+}
+
 g_a_a_name.on('keyup', function () {
     if(isNameRegaxChecked(g_a_a_name.val())){
         g_a_a_name.removeClass('is-invalid');
