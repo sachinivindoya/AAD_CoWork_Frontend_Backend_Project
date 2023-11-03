@@ -700,11 +700,6 @@ let g_a_a_fld_12 = false;
 
 //validate txt fields
 
-function isNameRegaxChecked(text) {
-    const regex = /^[a-zA-Z0-9_.-]{5,30}$/;
-    return regex.test(text);
-}
-
 g_a_a_name.on('keyup', function () {
     if(isNameRegaxChecked(g_a_a_name.val())){
         g_a_a_name.removeClass('is-invalid');
@@ -718,6 +713,7 @@ g_a_a_name.on('keyup', function () {
         addGuideSaveBtnIsEnableTrigger();
     }
 });
+
 g_a_a_address.on('keyup', function () {
     if(isAddressRegaxChecked(g_a_a_address.val())){
         g_a_a_address.removeClass('is-invalid');
