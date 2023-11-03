@@ -77,4 +77,23 @@ public class AdminController {
         return adminService.userAdminGetProfileData(id,token);
     }
 
+
+    //update Profile Data - guide admin
+    @PutMapping(value = "/save_new_client")
+    public ResponseEntity<ReqProfileDataAdminsDTO> userAdminUpdateProfileData(
+            @RequestParam String id ,
+            @RequestParam String token
+    ){
+        return adminService.userAdminGetProfileData(id,token);
+    }
+
+
+    //search all admins
+    @GetMapping(value = "/get-admin-data")
+    public ResponseEntity<Admin> getAllAdminsSataNySearch(
+            @RequestParam String search_keyword ,
+            @RequestParam String token
+    ){
+        return adminService.getAllAdminsSataNySearch(search_keyword,token);
+    }
 }
