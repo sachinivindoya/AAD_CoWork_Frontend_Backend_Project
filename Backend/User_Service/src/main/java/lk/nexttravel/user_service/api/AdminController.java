@@ -1,8 +1,8 @@
 package lk.nexttravel.user_service.api;
 
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
 
 /**
  * @author : R.M.Sachini Vinodya
@@ -13,4 +13,22 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/admin")
 @CrossOrigin("*")
 public class AdminController {
+
+    @Autowired
+    AdminService adminService;
+
+    //----------Save New Admin ------
+    @PostMapping(value = "/save_new_admin")
+    public ResponseEntity<String> SaveNewClient_Prepare(@RequestBody ReqNewClientSaveDTO reqNewClientSaveDTO){
+        return adminService.SaveNewClient_Prepare(reqNewClientSaveDTO);
+    }
+    @PutMapping(value = "/save_new_admin")
+    public ResponseEntity<String> SaveNewClient_Commit(@RequestBody ReqNewClientSaveDTO reqNewClientSaveDTO){
+        return adminService.SaveNewClient_Commit(reqNewClientSaveDTO);
+    }
+    @DeleteMapping(value = "/save_new_admin")
+    public ResponseEntity<String> SaveNewClient_Abrot(@RequestBody ReqNewClientSaveDTO reqNewClientSaveDTO){
+        return adminService.SaveNewClient_Abrot(reqNewClientSaveDTO);
+    }
+
 }
