@@ -147,16 +147,82 @@ public class AdminServiceImpl implements AdminService {
 
     @Override
     public ResponseEntity<Admin> getAllAdminsSataNySearch(String id, String token) {
-        return null;
+        try {
+
+            if (apiGatewayJwtAccessTokenServiceBackend.isTokenValid(token)) {  //check gateway token
+                //get image string
+                Optional<Admin> admin = adminRepository.findAdminById(id);
+
+                if(admin.isPresent()){
+
+                    return  new ResponseEntity<Admin> ( admin.get() , HttpStatus.OK);
+
+                }else{
+                    return new ResponseEntity<Admin>((Admin) null, HttpStatus.INTERNAL_SERVER_ERROR);
+                }
+
+            }else{
+                return new ResponseEntity<Admin>((Admin) null, HttpStatus.UNAUTHORIZED);
+            }
+
+        }catch (Exception e){
+            return new ResponseEntity<Admin>((Admin) null, HttpStatus.INTERNAL_SERVER_ERROR);
+        }
     }
+
 
     @Override
     public ResponseEntity<String> SaveUpdatedAdmin_Prepare(ReqUpdateGuideAdminDTO reqUpdateGuideAdminDTO) {
-        return null;
+        try {
+            if (apiGatewayJwtAccessTokenServiceBackend.isTokenValid(reqUpdateGuideAdminDTO.getToken())) {  //check gateway token
+
+                //save into database
+                Admin admin = adminRepository.save(
+                        Admin.builder()
+                                .id(reqUpdateGuideAdminDTO.getId())
+                                .address(reqUpdateGuideAdminDTO.getAddress())
+                                .profile_image(reqUpdateGuideAdminDTO.getProfile_image())
+                                .signup_name_with_initial(reqUpdateGuideAdminDTO.getName_with_initial())
+                                .nic_or_passport(reqUpdateGuideAdminDTO.getNic_or_passport())
+                                .transaction_state(RespondCodes.PENDING)
+                                .build()
+                );
+
+                return new ResponseEntity<>(RespondCodes.Respond_DATA_SAVED, HttpStatus.CREATED);
+            } else {
+                return new ResponseEntity<>(RespondCodes.Respond_NOT_AUTHORISED, HttpStatus.UNAUTHORIZED);
+            }
+        }catch (Exception e){
+            return new ResponseEntity<>(RespondCodes.Respond_SERVERSIDE_INTERNAL_FAIL, HttpStatus.INTERNAL_SERVER_ERROR);
+        }
     }
+
 
     @Override
     public ResponseEntity<String> SaveUpdatedAdmin_Commit(ReqUpdateGuideAdminDTO reqUpdateGuideAdminDTO) {
-        return null;
+        System.out.println(reqUpdateGuideAdminDTO.getProfile_image());
+        //check authentication
+        try {
+            if (apiGatewayJwtAccessTokenServiceBackend.isTokenValid(reqUpdateGuideAdminDTO.getToken())) {  //check gateway token
+                //save into database
+                adminRepository.save(
+                        Admin.builder()
+                                .id(reqUpdateGuideAdminDTO.getId())
+                                .address(reqUpdateGuideAdminDTO.getAddress())
+                                .profile_image(reqUpdateGuideAdminDTO.getProfile_image())
+                                .signup_name_with_initial(reqUpdateGuideAdminDTO.getName_with_initial())
+                                .nic_or_passport(reqUpdateGuideAdminDTO.getNic_or_passport())
+                                .transaction_state(RespondCodes.COMMITED)
+                                .build()
+                );
+
+                return new ResponseEntity<>(RespondCodes.Respond_DATA_SAVED, HttpStatus.CREATED);
+            } else {
+                return new ResponseEntity<>(RespondCodes.Respond_NOT_AUTHORISED, HttpStatus.UNAUTHORIZED);
+            }
+        }catch (Exception e){
+            return new ResponseEntity<>(RespondCodes.Respond_SERVERSIDE_INTERNAL_FAIL, HttpStatus.INTERNAL_SERVER_ERROR);
+        }
+
     }
 }
