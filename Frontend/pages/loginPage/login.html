@@ -10,6 +10,51 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
     <link href="img/logo.png" rel="icon">
     <title> Sign In Page | Next Travel</title>
+    <style>
+        body {
+            /* Fallback for old browsers with a background color */
+            background-color: #007bff; /* Replace with your desired background color */
+
+            /* Use the 'background-image' property to specify the image URL */
+            background-image: url("assets/images/wave_image.gif"); /* Replace with your image URL */
+
+            /* Set background properties for the image */
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed; /* Keeps the background fixed within the window */
+            background-position: center;
+
+        }
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+
+        /* Track */
+        ::-webkit-scrollbar-track {
+            background: #cccccc;
+        }
+
+        /* Handle */
+        ::-webkit-scrollbar-thumb {
+            background: #5d5d5d;
+        }
+
+        /* Handle on hover */
+        ::-webkit-scrollbar-thumb:hover {
+            background: #555;
+        }
+
+        #login_container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
 </head>
 
 <body>
