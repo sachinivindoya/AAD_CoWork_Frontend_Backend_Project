@@ -58,4 +58,23 @@ public class AdminController {
     ){
         return adminService.userAdminGetProfileData(id,token);
     }
+
+    //get profile image - hotel admin
+    @GetMapping(value = "/hotel-admin-get-profile-image")
+    public ResponseEntity<ReqProfileDataAdminsDTO> hotelAdminGetProfileData(
+            @RequestParam String id ,
+            @RequestParam String token
+    ){
+        return adminService.userAdminGetProfileData(id,token);
+    }
+
+    //get profile image - guide admin
+    @GetMapping(value = "/guide-admin-get-profile-image")
+    public ResponseEntity<ReqProfileDataAdminsDTO> guideAdminGetProfileData(
+            @RequestParam String id ,
+            @RequestParam String token
+    ){
+        return adminService.userAdminGetProfileData(id,token);
+    }
+
 }
