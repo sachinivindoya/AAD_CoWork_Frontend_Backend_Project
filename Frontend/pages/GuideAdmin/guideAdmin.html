@@ -45,7 +45,7 @@
             <h3><img src="img/logo2.png" class="img-fluid"/><span>Next Travel</span></h3>
         </div>
         <ul class="list-unstyled components">
-            <li  class="active" onclick="openHomeContainer()">
+            <li  class="" onclick="openHomeContainer()">
                 <a href="#" class="dashboard"><i class="material-icons">dashboard</i>
                     <span>Dashboard</span></a>
             </li>
@@ -214,7 +214,7 @@
             </div>
         </div>
 
-        <div class="container-fluid " id="dashboard_container_guide" style="display: block; ">
+        <div class="container-fluid " id="home_container" style="display: block; ">
             <div class="container">
                 <div class="row">
                     <div class="col">
@@ -260,6 +260,140 @@
         </div>
 
 
+        <!--New Guide container-->
+        <div class="container-fluid" id="add_guide_container" style="background-color: #EDF1D6; display: none">
+            <div class="card" >
+            <div class="card-body">
+                    <div style="display: flex; flex-direction: column;">
+                        <div class="mb-4">
+                            <div class="row text-center">
+                                <div class="col-xs-6 text-center" style=" margin-top: 10px;">
+                                    <div class='product-holder'>
+                                        <br><br>
+                                        <img src="" width="150" height="150" class='product-image' id="g_a_a_image" style="border: 1px solid #000; border-radius: 50%; filter: brightness(90%)" alt="">
+                                        <input id="g_a_a_image_input" class="form-control" type="file" accept=".jpg, .jpeg, .webp" style="background-color: #EDF1D6; border-color: #EDF1D6; border-width: 1.5px; width: 250px; margin-left: 38%; margin-top: 10px">
+                                        <div class="valid-feedback" id="g_a_a_img-valid-feedback">
+                                            Looks good!
+                                        </div>
+                                        <div class="invalid-feedback" id="g_a_a_img-invalid-feedback">
+                                            Please choose a valid image (JPG, JPEG, PNG, or GIF format) and ensure the file size is less than 2MB.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+                    <div style="flex-direction: column; margin-left: 15%">
+                        <div class="mb-0">
+                            <label for="g_a_a_name" class="form-label" style="margin-left: 40%"></label>
+                            <input placeholder="Name" type="text" class="form-control" id="g_a_a_name"  style="width: 85%; background-color: #EDF1D6; border-color: #EDF1D6; border-width: 1.5px">
+                            <div class="invalid-feedback">
+                                *Enter your name, which must be at least 4 characters long and contain only letters and spaces.
+                                *Ex:-John Doe, john doe
+                            </div>
+                        </div>
+                        <div class="mb-0">
+                            <label for="g_a_a_address" class="form-label" style="margin-left: 39.5%"></label>
+                            <input placeholder="Address " type="text" class="form-control" id="g_a_a_address" style="width: 85%; background-color: #EDF1D6; border-color: #EDF1D6; border-width: 1.5px">
+                            <div class="invalid-feedback">
+                                *Enter your adress, which must be at least 4 characters long and contain only letters, commas, spaces like these examples.
+                                *Ex:- 123 Main,Street / 456 Elm Street, Apt. 7B / 789 Oak Lane, Suite
+                            </div>
+                        </div>
+                        <div class="mb-0">
+                            <label for="g_a_a_nic" class="form-label" style="margin-left: 40.5%"></label>
+                            <input placeholder="NIC " type="text" class="form-control" id="g_a_a_nic" style="width: 85%; background-color: #EDF1D6; border-color: #EDF1D6; border-width: 1.5px">
+                            <div class="invalid-feedback">
+                                *Enter your correct Srilankan National ID card number.
+                                *Ex:- xxxxxxxxxxxx / xxxxxxxxxv
+                            </div>
+                        </div>
+                        <div class="mb-0">
+                            <label for="g_a_a_tell" class="form-label" style="margin-left: 40.5%"></label>
+                            <input placeholder="Contact Number" type="text" class="form-control" id="g_a_a_tell" style="width: 85%; background-color: #EDF1D6; border-color: #EDF1D6; border-width: 1.5px">
+                            <div class="invalid-feedback">
+                                *Enter your correct Srilankan Telephone number.
+                                *Ex:- 0xxxxxxxxx / +94xxxxxxxxx
+                            </div>
+                        </div>
+                        <div class="mb-0">
+                            <label for="g_a_a_experience" class="form-label" style="margin-left: 38.5%"></label>
+                            <input placeholder="Experience " type="number" class="form-control" id="g_a_a_experience" style="width: 85%; background-color: #EDF1D6; border-color: #EDF1D6; border-width: 1.5px">
+                            <div class="invalid-feedback">
+                                *Enter only number value.
+                                *Ex:- 10 / 4
+                            </div>
+                        </div>
+                        <div class="mb-0">
+                            <label for="g_a_a_age" class="form-label" style="margin-left: 39%"></label>
+                            <input placeholder="Date Of Birth " type="date" class="form-control" id="g_a_a_age" style="width: 85%; background-color: #EDF1D6; border-color: #EDF1D6; border-width: 1.5px">
+                            <div class="invalid-feedback">
+                                *Enter your Birthday, which must included pattern like these example.
+                                *Ex:- year-month-day
+                            </div>
+                        </div>
+                        <div class="mb-0">
+                            <label for="g_a_a_perdayfee" class="form-label" style="margin-left: 38.5%"></label>
+                            <input placeholder="Fee (Per Day)" type="number" class="form-control" id="g_a_a_perdayfee" style="width: 85%; background-color: #EDF1D6; border-color: #EDF1D6; border-width: 1.5px">
+                            <div class="invalid-feedback">
+                                *Enter only number value.
+                                *Ex:- 10 / 4
+                            </div>
+                        </div>
+                        <div class="mb-0">
+                            <label for="g_a_a_remarks" class="form-label" style="margin-left: 39%"></label>
+                            <input placeholder="Remarks " type="text" class="form-control" id="g_a_a_remarks" style="width: 85%; background-color: #EDF1D6; border-color: #EDF1D6; border-width: 1.5px">
+                            <div class="invalid-feedback">
+                                *Enter your Remarks, which must include letters, numbers, commas, spaces,pullstop.
+                                *Ex:- lorem lorem.
+                            </div>
+                        </div>
+                        <div class="mb-4">
+                            <label for="g_a_a_gender" class="form-label" style="margin-left: 39.5%"></label>
+                            <select class="form-control" id="g_a_a_gender" style="width: 85%; background-color: #EDF1D6; border-color: #EDF1D6; border-width: 1.5px">
+                                <option value="">Select Gender</option>
+                                <option value="male">Male</option>
+                                <option value="female">Female</option>
+                                <option value="trans">Trans</option>
+                            </select>
+                            <div class="invalid-feedback">
+                                *Select gender here... Male or Female
+                            </div>
+                        </div>
+                        <br>
+                        <div class="mb-4 " style="display: flex; flex-direction: column; margin-left: 10%">
+                            <label for="g_a_a_nic_front_image" class="form-label" style="margin-left: 20%">NIC / Passport - Front View</label>
+                            <img src="img/frontnicimage.png" width="600" height="370"  id="g_a_a_nic_front_image" style="border: 0.5px solid #609966; border-radius: 1%; ">
+                            <input id="g_a_a_nic_front_image_input"  class="form-control" type="file" accept=".jpg, .jpeg, .webp" style="background-color: #EDF1D6; border: 1.5px solid #609966; width: 250px">
+                            <div class="valid-feedback" id="g_a_a_nic_frontimg-valid-feedback">
+                                Looks good!
+                            </div>
+                            <div class="invalid-feedback" id="g_a_a_nic_frontimg-invalid-feedback">
+                                Please choose a valid image (JPG, JPEG, PNG, or GIF format) and ensure the file size is less than 2MB.
+                            </div>
+                        </div>
+                        <br>
+                        <div class="mb-4" style="display: flex; flex-direction: column; margin-left: 10%">
+                            <label for="g_a_a_nic_rear_image" class="form-label" style="margin-left: 20%">NIC / Passport - Rear View</label>
+                            <img src="img/rearnicimage.png" width="600" height="370"  id="g_a_a_nic_rear_image" style="border: 0.5px solid #609966; border-radius: 1%; ">
+                            <input id="g_a_a_nic_rear_image_input"  class="form-control" type="file" accept=".jpg, .jpeg, .webp" style="background-color: #EDF1D6; border: 1.5px solid #609966; border-radius: 1%; width: 250px">
+                            <div class="valid-feedback" id="g_a_a_nic_rearimg-valid-feedback">
+                                Looks good!
+                            </div>
+                            <div class="invalid-feedback" id="g_a_a_nic_rearimg-invalid-feedback">
+                                Please choose a valid image (JPG, JPEG, PNG, or GIF format) and ensure the file size is less than 2MB.
+                            </div>
+                        </div>
+                    </div>
+                    <br><br>
+                    <div style="margin-left: 39%">
+                        <button type="button" class="btn btn-success  " id="g_a_a_savebtn" onclick="saveNewGuideBtnClicked()" disabled style="width: 20rem; height: 4rem; font-size: 1.4rem;">Save</button>
+                    </div>
+                    <br><br>
+                </div>
+            </div>
+        </div>
 
 
 
@@ -292,8 +426,16 @@
 
 
 
+        <footer class="footer" style="background-color: #062c33">
+            <div class="container-fluid" >
+                <div class="footer-in">
+                    <p class="mb-0">&copy 2023 Sachini Vinodya . All Rights Reserved.</p>
+                </div>
+            </div>
+        </footer>
     </div>
 </div>
+
 
 
 
