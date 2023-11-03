@@ -50,4 +50,12 @@ public class AdminController {
     ){
         return adminService.userAdminGetProfileData(id,token);
     }
+    //get profile image - vehicle admin
+    @GetMapping(value = "/vehicle-admin-get-profile-image")
+    public ResponseEntity<ReqProfileDataAdminsDTO> vehicleAdminGetProfileData(
+            @RequestParam String id ,
+            @RequestParam String token
+    ){
+        return adminService.userAdminGetProfileData(id,token);
+    }
 }
