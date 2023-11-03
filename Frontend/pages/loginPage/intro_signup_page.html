@@ -78,7 +78,7 @@
     <div class="container py-5 h-100">
         <div class="row d-flex justify-content-center align-items-center h-100">
             <div class="col-12 col-md-8 col-lg-6 col-xl-5">
-                <div class="card bg-dark text-white" style="border-radius: 1rem;">
+                <div class="card bg-transparent text-white" style="border-radius: 1rem; backdrop-filter: blur(5px)">
                     <div class="card-body p-5 text-center">
                         <h2 class="fw-bold mb-2 text-uppercase">Sign up</h2>
                         <br>
@@ -174,18 +174,14 @@
 
 <!-- loading window -->
 <!-- use Modal -->
-<div class="modal fade" id="loading-model" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true" data-bs-backdrop='static'>
+<div class="modal fade" id="loading-model" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true" data-bs-backdrop='static' style="backdrop-filter: blur(3px)">
     <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
-            <!--          <div class="modal-header">-->
-            <!--            -->
-            <!--          </div>-->
             <div class="modal-body text-center bg-info flex-box">
                 <img src="img/Next%20travels.gif" class="img-fluid" alt="Responsive image" style="width: 50%; height: 50%">
 
             </div>
             <div class="modal-footer justify-content-center bg-info">
-                <h6 class="modal-title text-white" id="exampleModalLongTitle">Please Wait... </h6>
             </div>
         </div>
     </div>
