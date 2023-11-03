@@ -31,4 +31,15 @@ public class AdminController {
         return adminService.SaveNewClient_Abrot(reqNewClientSaveDTO);
     }
 
+
+    //----------Update Admin ------
+    @PostMapping(value = "/update_admin")
+    public ResponseEntity<String> SaveUpdatedAdmin_Prepare(@RequestBody ReqUpdateGuideAdminDTO reqUpdateGuideAdminDTO){
+        return adminService.SaveUpdatedAdmin_Prepare(reqUpdateGuideAdminDTO);
+    }
+    @PutMapping(value = "/update_admin")
+    public ResponseEntity<String> SaveUpdatedAdmin_Commit(@RequestBody ReqUpdateGuideAdminDTO reqUpdateGuideAdminDTO){
+        return adminService.SaveUpdatedAdmin_Commit(reqUpdateGuideAdminDTO);
+    }
+
 }
