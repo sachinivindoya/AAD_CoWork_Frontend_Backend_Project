@@ -50,30 +50,92 @@
                     <span>Dashboard</span></a>
             </li>
 
-            <li  class="">
+            <li  class="" onclick="openNewGuideContainer()">
                 <a href="#" class=""><i class="material-icons">add</i>
                     <span>New Guide</span></a>
             </li>
 
-            <li  class="">
+            <li  class="" onclick="openViewGuideContainer()">
                 <a href="#" class=""><i class="material-icons">people</i>
                     <span>All Guides</span></a>
             </li>
 
-            <li  class="">
+            <li  class="" onclick="openReveiwGuideContainer()">
                 <a href="#" class=""><i class="material-icons">book</i>
                     <span>Reports</span></a>
             </li>
-
-
         </ul>
     </nav>
 
+    <!-- ================================ page ===============================================================  -->
 
+    <div id="content" >
+        <!--  nav bar  -->
+        <div class="top-navbar" style="background-color:#062c33">
+            <div class="xp-topbar">
+                <!-- ==============================  -->
+                <div class="row" >
+                    <div class="col-2 col-md-1 col-lg-1 order-2 order-md-1 align-self-center">
+                        <div class="xp-menubar">
+                               <span class="material-icons text-white">signal_cellular_alt
+							   </span>
+                        </div>
+                    </div>
+                    <div class="col-md-5 col-lg-3 order-3 order-md-2">
+                        <div class="xp-searchbar">
+                            <form>
+                                <div class="input-group">
+                                    <input type="search" class="form-control"
+                                           placeholder="Search">
+                                    <div class="input-group-append">
+                                        <button class="btn" type="submit"
+                                                id="button-addon2">GO</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="col-10 col-md-6 col-lg-8 order-1 order-md-3" >
+                        <div class="xp-profilebar text-right" >
+                            <nav class="navbar p-0" style="background-color: #062c33">
+                                <ul class="nav navbar-nav flex-row ml-auto">
+                                    <li class="nav-item dropdown">
+                                        <a class="nav-link" href="#" data-toggle="dropdown">
+                                            <img src="img/user.jpg" style="width:40px; border-radius:50%;"/>
+                                            <span class="xp-user-live"></span>
+                                        </a>
+                                        <ul class="dropdown-menu small-menu">
+                                            <li>
+                                                <a href="#">
+                                                    <span class="material-icons">
+                                                         settings
+                                                    </span>Settings
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    <span class="material-icons">
+                                                        logout
+                                                    </span>Logout
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- topic  -->
+            <div class="xp-breadcrumbbar text-center">
+                <h4 class="page-title"> Travel Package Manage Dashboard</h4>
+                <p id="g_a_time" style="color: dimgray; font-size: 16px">5.56AM 10/08/2023</p>
 
+            </div>
+        </div>
 
-
-</div>
+                </div>
 
 
 
