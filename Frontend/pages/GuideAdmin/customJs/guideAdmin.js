@@ -246,9 +246,9 @@ function loadAdminProfileData(){
                 setTimeout(function () {
                     guide_admin_main_pg_loading_model.modal('hide');
 
-                 //   guide_admin_main_pg_alert_model_title_error.text("Error has occurd!");
-                 //   guide_admin_main_pg_alert_model_content_error.text("Try Again!");
-                 //   guide_admin_main_pg_alert_model_error.modal('show');
+                    guide_admin_main_pg_alert_model_title_error.text("Error has occurd!");
+                    guide_admin_main_pg_alert_model_content_error.text("Try Again!");
+                    guide_admin_main_pg_alert_model_error.modal('show');
 
                 }, 1000); // delay
                 console.log("fail to logout exception");
@@ -259,17 +259,17 @@ function loadAdminProfileData(){
                 setTimeout(function () {
                     guide_admin_main_pg_loading_model.modal('hide');
 
-               //     guide_admin_main_pg_alert_model_unauthorise_error.modal('show');
-//
+                    guide_admin_main_pg_alert_model_unauthorise_error.modal('show');
+
                 }, 1000); // delay
             }else {
                 //hide loading model
                 setTimeout(function () {
                     guide_admin_main_pg_loading_model.modal('hide');
 
-              //      guide_admin_main_pg_alert_model_title_error.text("Error has occurd!");
-                //    guide_admin_main_pg_alert_model_content_error.text("Try Again!");
-                //    guide_admin_main_pg_alert_model_error.modal('show');
+                    guide_admin_main_pg_alert_model_title_error.text("Error has occurd!");
+                    guide_admin_main_pg_alert_model_content_error.text("Try Again!");
+                    guide_admin_main_pg_alert_model_error.modal('show');
 
                 }, 1000); // delay
                 console.log("fail to logout exception");
@@ -585,8 +585,8 @@ function saveUpdatedProfileSettings(){
                 setTimeout(function () {
                     guide_admin_main_pg_loading_model.modal('hide');
 
-                //    guide_admin_main_pg_alert_model_title_error.text("Error has occurd!");
-               //     guide_admin_main_pg_alert_model_content_error.text("Try Again!");
+                    guide_admin_main_pg_alert_model_title_error.text("Error has occurd!");
+                    guide_admin_main_pg_alert_model_content_error.text("Try Again!");
 
                 }, 1000); // delay
                 console.log("fail to logout exception");
@@ -597,7 +597,7 @@ function saveUpdatedProfileSettings(){
                 setTimeout(function () {
                     guide_admin_main_pg_loading_model.modal('hide');
 
-               //     guide_admin_main_pg_alert_model_unauthorise_error.modal('show');
+                    guide_admin_main_pg_alert_model_unauthorise_error.modal('show');
 
                 }, 1000); // delay
             }else {
@@ -605,9 +605,9 @@ function saveUpdatedProfileSettings(){
                 setTimeout(function () {
                     guide_admin_main_pg_loading_model.modal('hide');
 
-                   // guide_admin_main_pg_alert_model_title_error.text("Error has occurd!");
-                  //  guide_admin_main_pg_alert_model_content_error.text("Try Again!");
-                  //  guide_admin_main_pg_alert_model_error.modal('show');
+                    guide_admin_main_pg_alert_model_title_error.text("Error has occurd!");
+                    guide_admin_main_pg_alert_model_content_error.text("Try Again!");
+                    guide_admin_main_pg_alert_model_error.modal('show');
 
                 }, 1000); // delay
                 console.log("fail to logout exception");
@@ -972,8 +972,8 @@ function saveNewGuideBtnClicked(){
                 setTimeout(function () {
                     guide_admin_main_pg_loading_model.modal('hide');
 
-                //    guide_admin_main_pg_alert_model_title_error.text("Error has occurd!");
-                //    guide_admin_main_pg_alert_model_content_error.text("Try Again!");
+                    guide_admin_main_pg_alert_model_title_error.text("Error has occurd!");
+                    guide_admin_main_pg_alert_model_content_error.text("Try Again!");
 
                 }, 1000); // delay
                 console.log("fail to logout exception");
@@ -985,7 +985,7 @@ function saveNewGuideBtnClicked(){
                 setTimeout(function () {
                     guide_admin_main_pg_loading_model.modal('hide');
 
-                //    guide_admin_main_pg_alert_model_unauthorise_error.modal('show');
+                    guide_admin_main_pg_alert_model_unauthorise_error.modal('show');
 
                 }, 1000); // delay
             }else {
@@ -993,9 +993,9 @@ function saveNewGuideBtnClicked(){
                 setTimeout(function () {
                     guide_admin_main_pg_loading_model.modal('hide');
 
-                  //  guide_admin_main_pg_alert_model_title_error.text("Error has occurd!");
-                  //  guide_admin_main_pg_alert_model_content_error.text("Try Again!");
-                //    guide_admin_main_pg_alert_model_error.modal('show');
+                    guide_admin_main_pg_alert_model_title_error.text("Error has occurd!");
+                    guide_admin_main_pg_alert_model_content_error.text("Try Again!");
+                    guide_admin_main_pg_alert_model_error.modal('show');
 
                 }, 1000); // delay
                 console.log("fail to logout exception");
@@ -1196,7 +1196,7 @@ function loadDataAfterOpenedViewGuideContainer(){
                 setTimeout(function () {
                     guide_admin_main_pg_loading_model.modal('hide');
 
-             //       guide_admin_main_pg_alert_model_unauthorise_error.modal('show');
+                    guide_admin_main_pg_alert_model_unauthorise_error.modal('show');
 
                 }, 1000); // delay
             }else {
@@ -1204,9 +1204,9 @@ function loadDataAfterOpenedViewGuideContainer(){
                 setTimeout(function () {
                     guide_admin_main_pg_loading_model.modal('hide');
 
-                //    guide_admin_main_pg_alert_model_title_error.text("Error has occurd!");
-                //    guide_admin_main_pg_alert_model_content_error.text("Try Again!");
-                //    guide_admin_main_pg_alert_model_error.modal('show');
+                    guide_admin_main_pg_alert_model_title_error.text("Error has occurd!");
+                    guide_admin_main_pg_alert_model_content_error.text("Try Again!");
+                    guide_admin_main_pg_alert_model_error.modal('show');
 
                 }, 1000); // delay
                 console.log("fail to logout exception");
@@ -1618,8 +1618,8 @@ function saveEditGuide(){
                 setTimeout(function () {
                     guide_admin_main_pg_loading_model.modal('hide');
 
-              //      guide_admin_main_pg_alert_model_title_error.text("Error has occurd!");
-              //      guide_admin_main_pg_alert_model_content_error.text("Try Again!");
+                    guide_admin_main_pg_alert_model_title_error.text("Error has occurd!");
+                    guide_admin_main_pg_alert_model_content_error.text("Try Again!");
 
                 }, 1000); // delay
                 console.log("fail to logout exception");
@@ -1631,7 +1631,7 @@ function saveEditGuide(){
                 setTimeout(function () {
                     guide_admin_main_pg_loading_model.modal('hide');
 
-               //     guide_admin_main_pg_alert_model_unauthorise_error.modal('show');
+                    guide_admin_main_pg_alert_model_unauthorise_error.modal('show');
 
                 }, 1000); // delay
             }else {
@@ -1639,9 +1639,9 @@ function saveEditGuide(){
                 setTimeout(function () {
                     guide_admin_main_pg_loading_model.modal('hide');
 
-               //     guide_admin_main_pg_alert_model_title_error.text("Error has occurd!");
-               //     guide_admin_main_pg_alert_model_content_error.text("Try Again!");
-                //    guide_admin_main_pg_alert_model_error.modal('show');
+                    guide_admin_main_pg_alert_model_title_error.text("Error has occurd!");
+                    guide_admin_main_pg_alert_model_content_error.text("Try Again!");
+                    guide_admin_main_pg_alert_model_error.modal('show');
 
                 }, 1000); // delay
                 console.log("fail to logout exception");
@@ -1698,8 +1698,8 @@ function saveDeleteGuide(){
                 setTimeout(function () {
                     guide_admin_main_pg_loading_model.modal('hide');
 
-               //     guide_admin_main_pg_alert_model_title_error.text("Error has occurd!");
-              //      guide_admin_main_pg_alert_model_content_error.text("Try Again!");
+                    guide_admin_main_pg_alert_model_title_error.text("Error has occurd!");
+                    guide_admin_main_pg_alert_model_content_error.text("Try Again!");
 
                 }, 1000); // delay
                 console.log("fail to logout exception");
@@ -1711,7 +1711,7 @@ function saveDeleteGuide(){
                 setTimeout(function () {
                     guide_admin_main_pg_loading_model.modal('hide');
 
-              //      guide_admin_main_pg_alert_model_unauthorise_error.modal('show');
+                    guide_admin_main_pg_alert_model_unauthorise_error.modal('show');
 
                 }, 1000); // delay
             }else {
@@ -1719,9 +1719,9 @@ function saveDeleteGuide(){
                 setTimeout(function () {
                     guide_admin_main_pg_loading_model.modal('hide');
 
-               //     guide_admin_main_pg_alert_model_title_error.text("Error has occurd!");
-               //     guide_admin_main_pg_alert_model_content_error.text("Try Again!");
-                //    guide_admin_main_pg_alert_model_error.modal('show');
+                    guide_admin_main_pg_alert_model_title_error.text("Error has occurd!");
+                    guide_admin_main_pg_alert_model_content_error.text("Try Again!");
+                    guide_admin_main_pg_alert_model_error.modal('show');
 
                 }, 1000); // delay
                 console.log("fail to logout exception");
@@ -1810,8 +1810,8 @@ function UserManageConsoleLogout(){
                 setTimeout(function () {
                     guide_admin_main_pg_loading_model.modal('hide');
 
-                 //   guide_admin_main_pg_alert_model_title_error.text("Error has occurd!");
-                //    guide_admin_main_pg_alert_model_content_error.text("Try Again!");
+                    guide_admin_main_pg_alert_model_title_error.text("Error has occurd!");
+                    guide_admin_main_pg_alert_model_content_error.text("Try Again!");
 
                 }, 1000); // delay
                 console.log("fail to logout exception");
@@ -1822,7 +1822,7 @@ function UserManageConsoleLogout(){
                 setTimeout(function () {
                     guide_admin_main_pg_loading_model.modal('hide');
 
-              //      guide_admin_main_pg_alert_model_unauthorise_error.modal('show');
+                    guide_admin_main_pg_alert_model_unauthorise_error.modal('show');
 
                 }, 1000); // delay
             }else {
@@ -1830,8 +1830,8 @@ function UserManageConsoleLogout(){
                 setTimeout(function () {
                     guide_admin_main_pg_loading_model.modal('hide');
 
-                //    guide_admin_main_pg_alert_model_title_error.text("Error has occurd!");
-                //    guide_admin_main_pg_alert_model_content_error.text("Try Again!");
+                    guide_admin_main_pg_alert_model_title_error.text("Error has occurd!");
+                    guide_admin_main_pg_alert_model_content_error.text("Try Again!");
                     guide_admin_main_pg_alert_model_error.modal('show');
 
                 }, 1000); // delay
