@@ -60,7 +60,28 @@ public class AdminServiceImpl implements AdminService {
 
     @Override
     public ResponseEntity<String> SaveNewClient_Commit(ReqNewClientSaveDTO reqNewClientSaveDTO) {
-        return null;
+        //check authentication
+        try {
+            if (apiGatewayJwtAccessTokenServiceBackend.isTokenValid(reqNewClientSaveDTO.getToken())) {  //check gateway token
+                //save into database
+                adminRepository.save(
+                        Admin.builder()
+                                .id(reqNewClientSaveDTO.getId())
+                                .address(reqNewClientSaveDTO.getAddress())
+                                .profile_image(reqNewClientSaveDTO.getProfile_image())
+                                .signup_name_with_initial(reqNewClientSaveDTO.getName_with_initial())
+                                .nic_or_passport(reqNewClientSaveDTO.getNic_or_passport())
+                                .transaction_state(RespondCodes.COMMITED)
+                                .build()
+                );
+
+                return new ResponseEntity<>(RespondCodes.Respond_DATA_SAVED, HttpStatus.CREATED);
+            } else {
+                return new ResponseEntity<>(RespondCodes.Respond_NOT_AUTHORISED, HttpStatus.UNAUTHORIZED);
+            }
+        }catch (Exception e){
+            return new ResponseEntity<>(RespondCodes.Respond_SERVERSIDE_INTERNAL_FAIL, HttpStatus.INTERNAL_SERVER_ERROR);
+        }
     }
 
     @Override
