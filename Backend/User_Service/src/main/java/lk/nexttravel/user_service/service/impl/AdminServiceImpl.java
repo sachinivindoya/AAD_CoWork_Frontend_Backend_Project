@@ -11,6 +11,8 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
+import java.util.Optional;
+
 /**
  * @author : R.M.Sachini Vinodya
  * Date    : 03/11/2023
@@ -86,13 +88,62 @@ public class AdminServiceImpl implements AdminService {
 
     @Override
     public ResponseEntity<String> SaveNewClient_Abrot(ReqNewClientSaveDTO reqNewClientSaveDTO) {
-        return null;
+        public ResponseEntity<String> SaveNewClient_Abrot(ReqNewClientSaveDTO reqNewClientSaveDTO){
+            //check authentication
+            try {
+                if (apiGatewayJwtAccessTokenServiceBackend.isTokenValid(reqNewClientSaveDTO.getToken())) {  //check gateway token
+                    //delete
+                    adminRepository.delete(
+                            Admin.builder()
+                                    .id(reqNewClientSaveDTO.getId())
+                                    .address(reqNewClientSaveDTO.getAddress())
+                                    .profile_image(reqNewClientSaveDTO.getProfile_image())
+                                    .signup_name_with_initial(reqNewClientSaveDTO.getName_with_initial())
+                                    .nic_or_passport(reqNewClientSaveDTO.getNic_or_passport())
+                                    .build()
+                    );
+
+                    return new ResponseEntity<>(RespondCodes.Respond_DATA_DELETED, HttpStatus.CREATED);
+                } else {
+                    return new ResponseEntity<>(RespondCodes.Respond_NOT_AUTHORISED, HttpStatus.UNAUTHORIZED);
+                }
+            } catch (Exception e) {
+                return new ResponseEntity<>(RespondCodes.Respond_SERVERSIDE_INTERNAL_FAIL, HttpStatus.INTERNAL_SERVER_ERROR);
+            }
+        }
     }
 
     @Override
     public ResponseEntity<ReqProfileDataAdminsDTO> userAdminGetProfileData(String id, String token) {
-        return null;
+        try {
+            System.out.println("done");
+            if (apiGatewayJwtAccessTokenServiceBackend.isTokenValid(token)) {  //check gateway token
+                //get image string
+                Optional<Admin> admin = adminRepository.findAdminById(id);
+                if(admin.isPresent()){
+
+                    return  new ResponseEntity<> (
+                            ReqProfileDataAdminsDTO.builder()
+                                    .name_with_initial(admin.get().getSignup_name_with_initial())
+                                    .nic_or_passport(admin.get().getNic_or_passport())
+                                    .address(admin.get().getAddress())
+                                    .profile_image(admin.get().getProfile_image())
+                                    .build()
+                            , HttpStatus.OK);
+
+                }else{
+                    return new ResponseEntity<>(null, HttpStatus.INTERNAL_SERVER_ERROR);
+                }
+
+            }else{
+                return new ResponseEntity<>(null, HttpStatus.UNAUTHORIZED);
+            }
+
+        }catch (Exception e){
+            return new ResponseEntity<>(null, HttpStatus.INTERNAL_SERVER_ERROR);
+        }
     }
+
 
     @Override
     public ResponseEntity<Admin> getAllAdminsSataNySearch(String id, String token) {
