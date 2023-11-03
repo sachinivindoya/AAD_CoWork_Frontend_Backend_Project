@@ -1,4 +1,4 @@
-package lk.nexttravel.user_service.api.config;
+package lk.nexttravel.user_service.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -6,7 +6,7 @@ import org.springframework.context.annotation.Configuration;
 /**
  * @author : R.M.Sachini Vinodya
  * Date    : 03/11/2023
- * Time    : 22:08
+ * Time    : 22:11
  */
 @Configuration
 public class ModelMapperConfig {
