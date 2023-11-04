@@ -1797,7 +1797,7 @@ function UserManageConsoleLogout(){
                             $('#alert').hide();
                             admin_manage_container_edit_admin_model.modal('hide');
                             console.log("done");
-                            window.open("http://localhost:63342/NextTravel_Company_Project_Frontend_Backend/Frontend/index.html?_ijt=52ammnccq57t2dg07p5m351hpu&_ij_reload=RELOAD_ON_SAVE");
+                            window.open("http://localhost:63342/Final_AAD/Frontend/index.html?_ijt=g1mqhf0q35ulerp2hblg730cq1&_ij_reload=RELOAD_ON_SAVE");
                         }, 100); // delay
                     }, 100); // delay
 

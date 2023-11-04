@@ -129,7 +129,7 @@ function loginFormBtnClicked() {
                             intrologin_pg_alertModelDone.modal('show');
 
                             setTimeout(function () {
-                                window.location.href = 'http://localhost:63342/NextTravel_Company_Project_Frontend_Backend/Frontend/pages/client_main_page.html?_ijt=lgk33b09l42ffpce17ruvb5qhv&_ij_reload=RELOAD_ON_SAVE';
+                                window.location.href = 'http://localhost:63342/Final_AAD/Frontend/pages/MainWebSite/MainWeb.html';
                             }, 1000); // delay
 
                         }, 100); // delay
@@ -155,7 +155,7 @@ function loginFormBtnClicked() {
                             intrologin_pg_alertModelDone.modal('show');
 
                             setTimeout(function () {
-                                window.location.href = 'http://localhost:63342/NextTravel_Company_Project_Frontend_Backend/Frontend/pages/user_admin_main_page.html?_ijt=1mvkd5bqbnv72hebvfm2dsuead&_ij_reload=RELOAD_ON_SAVE';
+                                window.location.href = 'http://localhost:63342/Final_AAD/Frontend/pages/UserAdmin/userAdmin.html?_ijt=sh9d91tqtt426g3gq4qj9a1r4n&_ij_reload=RELOAD_ON_SAVE';
                             }, 1000); // delay
 
                         }, 100); // delay
@@ -181,7 +181,7 @@ function loginFormBtnClicked() {
                             intrologin_pg_alertModelDone.modal('show');
 
                             setTimeout(function () {
-                                window.location.href = 'http://localhost:63342/NextTravel_Company_Project_Frontend_Backend/Frontend/pages/travelpackage_admin_main_page.html?_ijt=1mvkd5bqbnv72hebvfm2dsuead&_ij_reload=RELOAD_ON_SAVE';
+                                window.location.href = 'http://localhost:63342/Final_AAD/Frontend/pages/PackageAdmin/packageAdmin.html?_ijt=3gnj9br14g0fm3op6j8ve680m6&_ij_reload=RELOAD_ON_SAVE';
                             }, 1000); // delay
 
                         }, 100); // delay
@@ -207,7 +207,7 @@ function loginFormBtnClicked() {
                             intrologin_pg_alertModelDone.modal('show');
 
                             setTimeout(function () {
-                                window.location.href = 'http://localhost:63342/NextTravel_Company_Project_Frontend_Backend/Frontend/pages/hotel_admin_main_page.html?_ijt=1mvkd5bqbnv72hebvfm2dsuead&_ij_reload=RELOAD_ON_SAVE';
+                                window.location.href = 'http://localhost:63342/Final_AAD/Frontend/pages/HotelAdmin/hotelAdmin.html?_ijt=si03jlluot3qaoupqjt53dsoi9&_ij_reload=RELOAD_ON_SAVE';
                             }, 1000); // delay
 
                         }, 100); // delay
@@ -233,7 +233,7 @@ function loginFormBtnClicked() {
                             intrologin_pg_alertModelDone.modal('show');
 
                             setTimeout(function () {
-                                window.location.href = 'http://localhost:63342/NextTravel_Company_Project_Frontend_Backend/Frontend/pages/guide_admin_main_page.html?_ijt=1mvkd5bqbnv72hebvfm2dsuead&_ij_reload=RELOAD_ON_SAVE';
+                                window.location.href = 'http://localhost:63342/Final_AAD/Frontend/pages/GuideAdmin/guideAdmin.html?_ijt=9i1hn0d6u3434bl0sumepne28o&_ij_reload=RELOAD_ON_SAVE#';
                             }, 1000); // delay
 
                         }, 100); // delay
@@ -259,7 +259,7 @@ function loginFormBtnClicked() {
                             intrologin_pg_alertModelDone.modal('show');
 
                             setTimeout(function () {
-                                window.location.href = 'http://localhost:63342/NextTravel_Company_Project_Frontend_Backend/Frontend/pages/vehicle_admin_main_page.html?_ijt=lfe5pib42qssa1523t2ctc28hn&_ij_reload=RELOAD_ON_SAVE';
+                                window.location.href = 'http://localhost:63342/Final_AAD/Frontend/pages/VehicleAdmin/vehicleAdmin.html?_ijt=fqp9ol3ij5tdp5cjpo9e89jbhm&_ij_reload=RELOAD_ON_SAVE';
                             }, 1000); // delay
 
                         }, 100); // delay

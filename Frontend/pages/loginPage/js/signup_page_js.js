@@ -383,9 +383,9 @@ function sendSignupDataIntoServer(){
                     // Remove the event listener to avoid multiple executions
                     loadingModel.off('hidden.bs.modal');
 
-                    location.reload();
+                    // location.reload();
 
-                    window.location.href = 'http://localhost:63342/NextTravel_Company_Project_Frontend_Backend/Frontend/pages/client_main_page.html?_ijt=65d3q769nd0k24e1vqus1m71m7&_ij_reload=RELOAD_ON_SAVE';
+                    window.location.href = 'http://localhost:63342/Final_AAD/Frontend/pages/MainWebSite/MainWeb.html?_ijt=bhdm0411cvqf091erp9lok6vis&_ij_reload=RELOAD_ON_SAVE';
                 });
             }else{
                 //hide loading model

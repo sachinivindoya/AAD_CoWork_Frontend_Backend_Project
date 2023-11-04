@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
     <link rel="shortcut icon" type="image/icon" href="img/logo2.png">
     <title>Guide Admin Dashboard | Next Travel</title>
-
-
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
@@ -560,25 +560,24 @@
                 </div>
             </div>
         </div>
-
-        <!--guide manage container - sub content - edit guide model-->
+        <!--admin manage container - sub content - edit admin model-->
         <!-- Modal -->
         <div class="modal fade" id="admin-manage-container-edit-admin-model" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" data-bs-backdrop="static" data-bs-keyboard="false">
-            <div class="modal-dialog modal-xl">
-                <div class="modal-content">
+            <div class="modal-dialog modal-xl" style="height: 500px">
+                <div class="modal-content" style="width: 900px">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">Edit Existing Admin</h5>
+                        <h5 class="modal-title" id="exampleModalLabel">Edit Existing Guide</h5>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body" style="max-height: 80vh; overflow-y: auto;">
                         <div style="display: flex;">
-                            <div style="flex-direction: column; width: 600px;">
+                            <div style="flex-direction: column; width: 400px;">
                                 <div class="mb-4">
                                     <div class="row text-center">
                                         <div class="col-xs-6 text-center" style=" margin-top: 10px;">
                                             <div class='product-holder'>
-                                                <img src="" width="300" height="310" class='product-image' id="edit_profile_image" style="border: 1px solid #000; border-radius: 50%; filter: brightness(90%)">
-                                                <input id="edit_profile_image_input" class="form-control" type="file" accept=".jpg, .jpeg, .webp" style="background-color: #e5f1f8; border-color: #112D4E; border-width: 1.5px; width: 250px; margin-left: 70px">
+                                                <img src="" width="200" height="200" class='product-image' id="edit_profile_image" style="border: 1px solid #000; border-radius: 50%; filter: brightness(90%)">
+                                                <input id="edit_profile_image_input" class="form-control" type="file" accept=".jpg, .jpeg, .webp" style="background-color: #e5f1f8; border-color: #112D4E; border-width: 1.5px; width: 200px; margin-left: 50px; margin-top: 10px">
                                             </div>
                                         </div>
                                     </div>
@@ -586,43 +585,40 @@
                             </div>
                             <div style="flex-direction: column; width: 100%; height: 480px; overflow-y: auto;">
                                 <div data-spy="scroll" data-target="#navbar-example3" data-offset="0">
-
-
-
-                                    <div class="mb-4">
-                                        <label for="g_a_a_name" class="form-label" style="margin-left: 40%">Name</label>
+                                    <div class="mb-0">
+                                        <label for="g_a_a_name" class="form-label" style="margin-left: 40%"></label>
                                         <input placeholder="Name here..." type="text" class="form-control" id="e_g_a_a_name"  style="width: 85%; background-color: #EDF1D6; border-color: #EDF1D6; border-width: 1.5px">
                                         <div class="invalid-feedback">
                                             *Enter your name, which must be at least 4 characters long and contain only letters and spaces.
                                             *Ex:-John Doe, john doe
                                         </div>
                                     </div>
-                                    <div class="mb-4">
-                                        <label for="g_a_a_address" class="form-label" style="margin-left: 39.5%">Address</label>
+                                    <div class="mb-0">
+                                        <label for="g_a_a_address" class="form-label" style="margin-left: 39.5%"></label>
                                         <input placeholder="Address here..." type="text" class="form-control" id="e_g_a_a_address" style="width: 85%; background-color: #EDF1D6; border-color: #EDF1D6; border-width: 1.5px">
                                         <div class="invalid-feedback">
                                             *Enter your adress, which must be at least 4 characters long and contain only letters, commas, spaces like these examples.
                                             *Ex:- 123 Main,Street / 456 Elm Street, Apt. 7B / 789 Oak Lane, Suite
                                         </div>
                                     </div>
-                                    <div class="mb-4">
-                                        <label for="g_a_a_nic" class="form-label" style="margin-left: 40.5%">NIC</label>
+                                    <div class="mb-0">
+                                        <label for="g_a_a_nic" class="form-label" style="margin-left: 40.5%"></label>
                                         <input placeholder="NIC here..." type="text" class="form-control" id="e_g_a_a_nic" style="width: 85%; background-color: #EDF1D6; border-color: #EDF1D6; border-width: 1.5px">
                                         <div class="invalid-feedback">
                                             *Enter your correct Srilankan National ID card number.
                                             *Ex:- xxxxxxxxxxxx / xxxxxxxxxv
                                         </div>
                                     </div>
-                                    <div class="mb-4">
-                                        <label for="g_a_a_tell" class="form-label" style="margin-left: 40.5%">Tell</label>
+                                    <div class="mb-0">
+                                        <label for="g_a_a_tell" class="form-label" style="margin-left: 40.5%"></label>
                                         <input placeholder="Tell number here..." type="text" class="form-control" id="e_g_a_a_tell" style="width: 85%; background-color: #EDF1D6; border-color: #EDF1D6; border-width: 1.5px">
                                         <div class="invalid-feedback">
                                             *Enter your correct Srilankan Telephone number.
                                             *Ex:- 0xxxxxxxxx / +94xxxxxxxxx
                                         </div>
                                     </div>
-                                    <div class="mb-4">
-                                        <label for="g_a_a_experience" class="form-label" style="margin-left: 38.5%">Experience</label>
+                                    <div class="mb-0">
+                                        <label for="g_a_a_experience" class="form-label" style="margin-left: 38.5%"></label>
                                         <input placeholder="Expereience type here..." type="number" class="form-control" id="e_g_a_a_experience" style="width: 85%; background-color: #EDF1D6; border-color: #EDF1D6; border-width: 1.5px">
                                         <div class="invalid-feedback">
                                             *Enter only number value.
@@ -637,24 +633,24 @@
                                             *Ex:- year-month-day
                                         </div>
                                     </div>
-                                    <div class="mb-4">
-                                        <label for="g_a_a_perdayfee" class="form-label" style="margin-left: 38.5%">Per day fee</label>
+                                    <div class="mb-0">
+                                        <label for="g_a_a_perdayfee" class="form-label" style="margin-left: 38.5%"></label>
                                         <input placeholder="Perday fee here..." type="number" class="form-control" id="e_g_a_a_perdayfee" style="width: 85%; background-color: #EDF1D6; border-color: #EDF1D6; border-width: 1.5px">
                                         <div class="invalid-feedback">
                                             *Enter only number value.
                                             *Ex:- 10 / 4
                                         </div>
                                     </div>
-                                    <div class="mb-4">
-                                        <label for="g_a_a_remarks" class="form-label" style="margin-left: 39%">Remarks</label>
+                                    <div class="mb-0">
+                                        <label for="g_a_a_remarks" class="form-label" style="margin-left: 39%"></label>
                                         <input placeholder="Remarks here..." type="text" class="form-control" id="e_g_a_a_remarks" style="width: 85%; background-color: #EDF1D6; border-color: #EDF1D6; border-width: 1.5px">
                                         <div class="invalid-feedback">
                                             *Enter your Remarks, which must include letters, numbers, commas, spaces,pullstop.
                                             *Ex:- lorem lorem.
                                         </div>
                                     </div>
-                                    <div class="mb-4">
-                                        <label for="g_a_a_gender" class="form-label" style="margin-left: 39.5%">Gender</label>
+                                    <div class="mb-0">
+                                        <label for="g_a_a_gender" class="form-label" style="margin-left: 39.5%"></label>
                                         <select class="form-control" id="e_g_a_a_gender" style="width: 85%; background-color: #EDF1D6; border-color: #EDF1D6; border-width: 1.5px">
                                             <option value="">Select Gender here...</option>
                                             <option value="male">Male</option>
@@ -666,9 +662,9 @@
                                         </div>
                                     </div>
                                     <br>
-                                    <div class="mb-4 " style="display: flex; flex-direction: column; ">
+                                    <div class="mb-0 " style="display: flex; flex-direction: column; ">
                                         <label for="g_a_a_nic_front_image" class="form-label" >NIC / Passport - Front View</label>
-                                        <img src="" width="530" height="370"  id="edit_front_nic_image" style="border: 0.5px solid #609966; border-radius: 1%; ">
+                                        <img src="" width="500" height="300"  id="edit_front_nic_image" style="border: 0.5px solid #609966; border-radius: 1%; ">
                                         <input id="edit_front_nic_image_input"  class="form-control" type="file" accept=".jpg, .jpeg, .webp" style="background-color: #EDF1D6; border: 1.5px solid #609966; width: 250px">
                                         <div class="valid-feedback" id="e_g_a_a_nic_frontimg-valid-feedback">
                                             Looks good!
@@ -678,9 +674,9 @@
                                         </div>
                                     </div>
                                     <br>
-                                    <div class="mb-4" style="display: flex; flex-direction: column; ">
+                                    <div class="mb-0" style="display: flex; flex-direction: column; ">
                                         <label for="g_a_a_nic_rear_image" class="form-label" >NIC / Passport - Rear View</label>
-                                        <img src="" width="530" height="370"  id="edit_rear_nic_image" style="border: 0.5px solid #609966; border-radius: 1%; ">
+                                        <img src="" width="500" height="300"  id="edit_rear_nic_image" style="border: 0.5px solid #609966; border-radius: 1%; ">
                                         <input id="edit_rear_nic_image_input"  class="form-control" type="file" accept=".jpg, .jpeg, .webp" style="background-color: #EDF1D6; border: 1.5px solid #609966; border-radius: 1%; width: 250px">
                                         <div class="valid-feedback" id="e_g_a_a_nic_rearimg-valid-feedback">
                                             Looks good!
@@ -689,24 +685,26 @@
                                             Please choose a valid image (JPG, JPEG, PNG, or GIF format) and ensure the file size is less than 2MB.
                                         </div>
                                     </div>
+
+
+
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-primary text-white" style="width: 80px" disabled id="e_a_m_n_a_a_savebtn" onclick="saveEditGuide()">Save</button>
+                        <button type="button" class="btn btn-primary text-white" style="width: 50px" disabled id="e_a_m_n_a_a_savebtn" onclick="saveEditGuide()">Save</button>
                     </div>
                 </div>
             </div>
         </div>
 
-
         <!-- delete confiremation model -->
         <!-- Modal -->
         <div class="modal fade " id="guide_admin_main_pg_delete-model" tabindex="-1" role="dialog" aria-hidden="true" data-bs-backdrop='static' style="background-color: rgba(0,0,0,0.25); backdrop-filter: blur(3px)">
-            <div class="modal-dialog modal-dialog-centered" role="document">
-                <div class="modal-content bg-danger text-white">
+            <div class="modal-dialog " role="document">
+                <div class="modal-content bg-light text-dark">
                     <div class="modal-header">
 <!--                        <svg xmlns="http://www.w3.org/2000/svg" width="25" height=25" fill="white" class="bi bi-x-octagon" viewBox="0 0 16 16">-->
 <!--                            <path d="M4.54.146A.5.5 0 0 1 4.893 0h6.214a.5.5 0 0 1 .353.146l4.394 4.394a.5.5 0 0 1 .146.353v6.214a.5.5 0 0 1-.146.353l-4.394 4.394a.5.5 0 0 1-.353.146H4.893a.5.5 0 0 1-.353-.146L.146 11.46A.5.5 0 0 1 0 11.107V4.893a.5.5 0 0 1 .146-.353L4.54.146zM5.1 1 1 5.1v5.8L5.1 15h5.8l4.1-4.1V5.1L10.9 1H5.1z"/>-->
@@ -715,10 +713,10 @@
                         <h5 class="modal-title" >Guide Delete Confirmation!</h5>
                     </div>
                     <div class="modal-body">
-                        <p class="modal-dialog-centered" id="guide_admin_main_pg_delete-model_text"></p>
-                        <p class="modal-dialog-centered" >Are you Sure to delete this Guide?</p>
-                        <button type="button" class="btn btn-secondary" style="width: 80px" data-bs-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-primary text-white" style="width: 120px" onclick="saveDeleteGuide()">Yes Delete</button>
+                        <p id="guide_admin_main_pg_delete-model_text"></p>
+                        <p  >Are you Sure to delete this Guide?</p>
+                        <button type="button" class="btn btn-secondary" style="width: 50px" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-danger text-white" style="width: 120px" onclick="saveDeleteGuide()">Yes Delete</button>
                     </div>
                 </div>
             </div>
@@ -737,8 +735,8 @@
             </div>
         </div>
 
-        <!-- Error alert model &ndash;&gt;
-        &lt;!&ndash; Modal &ndash;&gt;
+        <!-- Error alert model -->
+        <!-- Modal -->
         <div class="modal fade " id="guide_admin_main_pg_alert-model-error" tabindex="-1" role="dialog" aria-hidden="true" data-bs-backdrop='static' style="background-color: rgba(0,0,0,0.25); backdrop-filter: blur(3px)">
             <div class="modal-dialog modal-dialog-centered" role="document">
                 <div class="modal-content bg-danger text-white">
@@ -750,13 +748,13 @@
                         <h5 class="modal-title" id="guide_admin_main_pg_alert-model-title-error">title</h5>
                     </div>
                     <div class="modal-body">
-                        <p class="modal-dialog-centered" id="guide_admin_main_pg_alert-model-content-error">content</p>
+                        <p class="" id="guide_admin_main_pg_alert-model-content-error">content</p>
                     </div>
                 </div>
             </div>
         </div>
-        &lt;!&ndash; Error Unauthorize model &ndash;&gt;
-        &lt;!&ndash; Modal &ndash;&gt;
+        <!-- Error Unauthorize model -->
+        <!-- Modal -->
         <div class="modal fade " id="guide_admin_main_pg_alert-model-unauthorise-error" tabindex="-1" role="dialog" aria-hidden="true" data-bs-backdrop='static' style="background-color: rgba(0,0,0,0.25); backdrop-filter: blur(3px)">
             <div class="modal-dialog modal-dialog-centered" role="document">
                 <div class="modal-content bg-danger text-white">
@@ -768,13 +766,13 @@
                         <h5 class="modal-title" id="guide_admin_main_pg_alert-model-title-unauthorise-error">Something went wrong !</h5>
                     </div>
                     <div class="modal-body">
-                        <p class="modal-dialog-centered" id="guide_admin_main_pg_alert-model-content-unauthorise-error">Unauthorized error has occurred! Please log out and Sign in Again</p>
+                        <p class="" id="guide_admin_main_pg_alert-model-content-unauthorise-error">Unauthorized error has occurred! Please log out and Sign in Again</p>
                         <button type="button" class="btn btn-secondary"><a href="../loginPage/login.html" style="color: white; "> Logout & Sign in click here...</a></button>
                     </div>
                 </div>
             </div>
         </div>
--->
+
         <!-- Done alert model -->
         <!-- Modal -->
         <div class="modal fade" id="guide_admin_main_pg-alert-model-done"  tabindex="-1" role="dialog"  aria-hidden="true" data-bs-backdrop='static' style="background-color: rgba(0, 0, 0, 0.37);">
@@ -840,8 +838,10 @@
     </div>
 </div>
 
+<script src = customJs/RoleTypes.js></script>
+<script src = "customJs/RespondCodes.js"></script>
 
-<script src="customJs/Regax.js"></script>
+</script><script src="customJs/Regax.js"></script>
 <script src="customJs/guideAdmin.js"></script>
 <script src="customJs/db/localGuideDB.js"></script>
 <script src="customJs/dto/GuideDTO.js"></script>
