@@ -37,6 +37,4 @@ public class SequenceGeneratorServiceImpl implements SequenceGeneratorService {
         return !Objects.isNull(counter) ? counter.getSeq() : 1;
 
     }
-
-}
 }
