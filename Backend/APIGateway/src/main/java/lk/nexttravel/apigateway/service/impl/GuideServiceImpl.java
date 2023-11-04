@@ -31,7 +31,7 @@ import java.util.Optional;
  * Time    : 08:29
  */
 @Service
-public class GuideServiceImpl extends GuideService {
+public class GuideServiceImpl implements GuideService {
     @Autowired
     PasswordEncoder passwordEncoder;
 
