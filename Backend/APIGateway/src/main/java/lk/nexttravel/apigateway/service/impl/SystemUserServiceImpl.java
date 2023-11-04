@@ -26,8 +26,8 @@ import java.util.Random;
  */
 public class SystemUserServiceImpl implements SystemUserService
 {
-    @Autowired
-    private MailService mailService;
+//    @Autowired
+//    private MailService mailService;
 
     @Autowired
     UserRepository userRepository;
