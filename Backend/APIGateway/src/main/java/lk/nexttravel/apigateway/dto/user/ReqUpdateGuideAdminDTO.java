@@ -1,25 +1,28 @@
 package lk.nexttravel.apigateway.dto.user;
 
 import lombok.*;
+import org.springframework.stereotype.Component;
 
 /**
  * @author : R.M.Sachini Vinodya
  * Date    : 04/11/2023
- * Time    : 08:07
+ * Time    : 08:09
  */
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
-@ToString
 @Builder
-public class AdminDTO {
+@ToString
+
+@Component
+public class ReqUpdateGuideAdminDTO {
     private String id;
-    private String signup_name_with_initial;
+    private String name_with_initial;
     private String nic_or_passport;
     private String address;
-    private long salary;
     private String profile_image;
-
-    //for 2PC transaction
     private String transaction_state;
+
+    //---for security purpose
+    private String token;
 }
