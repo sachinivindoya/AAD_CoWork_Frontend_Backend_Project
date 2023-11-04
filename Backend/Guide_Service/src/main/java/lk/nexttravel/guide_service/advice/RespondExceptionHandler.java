@@ -2,6 +2,7 @@ package lk.nexttravel.guide_service.advice;
 
 import lk.nexttravel.guide_service.advice.util.InternalServerException;
 import lk.nexttravel.guide_service.advice.util.NotfoundException;
+import lk.nexttravel.guide_service.dto.RespondDTO;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ControllerAdvice;
