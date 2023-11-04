@@ -26,6 +26,7 @@ import lk.nexttravel.apigateway.util.RqRpURLs;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.*;
 import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 import org.springframework.web.server.ResponseStatusException;
 import reactor.core.publisher.Mono;
@@ -41,6 +42,7 @@ import java.util.Random;
  * Date    : 04/11/2023
  * Time    : 08:39
  */
+@Service
 public class SystemUserServiceImpl implements SystemUserService {
 
     @Autowired
@@ -218,7 +220,7 @@ public class SystemUserServiceImpl implements SystemUserService {
                     userRepository.save(user.get());
 
                     //Access Token Create Get
-                    String newAccessToken = APIGatewayJwtAccessTokenServiceFrontend.generateToken(user.get().getName()); //create and get JWT access token
+                    String newAccessToken = apiGatewayJwtAccessTokenServiceFrontend.generateToken(user.get().getName()); //create and get JWT access token
 
                     //UserRefreshToken Save On Gateway DB
                     String newRefreshToken = refreshTokenServiceFrontend.createRefreshToken(user.get()); //create get and save refresh token
@@ -307,7 +309,7 @@ public class SystemUserServiceImpl implements SystemUserService {
                 transactionCordinator.commitPhaseForCreate(transactionDTOArrayList);
 
                 //Access Token Create Get
-                String newAccessToken = APIGatewayJwtAccessTokenServiceFrontend.generateToken(userSignupDTO.getSignup_name()); //create and get JWT access token
+                String newAccessToken = apiGatewayJwtAccessTokenServiceFrontend.generateToken(userSignupDTO.getSignup_name()); //create and get JWT access token
 
                 //UserRefreshToken Save On Gateway DB
                 String newRefreshToken = refreshTokenServiceFrontend.createRefreshToken(savedUser.get()); //create get and save refresh token
@@ -367,7 +369,7 @@ public class SystemUserServiceImpl implements SystemUserService {
                 ){
                     //if matched
                     //Access Token Create Get
-                    String newAccessToken = APIGatewayJwtAccessTokenServiceFrontend.generateToken(user.get().getName()); //create and get JWT access token
+                    String newAccessToken = apiGatewayJwtAccessTokenServiceFrontend.generateToken(user.get().getName()); //create and get JWT access token
 
                     //UserRefreshToken Save On Gateway DB
                     String newRefreshToken = refreshTokenServiceFrontend.createRefreshToken(user.get()); //create get and save refresh token
@@ -456,7 +458,7 @@ public class SystemUserServiceImpl implements SystemUserService {
                 transactionCordinator.commitPhaseForCreate(transactionDTOArrayList);
 
                 //Access Token Create Get
-                String newAccessToken = APIGatewayJwtAccessTokenServiceFrontend.generateToken(userSignupDTO.getSignup_name()); //create and get JWT access token
+                String newAccessToken = apiGatewayJwtAccessTokenServiceFrontend.generateToken(userSignupDTO.getSignup_name()); //create and get JWT access token
 
                 //UserRefreshToken Save On Gateway DB
                 String newRefreshToken = refreshTokenServiceFrontend.createRefreshToken(savedUser.get()); //create get and save refresh token
