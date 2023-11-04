@@ -2,6 +2,7 @@ package lk.nexttravel.apigateway;
 
 import jakarta.annotation.PostConstruct;
 import lk.nexttravel.apigateway.dto.auth.UserSignupDTO;
+import lk.nexttravel.apigateway.persistence.UserRepository;
 import lk.nexttravel.apigateway.service.SequenceGeneratorService;
 import lk.nexttravel.apigateway.service.SystemUserService;
 import lk.nexttravel.apigateway.util.RoleTypes;
@@ -18,6 +19,9 @@ import java.nio.file.Paths;
 
 @SpringBootApplication
 public class ApiGatewayApplication {
+
+    @Autowired
+    UserRepository userRepository;
 
     @Autowired
     SystemUserService systemUserService;

@@ -50,5 +50,5 @@ public class Authenticate_Authorize_ServiceImpl implements Authenticate_Authoriz
             return internalFrontendSecurityCheckDTO;
         }
     }
-    }
+
 }

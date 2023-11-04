@@ -5,6 +5,7 @@ import lk.nexttravel.apigateway.entity.RefreshToken;
 import lk.nexttravel.apigateway.entity.User;
 import lk.nexttravel.apigateway.persistence.RefreshTokenRepository;
 import lk.nexttravel.apigateway.persistence.UserRepository;
+import lk.nexttravel.apigateway.util.security.SecurityCodes;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

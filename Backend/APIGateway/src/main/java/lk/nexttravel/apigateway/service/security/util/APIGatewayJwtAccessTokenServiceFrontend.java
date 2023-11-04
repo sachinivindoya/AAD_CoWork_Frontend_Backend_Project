@@ -7,6 +7,8 @@ import io.jsonwebtoken.SignatureAlgorithm;
 import lk.nexttravel.apigateway.dto.auth.InternalJWTUserDTO;
 import lk.nexttravel.apigateway.entity.User;
 import lk.nexttravel.apigateway.persistence.UserRepository;
+import lk.nexttravel.apigateway.util.RoleTypes;
+import lk.nexttravel.apigateway.util.security.SecurityCodes;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 

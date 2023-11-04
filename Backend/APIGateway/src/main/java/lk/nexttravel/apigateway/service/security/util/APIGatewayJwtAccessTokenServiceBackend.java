@@ -5,6 +5,7 @@ import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
 import io.jsonwebtoken.io.Decoders;
 import io.jsonwebtoken.security.Keys;
+import lk.nexttravel.apigateway.util.security.SecurityCodes;
 import org.springframework.stereotype.Component;
 
 import java.security.Key;
