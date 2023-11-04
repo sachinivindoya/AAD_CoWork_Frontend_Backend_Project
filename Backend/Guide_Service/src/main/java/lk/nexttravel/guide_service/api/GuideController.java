@@ -1,5 +1,8 @@
 package lk.nexttravel.guide_service.api;
 
+import lk.nexttravel.guide_service.dto.ReqNewGuideSaveDTO;
+import lk.nexttravel.guide_service.entity.Guide;
+import lk.nexttravel.guide_service.service.GuideService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
