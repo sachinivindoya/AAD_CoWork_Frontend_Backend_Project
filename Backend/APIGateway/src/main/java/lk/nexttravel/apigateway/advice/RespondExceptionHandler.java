@@ -1,6 +1,8 @@
 package lk.nexttravel.apigateway.advice;
 
 import lk.nexttravel.apigateway.advice.util.*;
+import lk.nexttravel.apigateway.dto.RespondDTO;
+import lk.nexttravel.apigateway.util.RespondCodes;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ControllerAdvice;
