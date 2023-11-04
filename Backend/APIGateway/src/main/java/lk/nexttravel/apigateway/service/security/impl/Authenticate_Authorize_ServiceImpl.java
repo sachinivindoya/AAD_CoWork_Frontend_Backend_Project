@@ -7,6 +7,7 @@ import lk.nexttravel.apigateway.dto.auth.InternalRefreshTUserDTO;
 import lk.nexttravel.apigateway.service.security.Authenticate_Authorize_Service;
 import lk.nexttravel.apigateway.service.security.util.APIGatewayJwtAccessTokenServiceFrontend;
 import lk.nexttravel.apigateway.service.security.util.RefreshTokenServiceFrontend;
+import lk.nexttravel.apigateway.util.RoleTypes;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

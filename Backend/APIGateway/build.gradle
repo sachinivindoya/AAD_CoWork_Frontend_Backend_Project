@@ -40,6 +40,9 @@ dependencies {
     //------mail sending dependency
     implementation 'org.springframework.boot:spring-boot-starter-mail'
 
+    //----------modelmapper
+    implementation 'org.modelmapper:modelmapper:3.1.1'
+
     //------apache velocity dependency
     implementation 'org.apache.velocity:velocity-engine-core:2.3'
 }

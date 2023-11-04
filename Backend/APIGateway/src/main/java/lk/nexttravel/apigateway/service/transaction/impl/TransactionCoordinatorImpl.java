@@ -1,5 +1,6 @@
 package lk.nexttravel.apigateway.service.transaction.impl;
 
+import lk.nexttravel.apigateway.advice.util.InternalServerException;
 import lk.nexttravel.apigateway.dto.TransactionDTO;
 import lk.nexttravel.apigateway.service.transaction.TransactionCordinator;
 import org.springframework.http.*;

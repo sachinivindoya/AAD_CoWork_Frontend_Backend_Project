@@ -1,5 +1,6 @@
 package lk.nexttravel.apigateway.entity;
 
+import lk.nexttravel.apigateway.util.RoleTypes;
 import lombok.*;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.annotation.Transient;

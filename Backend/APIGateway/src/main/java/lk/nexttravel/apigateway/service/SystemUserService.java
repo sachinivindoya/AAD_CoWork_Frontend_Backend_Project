@@ -2,6 +2,7 @@ package lk.nexttravel.apigateway.service;
 
 import lk.nexttravel.apigateway.dto.RespondDTO;
 import lk.nexttravel.apigateway.dto.auth.UserSignupDTO;
+import lk.nexttravel.apigateway.util.RoleTypes;
 import org.springframework.http.ResponseEntity;
 import reactor.core.publisher.Mono;
 

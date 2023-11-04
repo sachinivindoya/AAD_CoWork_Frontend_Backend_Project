@@ -1,5 +1,6 @@
 package lk.nexttravel.apigateway.dto.auth;
 
+import lk.nexttravel.apigateway.util.RoleTypes;
 import lombok.*;
 import org.springframework.stereotype.Component;
 
